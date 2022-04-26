@@ -35,8 +35,8 @@
 
 <main class="page-main catalog">
   <div class="wrapper">
-    <h1 class="catalog__title">Фото и видео</h1>
-    <p class="catalog__description">
+    <h1 class="catalog__title page-titles">Фото и видео</h1>
+    <p class="catalog__description page-descriptions">
       Не можете решиться на путешествие из-за курса?<br>
       Фотографии помогут вам забыть о политике и экономике.
     </p>
@@ -48,44 +48,84 @@
           <figure class="figure figure_wide figure_wide-ultra">
             <img src="img/figure/road-desktop.jpg" width="1200" height="400"
                  alt="Машина, едущая по дороге, в пустынное местности на фоне заката и гор">
-            <figcaption class="figure__description">
-              Неродные просторы
-              <span class="figure__author">Автор фото: Борис</span>
-            </figcaption>
-            <p class="figure__likes">1350</p>
+            <footer class="figure__meta">
+              <dl class="figure__list">
+                <div class="figure__item">
+                  <p class="figure__title">Неродные просторы</p>
+                  <dt class="figure__author">Автор фото:</dt>
+                  <dl class="figure__author-name">Борис</dl>
+                </div>
+                <div class="figure__item">
+                  <dt class="figure__like">
+                    <span class="visually-hidden">Количество лайков:</span>
+                  </dt>
+                  <dl class="figure__like-stat">1350</dl>
+                </div>
+              </dl>
+            </footer>
           </figure>
         </li>
         <li class="photos__item">
           <figure class="figure figure_wide-min figure_wide-high">
             <img src="img/figure/flora-desktop.jpg" width="400" height="267"
                  alt="Кактус на фоне гор в Седоне">
-            <figcaption class="figure__description">
-              Местная растительность
-              <span class="figure__author">Автор фото: Сергей</span>
-            </figcaption>
-            <p class="figure__likes">143</p>
+            <footer class="figure__meta">
+              <dl class="figure__list">
+                <div class="figure__item">
+                  <p class="figure__title">Местная растительность</p>
+                  <dt class="figure__author">Автор фото:</dt>
+                  <dl class="figure__author-name">Сергей</dl>
+                </div>
+                <div class="figure__item">
+                  <dt class="figure__like">
+                    <span class="visually-hidden">Количество лайков:</span>
+                  </dt>
+                  <dl class="figure__like-stat">143</dl>
+                </div>
+              </dl>
+            </footer>
           </figure>
         </li>
         <li class="photos__item">
           <figure class="figure figure_wide-min figure_wide-high">
             <img src="img/figure/road-rocks-desktop.jpg" width="400" height="267"
                  alt="Извилистая дорога в горах в лесу в Седоне">
-            <figcaption class="figure__description">
-              Дорога на север
-              <span class="figure__author">Автор фото: Петр</span>
-            </figcaption>
-            <p class="figure__likes">96</p>
+            <footer class="figure__meta">
+              <dl class="figure__list">
+                <div class="figure__item">
+                  <p class="figure__title">Дорога на север</p>
+                  <dt class="figure__author">Автор фото:</dt>
+                  <dl class="figure__author-name">Петр</dl>
+                </div>
+                <div class="figure__item">
+                  <dt class="figure__like">
+                    <span class="visually-hidden">Количество лайков:</span>
+                  </dt>
+                  <dl class="figure__like-stat">96</dl>
+                </div>
+              </dl>
+            </footer>
           </figure>
         </li>
         <li class="photos__item">
           <figure class="figure figure_wide-min figure_wide-high">
             <img src="img/figure/devils-bridge-desktop.jpg" width="400" height="267"
                  alt="Мост дьявола из скал на фоне гор в Седоне">
-            <figcaption class="figure__description">
-              Мость дьявола
-              <span class="figure__author">Автор фото: Антон</span>
-            </figcaption>
-            <p class="figure__likes">254</p>
+            <footer class="figure__meta">
+              <dl class="figure__list">
+                <div class="figure__item">
+                  <p class="figure__title">Мост дьявола</p>
+                  <dt class="figure__author">Автор фото:</dt>
+                  <dl class="figure__author-name">Антон</dl>
+                </div>
+                <div class="figure__item">
+                  <dt class="figure__like">
+                    <span class="visually-hidden">Количество лайков:</span>
+                  </dt>
+                  <dl class="figure__like-stat">254</dl>
+                </div>
+              </dl>
+            </footer>
           </figure>
         </li>
       </ul>
@@ -94,8 +134,8 @@
     <section class="video">
       <h2 class="visually-hidden">Раздел с видео</h2>
 
-      <p class="video__title">Все еще сомневаетесь?</p>
-      <p class="video__description">
+      <p class="video__title page-titles">Все еще сомневаетесь?</p>
+      <p class="video__description page-descriptions">
         Смотрите видеопрезентацию и скорее за билетами, пока они<br>
         не подорожали в очередной раз!
       </p>
