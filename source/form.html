@@ -33,8 +33,105 @@
   <div class="page-header__into intro"></div>
 </header>
 
-<main class="page-main">
+<main class="page-main form">
+  <div class="wrapper">
+    <h1 class="form__title">Оставьте свой отзыв</h1>
+    <p class="form__description">
+      Помогите нашим отелям стать лучше! оставьте отзыв о них, <br>
+      а также о посещенных вами достопричательностях
+    </p>
 
+    <form class="review" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="review__item user-info">
+        <legend class="review__title user-info__title">Представьтесь:</legend>
+        <ul class="review__input-list user-info__list">
+          <li class="review__input-input-item user-info__item">
+            <label class="review__label user-info__label" for="user-name">Имя*:</label>
+            <input class="review__input user-info__text" type="text" id="user-name" name="user-name" required>
+          </li>
+          <li class="review__input-item user-info__item">
+            <label class="review__label user-info__label" for="user-surname">Фамилия*:</label>
+            <input class="review__input user-info__text" type="text" id="user-surname" name="user-surname" required>
+          </li>
+          <li class="review__input-item user-info__item">
+            <label class="review__label user-info__label" for="user-middle-name">Отчество</label>
+            <input class="review__input user-info__text" type="text" id="user-middle-name" name="user-middle-name">
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="review__item user-contacts">
+        <legend class="review__title user-contacts__title">Контактная информация:</legend>
+        <ul class="review__input-list user-contacts__list">
+          <li class="review__input-item user-contacts__item">
+            <label class="review__label user-contacts__label" for="user-tel">Контактный телефон*:</label>
+            <input class="review__input user-contacts__tel" type="tel" id="user-tel" name="user-tel" required>
+          </li>
+          <li class="review__input-item user-contacts__item">
+            <label class="review__label user-contacts__label" for="user-email">Электронная почта*:</label>
+            <input class="review__input user-contacts__email" type="email" id="user-email" name="user-email" required>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="review__item user-impression">
+        <legend class="review__title user-impression__title">Ваше общее впечатление:</legend>
+        <ul class="review__input-list user-impression__list">
+          <li class="review__input-item user-impression__item">
+            <input class="review__input user-impression__radio" type="radio" id="user-positive"
+                   name="impression" value="positive" checked>
+            <label class="review__label user-impression__label" for="user-positive">Скорее положительное</label>
+          </li>
+          <li class="review__input-item">
+            <input class="review__input user-impression__radio" type="radio" id="user-negative"
+                   name="impression" value="negative">
+            <label class="review__label user-impression__label" for="user-negative">Скорее отрицательное</label>
+          </li>
+          <li class="review__input-item">
+            <input class="review__input user-impression__radio" type="radio" id="user-difficult"
+                   name="impression" value="difficult">
+            <label class="review__label user-impression__label" for="user-difficult">Затрудняюсь ответить</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="review__item user-visits">
+        <legend class="review__title user-visits__title">Посещенные достопримечательности:</legend>
+        <ul class="review__input-list user-visits__list">
+          <li class="review__input-item user-visits__item">
+            <input class="review__input user-visits__checkbox" type="checkbox" id="user-bridge"
+                   name="devils-bridge" checked>
+            <label class="review__label user-visits__label" for="user-bridge">Мост Дьявола</label>
+          </li>
+          <li class="review__input-item user-visits__item">
+            <input class="review__input user-visits__checkbox" type="checkbox" id="user-mount"
+                   name="mountain-bell" checked>
+            <label class="review__label user-visits__label" for="user-mount">Гора-Колокол</label>
+          </li>
+          <li class="review__input-item user-visits__item">
+            <input class="review__input user-visits__checkbox" type="checkbox" id="user-park"
+                   name="slide-park" checked>
+            <label class="review__label user-visits__label" for="user-park">Слайд-парк</label>
+          </li>
+          <li class="review__input-item user-visits__item">
+            <input class="review__input user-visits__checkbox" type="checkbox" id="user-rocks"
+                   name="red-rocks">
+            <label class="review__label user-visits__label" for="user-rocks">Красные скалы</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="review__item user-visits">
+        <legend class="review__title user-visits__title">
+          <label for="user-emotions">Опишите свои эмоции:</label>
+        </legend>
+        <textarea class="review__input-item" id="user-emotions" name="user-emotions"
+                  placeholder="Опишите подробно все свои восторги"></textarea>
+      </fieldset>
+
+      <button class="review__button button" type="submit">Отправить отзыв</button>
+    </form>
+  </div>
 </main>
 
 <footer class="page-footer">
