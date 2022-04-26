@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: {{projectTitle}}</title>
   </head>
-  <body>
-
+  <body class="page__body">
+    <header class="page-header">
+      <nav class="page-nav" aria-labelledby="nav-title">
+        <span class="visually-hidden" id="nav-title">Главная навигация по сайту</span>
+        <ul class="page-nav__list">
+          <li class="page-nav__item">
+            <a class="page-nav__link page-nav__link_active">Главная</a>
+          </li>
+          <li class="page-nav__item">
+            <a href="" class="page-nav__link">Фото и видео</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link">
+              <img class="logo logo_mobile" src="img/page-nav/logotype-mobile.svg"
+                   alt="Логотип Sedona" width="102" height="84">
+            </a>
+          </li>
+          <li class="page-nav__item">
+            <a href="" class="page-nav__link">Форма отзыва</a>
+          </li>
+          <li class="page-nav__item">
+            <a href="" class="page-nav__link">Html Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
