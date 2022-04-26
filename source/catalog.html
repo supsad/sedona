@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Фото и видео</title>
 </head>
 <body>
+<header class="page-header">
+  <nav class="page-nav" aria-labelledby="nav-title">
+    <span class="visually-hidden" id="nav-title">Главная навигация по сайту</span>
+    <button class="page-nav__toggle">
+      <span class="visually-hidden">Открыть меню навигации</span>
+    </button>
+    <a class="logo page-nav__log">
+      <img src="img/page-nav/logotype-mobile.svg"
+           alt="Логотип Sedona" width="102" height="84">
+    </a>
+    <ul class="page-nav__list">
+      <li class="page-nav__item">
+        <a class="page-nav__link page-nav__link_active">Главная</a>
+      </li>
+      <li class="page-nav__item">
+        <a href="" class="page-nav__link">Фото и видео</a>
+      </li>
+      <li class="page-nav__item">
+        <a href="" class="page-nav__link">Форма отзыва</a>
+      </li>
+      <li class="page-nav__item">
+        <a href="" class="page-nav__link">Html Academy</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="page-header__into intro"></div>
+</header>
 
+<main class="page-main catalog"></main>
+
+<footer class="page-footer">
+  <div class="wrapper">
+    <h2 class="visually-hidden">Дополнительная информация</h2>
+    <p class="page-footer__hashtag">#visitsedona</p>
+    <ul class="page-footer__social-media social-media">
+      <li class="social-media__item">
+        <a href="#" class="social-media__link">
+          <img src="img/social-media/icon-twitter.svg" width="18" height="15" alt="Страница Sedona в Twitter">
+        </a>
+      </li>
+      <li class="social-media__item">
+        <a href="#" class="social-media__link">
+          <img src="img/social-media/icon-facebook.svg" width="9" height="19" alt="Страница Sedona в Facebook">
+        </a>
+      </li>
+      <li class="social-media__item">
+        <a href="#" class="social-media__link">
+          <img src="img/social-media/icon-youtube.svg" width="20" height="14" alt="Страница Sedona Youtube">
+        </a>
+      </li>
+    </ul>
+    <div class="page-footer__devs devs">
+      <p class="devs__title">Разработано</p>
+      <a class="devs__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="devs__icon" width="27" height="35">
+          <use href="img/htmlacademy.svg#dev-icon"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
