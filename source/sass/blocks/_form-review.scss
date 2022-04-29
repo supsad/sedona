@@ -1,0 +1,53 @@
+.form-review {
+  display: grid;
+  grid-template-rows: repeat(6, min-content);
+  // TODO Добавить раскладку для других
+}
+
+.form-review__item {
+  border: 0;
+}
+
+.form-review__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.form-review__input-list {
+  padding: 0;
+
+  list-style: none;
+}
+
+.form-review__input-item {
+  &_textarea {
+    width: 100%;
+    height: 160px;
+    border: 0;
+
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    background-color: $light-gray;
+    resize: none;
+
+    &::placeholder {
+      color: $basic-black;
+    }
+  }
+}
+
+.form-review__submit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-review__button {
+  border: none;
+}
+
+.form-review__tip {
+  // TODO Убрать для мобилки ТИПу
+}
