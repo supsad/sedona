@@ -12,9 +12,13 @@
 
 // Blocks
 
+// General
+
 @import "blocks/page";
 
 @import "blocks/button";
+
+// Header
 
 @import "blocks/page-header";
 
@@ -22,4 +26,8 @@
 
 @import "blocks/intro";
 
+// Main
+
 @import "blocks/page-main";
+
+@import "blocks/advantages";

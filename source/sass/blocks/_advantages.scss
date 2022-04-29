@@ -1,0 +1,23 @@
+.advantages {
+  text-transform: uppercase;
+}
+
+.advantages__title {
+  text-align: center;
+}
+
+.advantages__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: $dark-gray;
+  text-align: center;
+}
+
+.advantages__list {
+  list-style: none;
+}
+
+.advantages__item {
+  // TODO Позиционка
+}
