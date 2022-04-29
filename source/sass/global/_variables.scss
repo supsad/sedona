@@ -12,7 +12,6 @@ $medium-gray: #e5e5e5;
 $extra-gray: #d5d5d5;
 $extra-gray-100: #5c6870;
 $dark-gray: #333;
-$dark-gray-opacity: rgba($dark-gray, 30%);
 
 // Accent
 
@@ -20,3 +19,8 @@ $accent-blue: #81b3d2;
 $accent-blue-hover: #669ec0;
 $accent-blue-active: #5496bd;
 $accent-blue-disabled: #e5e5e5;
+
+// Opacity
+
+$basic-white-opacity: rgba($basic-white, 0.3);
+$dark-gray-opacity: rgba($dark-gray, 0.3);
