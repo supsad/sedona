@@ -6,6 +6,7 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
+  min-width: 320px;
   align-content: start;
 
   font-family: "PT Sans", "Arial", sans-serif;

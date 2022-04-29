@@ -7,8 +7,9 @@
   }
 }
 
-.features__lead {
+.features__wrapper {
   // TODO Tablet | Desktop
+  text-align: center;
 }
 
 .features__description {
@@ -21,11 +22,15 @@
   // TODO Спозиционировать картинку
 }
 
-.features__city-wrapper img {
+.features__img {
   // TODO Здесь нужно сцентрировать картинку, возможно, аналогом маски
 }
 
 .features__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 0;
 
   list-style: none;
@@ -33,5 +38,5 @@
 
 .features__item {
   // TODO Позиционка
-}
 
+}

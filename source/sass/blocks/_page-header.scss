@@ -1,18 +1,10 @@
 .page-header {
 
-  // TODO Заготовка для бургера
   &::after {
-
+    // TODO Заготовка для бургера
   }
 }
 
-.page-header__page-nav {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
 .page-header__intro {
-  min-width: 900px;
   min-height: 390px;
 }

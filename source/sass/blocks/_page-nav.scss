@@ -1,4 +1,8 @@
 .page-nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
   color: $basic-white;
 }
 
@@ -8,11 +12,6 @@
 
 .page-nav__list {
   list-style: none;
-}
-
-.page-nav__item {
-  min-width: 320px;
-  min-height: 225px;
 }
 
 .page-nav__link {

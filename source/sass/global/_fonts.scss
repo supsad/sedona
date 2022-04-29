@@ -7,10 +7,11 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("PT Sans"),
-  local("PT-Sans-Regular"),
-  url("../fonts/ptsans.woff2"),
-  url("../fonts/ptsans.woff");
+  src:
+    local("PT Sans"),
+    local("PT-Sans-Regular"),
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
 }
 
 // Bold 700 | normal
@@ -20,8 +21,9 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("PT Sans Bold"),
-  local("PT-Sans-Bold"),
-  url("../fonts/ptsansbold.woff2"),
-  url("../fonts/ptsansbold.woff");
+  src:
+    local("PT Sans Bold"),
+    local("PT-Sans-Bold"),
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
 }

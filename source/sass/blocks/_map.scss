@@ -1,3 +1,8 @@
-.map img {
+.map {
+  width: 100%;
+}
+
+.map__img {
   object-fit: cover;
+  height: 350px;
 }
