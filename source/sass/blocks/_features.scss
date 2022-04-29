@@ -1,0 +1,36 @@
+.features {
+  background-color: $basic-gray;
+
+  &_primary {
+    background-color: $accent-blue;
+  }
+}
+
+.features__lead {
+  // TODO Tablet | Desktop
+}
+
+.features__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.features__city-wrapper {
+  // TODO Спозиционировать картинку
+}
+
+.features__city-wrapper img {
+  // TODO Здесь нужно сцентрировать картинку, возможно, аналогом маски
+}
+
+.features__list {
+  padding: 0;
+
+  list-style: none;
+}
+
+.features__item {
+  // TODO Позиционка
+}
+
