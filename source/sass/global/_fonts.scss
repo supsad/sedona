@@ -9,8 +9,8 @@
   font-display: swap;
   src: local("PT Sans"),
   local("PT-Sans-Regular"),
-  url("/source/fonts/ptsans.woff2"),
-  url("/source/fonts/ptsans.woff");
+  url("../fonts/ptsans.woff2"),
+  url("../fonts/ptsans.woff");
 }
 
 // Bold 700 | normal
@@ -22,6 +22,6 @@
   font-display: swap;
   src: local("PT Sans Bold"),
   local("PT-Sans-Bold"),
-  url("../../fonts/ptsansbold.woff2"),
-  url("../../fonts/ptsansbold.woff");
+  url("../fonts/ptsansbold.woff2"),
+  url("../fonts/ptsansbold.woff");
 }
