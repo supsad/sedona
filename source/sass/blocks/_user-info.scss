@@ -1,0 +1,29 @@
+.user-info,
+.user-info__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: $dark-gray;
+}
+
+.user-info__input {
+  border: none;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  background-color: $light-gray;
+
+  // TODO Написать стили для состояний
+  &:focus {
+    //
+  }
+
+  &:hover {
+    //
+  }
+
+  &:active {
+    //
+  }
+}
