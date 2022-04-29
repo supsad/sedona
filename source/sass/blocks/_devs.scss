@@ -1,0 +1,22 @@
+.devs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.devs__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.devs__link {
+  // TODO стили для svg
+  &:hover {
+
+  }
+
+  &:active {
+
+  }
+}
