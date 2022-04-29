@@ -1,0 +1,13 @@
+.social-media {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+}
+
+.social-media__link {
+  background-color: $accent-blue;
+}
