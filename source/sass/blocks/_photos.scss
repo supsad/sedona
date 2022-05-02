@@ -1,0 +1,16 @@
+.photos__list {
+  display: grid;
+  // TODO раскладка фотографий
+  padding: 0;
+
+  list-style: none;
+}
+
+.photos__item {
+  min-width: 280px;
+  height: auto;
+
+  &_wide {
+    // TODO стили для wide
+  }
+}
