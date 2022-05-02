@@ -1,0 +1,22 @@
+.meta__list-wrapper {
+  display: flex;
+}
+
+.meta__title,
+.meta__description {
+  margin: 0;
+}
+
+.meta__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.meta__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-gray;
+  text-transform: none;
+}
