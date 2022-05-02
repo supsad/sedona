@@ -1,0 +1,25 @@
+.player {
+  position: relative;
+}
+
+.player,
+.player__img {
+  max-width: 800px;
+  max-height: 500px;
+}
+
+.player__toggles {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  background-color: rgba($basic-black, 0.6);
+}
+
+.player__icon {
+  width: auto;
+  height: auto;
+}
