@@ -1,3 +1,8 @@
+// Viewport
+
+$viewport-tablet: 768px;
+$viewport-desktop: 1200px;
+
 // Colors
 
 // Basic
@@ -14,7 +19,11 @@ $extra-gray: #d5d5d5;
 $extra-gray-100: #5c6870;
 $dark-gray: #333333;
 
+$light-brown: #766357;
+$medium-brown: #604e43;
+
 $button-inner-shadow: rgba(1, 1, 1, 0.2);
+$wrapper-shadow: rgba(0, 1, 1, 0.2);
 
 // Accent
 
@@ -25,5 +34,6 @@ $accent-blue-disabled: #e5e5e5;
 
 // Opacity
 
+$basic-black-opacity: rgba($basic-black, 0.3);
 $basic-white-opacity: rgba($basic-white, 0.3);
 $dark-gray-opacity: rgba($dark-gray, 0.3);
