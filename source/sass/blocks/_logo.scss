@@ -1,6 +1,10 @@
+.logo,
 .logo__img {
-  min-width: 102px;
-  min-height: 84px;
-  max-width: 187px;
-  max-height: 97px;
+  width: 102px;
+  height: 84px;
+
+  @media (min-width: $viewport-desktop) {
+    width: 187px;
+    height: 97px;
+  }
 }
