@@ -1,26 +1,99 @@
 .page-nav {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  height: 56px;
 
   color: $basic-white;
 }
 
-.page-nav__logo {
-  order: 1;
+.page-nav__toggle {
+  order: 2;
 }
 
 .page-nav__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
+.page-nav__item {
+  text-align: center;
+}
+
+.page-nav__item_logo {
+  order: 2;
+}
+
 .page-nav__link {
+  width: 100%;
+  height: 55px;
+  padding: 10px 0 5px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
   box-shadow: 0 1px 0 $button-inner-shadow;
+}
 
-  &_current {
-    // TODO Для Tablet & Desktop версии
+// Tablet
+
+@media (min-width: $viewport-tablet) {
+  .page-nav {
+    flex-direction: row;
+  }
+
+  .page-nav__toggle {
+    display: none;
+  }
+
+  .page-nav__list {
+    flex-direction: row;
+  }
+
+  .page-nav__item {
+    flex-grow: 1;
+    height: 56px;
+  }
+
+  .page-nav__item_logo {
+    flex-grow: 0;
+    flex-shrink: 0;
+    order: 0;
+  }
+
+  .page-nav__link {
+    flex-grow: 1;
+    min-width: 153px;
+    padding: 15px 0;
+
+    font-size: 14px;
+    line-height: 26px;
+    color: $basic-black;
+    background: transparent;
+    box-shadow: none;
+
+    &:focus,
+    &:hover {
+      color: $accent-blue;
+      background: transparent;
+    }
+
+    &:active {
+      color: $basic-black-opacity;
+    }
+
+    &_current {
+      color: $light-brown;
+
+      &:focus,
+      &:hover {
+        color: $medium-brown;
+      }
+
+      &:active {
+        color: rgba($light-brown, 0.3);
+      }
+    }
   }
 }
