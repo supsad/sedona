@@ -2,5 +2,9 @@
 
 .wrapper {
   min-width: 320px;
-  padding: 0 40px;
+  padding: 0 20px;
+
+  @media (min-width: $viewport-tablet) {
+    padding: 0;
+  }
 }
