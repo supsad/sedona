@@ -1,5 +1,28 @@
+.page-footer {
+  background-color: $basic-white;
+  text-transform: uppercase;
+}
+
 .page-footer__wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  text-align: center;
+
+  @media (min-width: $viewport-tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.page-footer__hashtag {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.page-footer__social-media {
+  padding: 0;
+}
+
+.page-footer__copyright {
+  justify-content: center;
+  align-items: center;
 }
