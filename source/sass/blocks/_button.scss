@@ -10,6 +10,7 @@
   text-transform: uppercase;
   cursor: pointer;
 
+  &:focus,
   &:hover {
     background-color: $accent-blue-hover;
   }
