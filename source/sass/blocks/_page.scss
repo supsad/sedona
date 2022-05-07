@@ -7,8 +7,15 @@
   grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
   min-width: 320px;
+  max-width: 1200px;
   align-content: start;
+  margin: 0 auto;
 
   font-family: "PT Sans", "Arial", sans-serif;
+  background-color: $light-gray;
+}
+
+.page__wrapper {
   background-color: $basic-white;
+  box-shadow: 0 5px 15px $wrapper-shadow;
 }
