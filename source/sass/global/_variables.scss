@@ -11,26 +11,33 @@ $basic-black: #000000;
 $basic-white: #ffffff;
 $basic-gray: #eeeeee;
 
-// Other
-
-$light-gray: #f2f2f2;
-$medium-gray: #e5e5e5;
-$extra-gray: #d5d5d5;
-$extra-gray-100: #5c6870;
-$dark-gray: #333333;
-
-$light-brown: #766357;
-$medium-brown: #604e43;
-
-$button-inner-shadow: rgba(1, 1, 1, 0.2);
-$wrapper-shadow: rgba(0, 1, 1, 0.2);
-
 // Accent
 
 $accent-blue: #81b3d2;
 $accent-blue-hover: #669ec0;
 $accent-blue-active: #5496bd;
 $accent-blue-disabled: #e5e5e5;
+
+// Shades
+
+// Gray
+
+$light-gray: #f2f2f2;
+$light-gray-100: #eaeaea;
+$medium-gray: #e5e5e5;
+$extra-gray: #d5d5d5;
+$extra-gray-100: #5c6870;
+$dark-gray: #333333;
+
+// Brown
+
+$light-brown: #766357;
+$medium-brown: #604e43;
+
+// Shadow
+
+$button-inner-shadow: rgba(1, 1, 1, 0.2);
+$wrapper-shadow: rgba(0, 1, 1, 0.2);
 
 // Opacity
 
