@@ -1,4 +1,4 @@
-.visually-hidden {
+@mixin hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -9,4 +9,38 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@mixin non-hidden {
+  position: initial;
+  width: initial;
+  height: initial;
+  margin: initial;
+  border: initial;
+  padding: initial;
+  white-space: initial;
+  clip-path: initial;
+  clip: initial;
+  overflow: initial;
+}
+
+.visually-hidden {
+  @include hidden;
+}
+
+.visually-hidden_tablet,
+.visually-hidden_desktop {
+  @include non-hidden;
+}
+
+@media (min-width: $viewport-tablet) {
+  .visually-hidden_tablet {
+    @include hidden;
+  }
+}
+
+@media (min-width: $viewport-desktop) {
+  .visually-hidden_desktop {
+    @include hidden;
+  }
 }
