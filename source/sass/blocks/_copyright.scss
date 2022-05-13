@@ -1,7 +1,12 @@
 .copyright {
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    justify-content: flex-end;
+  }
 }
 
 .copyright__title {
