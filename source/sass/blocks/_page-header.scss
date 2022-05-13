@@ -1,9 +1,54 @@
 .page-header {
   &::after {
-    // TODO Заготовка для бургера
+    content: "";
+    display: block;
+    min-width: 320px;
+    min-height: 389px;
+    max-width: 1200px;
+    max-height: 518px;
+    background-color: $accent-blue-disabled;
+    background-image: url("../../img/intro/back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &_other {
+    &::after {
+      min-height: 158px;
+    }
   }
 }
 
-.page-header__intro {
-  min-height: 390px;
+// Dont work @media in selector and &::after (???)
+// Tablet
+
+@media (min-width: $viewport-tablet) {
+  .page-header {
+    &::after {
+      height: 518px;
+    }
+
+    &_other {
+      &::after {
+        height: 290px;
+      }
+    }
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+// Desktop
+
+@media (min-width: $viewport-desktop) {
+  .page-header {
+    &_other {
+      &::after {
+        height: 301px;
+      }
+    }
+  }
 }
