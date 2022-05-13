@@ -1,3 +1,7 @@
+.user-info {
+  width: 100%;
+}
+
 .user-info,
 .user-info__label {
   font-weight: 400;
@@ -26,5 +30,33 @@
 
   &:active {
     //
+  }
+
+  &_wide {
+    width: 100%;
+  }
+}
+
+// Desktop
+
+@media (min-width: $viewport-desktop) {
+  .user-info {
+    &_inline {
+      @media (min-width: $viewport-desktop) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .user-info__item {
+    &_inline {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .user-info__input {
+    width: auto;
   }
 }
