@@ -1,22 +1,58 @@
+.meta {
+  width: 100%;
+  height: 115px;
+
+  // Tablet
+
+  @media (min-width: $viewport-tablet) {
+    height: 80px;
+
+    background-color: $light-gray-100;
+  }
+}
+
+.meta__list {
+  margin: 0;
+}
+
 .meta__list-wrapper {
   display: flex;
 }
 
 .meta__title,
-.meta__description {
+.meta__description,
+.meta__description_like-stats {
   margin: 0;
-}
 
-.meta__title {
-  font-weight: 700;
   font-size: 14px;
   line-height: 24px;
 }
 
 .meta__description {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
   color: $dark-gray;
   text-transform: none;
+}
+
+.meta__title,
+.meta__description_like-stats {
+  font-weight: 700;
+}
+
+// Desktop
+
+@media (min-width: $viewport-desktop) {
+  .meta {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+
+    background-color: $basic-black-opacity;
+  }
+
+  .meta__title,
+  .meta__description,
+  .meta__description_like-stats {
+    color: $basic-white;
+  }
 }
