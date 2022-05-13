@@ -2,21 +2,22 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фото и видео</title>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-<header class="page-header">
-  <div class="wrapper">
+<div class="page__wrapper">
+  <header class="page-header">
+    <button class="page-header__toggle">
+      <span class="visually-hidden">Открыть меню навигации</span>
+    </button>
+    <a class="page-header__logo logo" href="index.html">
+      <img class="logo__img" src="img/page-nav/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
+    </a>
     <nav class="page-nav" aria-labelledby="nav-title">
       <span class="visually-hidden" id="nav-title">Главная навигация по сайту</span>
-      <button class="page-nav__toggle">
-        <span class="visually-hidden">Открыть меню навигации</span>
-      </button>
-      <a class="logo page-nav__logo" href="index.html">
-        <img class="logo__img" src="img/page-nav/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
-      </a>
       <ul class="page-nav__list">
         <li class="page-nav__item">
           <a class="button page-nav__link" href="index.html">Главная</a>
@@ -32,28 +33,25 @@
         </li>
       </ul>
     </nav>
-    <div class="page-header__intro intro"></div>
-  </div>
-</header>
+  </header>
 
-<main class="page-main">
-  <div class="wrapper catalog">
-    <h1 class="catalog__title intro-title">Фото и видео</h1>
-    <p class="catalog__description intro-description">
-      Не можете решиться на путешествие из-за курса?<br>
-      Фотографии помогут вам забыть о политике и экономике.
-    </p>
+  <main class="page-main">
+    <div class="catalog">
+      <div class="wrapper">
+        <h1 class="catalog__title intro-title">Фото и видео</h1>
+        <p class="catalog__description intro-description">
+          Не можете решиться на путешествие из-за курса?<br>
+          Фотографии помогут вам забыть о политике и экономике.
+        </p>
 
-    <section class="photos">
-      <h2 class="visually-hidden">Раздел с фотографиями</h2>
-      <ul class="photos__list">
-        <li class="photos__item photos__item_wide">
-          <figure class="figure">
-            <img src="img/figure/road-desktop.jpg" width="1200" height="400" alt="Машина, едущая по дороге, в пустынное
+        <article class="photos">
+          <h2 class="visually-hidden">Раздел с фотографиями</h2>
+          <ul class="photos__list">
+            <li class="photos__item photos__item_wide">
+              <figure class="photos__figure">
+                <img src="img/figure/road-desktop.jpg" width="1200" height="400" alt="Машина, едущая по дороге, в пустынное
             местности на фоне заката и гор">
-            <footer class="figure__meta-info">
-              <ul class="figure__list">
-                <li class="figure__item meta">
+                <footer class="photos__meta-info meta">
                   <dl class="meta__list">
                     <div class="meta__list-wrapper">
                       <dt class="visually-hidden">Название фотографии:</dt>
@@ -64,26 +62,20 @@
                       <dd class="meta__description">Борис</dd>
                     </div>
                   </dl>
-                </li>
-                <li class="figure__item meta">
                   <dl class="meta__list">
                     <dt class="meta__title meta__title_like-icon">
                       <span class="visually-hidden">Количество лайков:</span>
                     </dt>
-                    <dd class="meta__description_like-stats">1350</dd>
+                    <dd class="meta__description meta__description_like-stats">1350</dd>
                   </dl>
-                </li>
-              </ul>
-            </footer>
-          </figure>
-        </li>
-        <li class="photos__item photos__item_wide">
-          <figure class="figure">
-            <img src="img/figure/flora-desktop.jpg" width="400" height="267" alt="Красивый распустившийся кактус
+                </footer>
+              </figure>
+            </li>
+            <li class="photos__item">
+              <figure class="photos__figure">
+                <img src="img/figure/flora-desktop.jpg" width="400" height="267" alt="Красивый распустившийся кактус
             зелёно-жёлтого цвета на фоне гор">
-            <footer class="figure__meta-info">
-              <ul class="figure__list">
-                <li class="figure__item meta">
+                <footer class="photos__meta-info meta">
                   <dl class="meta__list">
                     <div class="meta__list-wrapper">
                       <dt class="visually-hidden">Название фотографии:</dt>
@@ -94,25 +86,20 @@
                       <dd class="meta__description">Сергей</dd>
                     </div>
                   </dl>
-                </li>
-                <li class="figure__item meta">
                   <dl class="meta__list">
                     <dt class="meta__title meta__title_like-icon">
                       <span class="visually-hidden">Количество лайков:</span>
                     </dt>
-                    <dd class="meta__description_like-stats">143</dd>
+                    <dd class="meta__description meta__description_like-stats">143</dd>
                   </dl>
-                </li>
-              </ul>
-            </footer>
-          </figure>
-        </li>
-        <li class="photos__item photos__item_wide">
-          <figure class="figure">
-            <img src="img/figure/road-rocks-desktop.jpg" width="400" height="267" alt="Серпантин в горах, вокруг леса">
-            <footer class="figure__meta-info">
-              <ul class="figure__list">
-                <li class="figure__item meta">
+                </footer>
+              </figure>
+            </li>
+            <li class="photos__item">
+              <figure class="photos__figure">
+                <img src="img/figure/road-rocks-desktop.jpg" width="400" height="267"
+                     alt="Серпантин в горах, вокруг леса">
+                <footer class="photos__meta-info meta">
                   <dl class="meta__list">
                     <div class="meta__list-wrapper">
                       <dt class="visually-hidden">Название фотографии:</dt>
@@ -123,26 +110,20 @@
                       <dd class="meta__description">Петр</dd>
                     </div>
                   </dl>
-                </li>
-                <li class="figure__item meta">
                   <dl class="meta__list">
                     <dt class="meta__title meta__title_like-icon">
                       <span class="visually-hidden">Количество лайков:</span>
                     </dt>
-                    <dd class="meta__description_like-stats">96</dd>
+                    <dd class="meta__description meta__description_like-stats">96</dd>
                   </dl>
-                </li>
-              </ul>
-            </footer>
-          </figure>
-        </li>
-        <li class="photos__item photos__item_wide">
-          <figure class="figure">
-            <img src="img/figure/devils-bridge-desktop.jpg" width="400" height="267" alt="Мост дьявола в горах
+                </footer>
+              </figure>
+            </li>
+            <li class="photos__item">
+              <figure class="photos__figure">
+                <img src="img/figure/devils-bridge-desktop.jpg" width="400" height="267" alt="Мост дьявола в горах
             на фоне цветущего леса">
-            <footer class="figure__meta-info">
-              <ul class="figure__list">
-                <li class="figure__item meta">
+                <footer class="photos__meta-info meta">
                   <dl class="meta__list">
                     <div class="meta__list-wrapper">
                       <dt class="visually-hidden">Название фотографии:</dt>
@@ -153,86 +134,91 @@
                       <dd class="meta__description">Антон</dd>
                     </div>
                   </dl>
-                </li>
-                <li class="figure__item meta">
                   <dl class="meta__list">
                     <dt class="meta__title meta__title_like-icon">
                       <span class="visually-hidden">Количество лайков:</span>
                     </dt>
-                    <dd class="meta__description_like-stats">254</dd>
+                    <dd class="meta__description meta__description_like-stats">254</dd>
                   </dl>
+                </footer>
+              </figure>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="wrapper catalog__wrapper">
+        <article class="video">
+          <h2 class="visually-hidden">Раздел с видео</h2>
+
+          <p class="video__title intro-title">Все еще сомневаетесь?</p>
+          <p class="video__description intro-description">
+            Смотрите видеопрезентацию и скорее за билетами, пока они<br>
+            не подорожали в очередной раз!
+          </p>
+
+          <div class="video__player player">
+            <img class="player__img" src="img/video/video-preview-desktop.jpg" width="800" height="500" alt="Пробка машин по дороге
+        за билетами в Седону">
+            <!--          TODO поменять изображения на кнопки-->
+            <div class="player__toggles">
+              <ul class="player__list">
+                <li class="player__replay">
+                  <img class="player__icon" src="img/player/replay.svg" width="16" height="20" alt="Кнопка перезапуска">
+                </li>
+                <li class="player__timeline">
+                  <div class="player__timeline-bar"></div>
+                  <div class="player__timeline-toggle"></div>
+                </li>
+                <li class="player__closed-caption">
+                  <img class="player__icon" src="img/player/subtitles.svg" width="32" height="20"
+                       alt="Кнопка включения субтитров">
+                </li>
+                <li class="player__screen-resolution">
+                  <img class="player__icon" src="img/player/fullscreen.svg" width="20" height="20"
+                       alt="Кнопка включения экрана">
                 </li>
               </ul>
-            </footer>
-          </figure>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper wrapper">
+      <h2 class="visually-hidden">Дополнительная информация</h2>
+      <p class="page-footer__hashtag">#visitsedona</p>
+
+      <ul class="page-footer__social-media social-media">
+        <li class="social-media__item">
+          <a href="#" class="button social-media__link">
+            <img src="img/social-media/icon-twitter.svg" width="18" height="15" alt="Страница Sedona в Twitter">
+          </a>
+        </li>
+        <li class="social-media__item">
+          <a href="#" class="button social-media__link">
+            <img src="img/social-media/icon-facebook.svg" width="9" height="19" alt="Страница Sedona в Facebook">
+          </a>
+        </li>
+        <li class="social-media__item">
+          <a href="#" class="button social-media__link">
+            <img src="img/social-media/icon-youtube.svg" width="20" height="14" alt="Страница Sedona Youtube">
+          </a>
         </li>
       </ul>
-    </section>
 
-    <section class="video">
-      <h2 class="visually-hidden">Раздел с видео</h2>
-
-      <p class="video__title intro-title">Все еще сомневаетесь?</p>
-      <p class="video__description intro-description">
-        Смотрите видеопрезентацию и скорее за билетами, пока они<br>
-        не подорожали в очередной раз!
-      </p>
-
-      <div class="video__player player">
-        <img class="player__img" src="img/video/video-preview-desktop.jpg" width="800" height="500" alt="Пробка машин по дороге
-        за билетами в Седону">
-        <div class="player__toggles">
-          <div class="player__timeline">
-            <div class="player__timeline-bar"></div>
-            <div class="player__timeline-toggle"></div>
-          </div>
-          <div class="player__replay">
-            <img class="player__icon" src="img/player/replay.svg" width="16" height="20" alt="Кнопка перезапуска">
-          </div>
-          <div class="player__closed-caption">
-            <img class="player__icon" src="img/player/subtitles.svg" width="32" height="20" alt="Кнопка включения субтитров">
-          </div>
-          <div class="player__screen-resolution">
-            <img class="player__icon" src="img/player/fullscreen.svg" width="20" height="20" alt="Кнопка включения экрана">
-          </div>
-        </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__title">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="copyright__icon" width="27" height="35">
+            <use href="img/htmlacademy.svg#dev-icon"></use>
+          </svg>
+        </a>
       </div>
-    </section>
-  </div>
-</main>
-
-<footer class="page-footer">
-  <div class="page-footer__wrapper wrapper">
-    <h2 class="visually-hidden">Дополнительная информация</h2>
-    <p class="page-footer__hashtag">#visitsedona</p>
-
-    <ul class="page-footer__social-media social-media">
-      <li class="social-media__item">
-        <a href="#" class="button social-media__link">
-          <img src="img/social-media/icon-twitter.svg" width="18" height="15" alt="Страница Sedona в Twitter">
-        </a>
-      </li>
-      <li class="social-media__item">
-        <a href="#" class="button social-media__link">
-          <img src="img/social-media/icon-facebook.svg" width="9" height="19" alt="Страница Sedona в Facebook">
-        </a>
-      </li>
-      <li class="social-media__item">
-        <a href="#" class="button social-media__link">
-          <img src="img/social-media/icon-youtube.svg" width="20" height="14" alt="Страница Sedona Youtube">
-        </a>
-      </li>
-    </ul>
-
-    <div class="copyright">
-      <p class="copyright__title">Разработано</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="copyright__icon" width="27" height="35">
-          <use href="img/htmlacademy.svg#dev-icon"></use>
-        </svg>
-      </a>
     </div>
-  </div>
-</footer>
+  </footer>
+</div>
 </body>
 </html>

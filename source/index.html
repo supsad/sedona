@@ -10,24 +10,20 @@
 <body class="page__body">
 <div class="page__wrapper">
   <header class="page-header">
+    <button class="page-header__toggle">
+      <span class="visually-hidden">Открыть меню навигации</span>
+    </button>
+    <a class="page-header__logo logo">
+      <img class="logo__img" src="img/page-nav/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
+    </a>
     <nav class="page-nav" aria-labelledby="nav-title">
       <span class="visually-hidden" id="nav-title">Главная навигация по сайту</span>
-      <button class="page-nav__toggle">
-        <span class="visually-hidden">Открыть меню навигации</span>
-      </button>
       <ul class="page-nav__list">
         <li class="page-nav__item">
           <a class="button page-nav__link page-nav__link_current">Главная</a>
         </li>
         <li class="page-nav__item">
           <a class="button page-nav__link" href="catalog.html">Фото и видео</a>
-        </li>
-        <!--        TODO подумать как лучше сделать лого-->
-        <li class="page-nav__item page-nav__item_logo">
-          <a class="page-nav__logo logo">
-            <img class="logo__img" src="img/page-nav/logotype-mobile.svg" alt="Логотип Sedona" width="102"
-                 height="84">
-          </a>
         </li>
         <li class="page-nav__item">
           <a class="button page-nav__link" href="form.html">Форма отзыва</a>
@@ -37,7 +33,6 @@
         </li>
       </ul>
     </nav>
-    <div class="page-header__intro intro"></div>
   </header>
 
   <main class="page-main">
