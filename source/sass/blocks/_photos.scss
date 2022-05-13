@@ -1,6 +1,5 @@
 .photos__list {
-  display: grid;
-  // TODO раскладка фотографий
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -9,8 +8,46 @@
 .photos__item {
   min-width: 280px;
   height: auto;
+}
 
-  &_wide {
-    // TODO стили для wide
+.photos__figure {
+  width: 100%;
+  margin: 0;
+}
+
+// Tablet
+
+@media (min-width: $viewport-tablet) {
+  .photos__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photos__item {
+    &_wide {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .photos__meta-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+}
+
+// Desktop
+
+@media (min-width: $viewport-desktop) {
+  .photos__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .photos__figure {
+    position: relative;
+    background-color: transparent;
   }
 }
