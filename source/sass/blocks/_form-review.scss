@@ -1,20 +1,20 @@
-.form-review {
-  display: grid;
-  grid-template-rows: repeat(6, min-content);
-  // TODO Добавить раскладку для других
-}
-
 .form-review__item {
+  margin: 0;
+  padding: 0;
   border: 0;
+  min-width: 320px;
 }
 
 .form-review__title {
+  padding: 0;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
 }
 
 .form-review__input-list {
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -40,8 +40,7 @@
 }
 
 .form-review__submit {
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
 }
 
 .form-review__button {
@@ -49,5 +48,37 @@
 }
 
 .form-review__tip {
-  // TODO Убрать для мобилки ТИПу
+  display: none;
+}
+
+// Tablet & Desktop
+
+@media (min-width: $viewport-tablet) {
+  .form-review {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-review__item {
+    &_contacts,
+    &_place,
+    &_textarea {
+      grid-column: 1 / -1;
+    }
+
+    &_impression {
+      order: -1;
+    }
+  }
+
+  .form-review__submit {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    text-align: initial;
+  }
+
+  .form-review__tip {
+    display: block;
+  }
 }
