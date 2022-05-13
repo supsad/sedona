@@ -4,22 +4,78 @@
 
 .player,
 .player__img {
-  max-width: 800px;
-  max-height: 500px;
+  min-width: 320px;
+  min-height: 201px;
 }
 
-.player__toggles {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+.player__timeline {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 72px;
+  width: 100%;
+  height: 45px;
+  padding: 21px 22px;
 
   background-color: rgba($basic-black, 0.6);
 }
 
+.player__timeline-bar {
+  width: 100%;
+  height: 3px;
+
+  background-color: rgba($basic-white, 0.2);
+}
+
+.player__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 66px;
+  margin: 0;
+  padding: 0;
+
+  background-color: $light-gray;
+  list-style: none;
+}
+
+// TODO Временное решение
 .player__icon {
   width: auto;
   height: auto;
+  filter: invert(0.5);
+}
+
+// Tablet & Desktop
+
+@media (min-width: $viewport-tablet) {
+  .player__toggles {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    left: 0;
+    bottom: 7px;
+    width: 100%;
+    height: 93px;
+
+    background-color: rgba($basic-black, 0.6);
+  }
+
+  .player__timeline {
+    position: initial;
+    width: 60%;
+    padding: 20px 0;
+    background-color: transparent;
+  }
+
+  .player__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .player__icon {
+    filter: invert(0);
+  }
 }
