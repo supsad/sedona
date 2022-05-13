@@ -26,6 +26,8 @@
 }
 
 .advantages__item {
+  //Tablet & Desktop
+
   @media (min-width: $viewport-tablet) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

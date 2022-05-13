@@ -6,9 +6,12 @@
 .page-footer__wrapper {
   text-align: center;
 
+  // Tablet & Desktop
+
   @media (min-width: $viewport-tablet) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    text-align: initial;
   }
 }
 
