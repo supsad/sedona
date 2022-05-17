@@ -1,10 +1,138 @@
 .page-nav {
   position: relative;
-
   color: $basic-white;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    flex-direction: row;
+  }
+
+  // Mobile only toggles
+
+  @media (max-width: $viewport-mobile-only) {
+    .page-nav__toggle {
+      position: absolute;
+      width: 23px;
+      height: 22px;
+      padding: 0;
+      border: none;
+      z-index: 3;
+
+      background-color: transparent;
+    }
+
+    // State for closed
+
+    &_closed {
+      .page-nav__item {
+        display: none;
+      }
+
+      .page-nav__toggle,
+      .page-nav__item_logo {
+        display: block;
+      }
+    }
+
+    // State for opened
+
+    &_opened {
+      .page-nav__item {
+        display: block;
+      }
+    }
+
+    // Closed menu button
+
+    &_closed .page-nav__toggle {
+      bottom: 17px;
+      right: 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+
+        background-color: $accent-blue;
+        box-shadow: 0 9px 0 0 $accent-blue, 0 18px 0 0 $accent-blue;
+      }
+
+      &:hover::after {
+        opacity: 0.6;
+      }
+
+      &:active::after {
+        opacity: 0.3;
+      }
+    }
+
+    // Opened menu button
+
+    &_opened .page-nav__toggle {
+      width: 30px;
+      height: 30px;
+      top: 13px;
+      right: 18px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 28px;
+
+        background-color: $basic-white;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+      &:hover::before,
+      &:hover::after {
+        opacity: 0.6;
+      }
+
+      &:active::before,
+      &:active::after {
+        opacity: 0.3;
+      }
+    }
+
+    // JavaScript unavailable toggles and menu
+
+    &_no-js {
+      .page-nav__toggle {
+        display: none;
+      }
+
+      .page-nav__list {
+        display: flex;
+      }
+    }
+  }
+}
+
+.page-nav__toggle {
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    display: none;
+  }
 }
 
 .page-nav__list {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -12,56 +140,93 @@
 
   list-style: none;
 
+  // Shadow in bottom list
+
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 56px;
     left: 0;
     width: 100%;
     height: 7px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
   }
-}
 
-.page-nav__item {
-  text-align: center;
-}
+  // Tablet & Desktop
 
-.page-nav__link {
-  width: 100%;
-  height: 55px;
-  padding: 10px 0 5px;
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 40px;
-  box-shadow: 0 1px 0 $button-inner-shadow;
-}
-
-// Tablet & Desktop
-
-@media (min-width: $viewport-tablet) {
-  .page-nav {
+  @media (min-width: $viewport-tablet) {
     flex-direction: row;
-  }
 
-  .page-nav__list {
-    flex-direction: row;
+    // Shadow in bottom hide
 
     &::after {
       display: none;
     }
   }
+}
 
-  .page-nav__item {
-    flex-grow: 1;
+.page-nav__item {
+  text-align: center;
+
+  &_logo {
     height: 56px;
+    z-index: 2;
+    order: 3;
   }
 
-  .page-nav__link {
+  // None shadow
+
+  &:first-child {
+    .page-nav__link {
+      border-top: none;
+    }
+  }
+
+  &:last-child {
+    .page-nav__link {
+      border-bottom: none;
+    }
+  }
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    flex-grow: 1;
+    height: 56px;
+
+    &_logo {
+      order: 0;
+    }
+  }
+}
+
+.page-nav__link {
+  width: 100%;
+  height: 55px;
+  padding: 9px 0 5px; // 10 pad - 1 border-top
+  border-top: 1px solid rgba(lighten($accent-blue, 50%), 0.2);
+  border-bottom: 1px solid rgba(darken($accent-blue, 50%), 0.2);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+
+  &_current {
+    &:hover,
+    &:active,
+    &:focus {
+      color: $basic-white;
+      background-color: $accent-blue;
+    }
+  }
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
     flex-grow: 1;
     min-width: 153px;
     padding: 15px 0;
+    border: none;
 
     font-size: 14px;
     line-height: 26px;
