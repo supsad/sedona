@@ -9,14 +9,11 @@
 </head>
 <body class="page__body">
 <div class="page__wrapper">
-  <header class="page-header page-header_other">
-    <button class="page-header__toggle">
-      <span class="visually-hidden">Открыть меню навигации</span>
-    </button>
-    <a class="page-header__logo logo" href="index.html">
-      <img class="logo__img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
-    </a>
-    <nav class="page-nav" aria-labelledby="nav-title">
+  <header class="page__page-header page-header page-header_other">
+    <nav class="page-header__page-nav page-nav page-nav_closed page-nav_no-js" aria-labelledby="nav-title">
+      <button class="page-nav__toggle">
+        <span class="visually-hidden">Открыть меню навигации</span>
+      </button>
       <span class="visually-hidden" id="nav-title">Главная навигация по сайту</span>
       <ul class="page-nav__list">
         <li class="page-nav__item">
@@ -24,6 +21,11 @@
         </li>
         <li class="page-nav__item">
           <a class="button page-nav__link" href="catalog.html">Фото и видео</a>
+        </li>
+        <li class="page-nav__item page-nav__item_logo">
+          <a class="page-nav__logo logo" href="index.html">
+            <img class="logo__img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
+          </a>
         </li>
         <li class="page-nav__item">
           <a class="button page-nav__link page-nav__link_current">Форма отзыва</a>
@@ -170,5 +172,7 @@
     </div>
   </footer>
 </div>
+
+<script src="js/page-nav.js"></script>
 </body>
 </html>
