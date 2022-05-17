@@ -1,7 +1,28 @@
 .page-header {
+  position: relative;
+
+  // Intro shapes
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 57px;
+    background-image: url("../../img/page-header/intro-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  // Background
+
   &::after {
     content: "";
     display: block;
+    order: 3;
     min-width: 320px;
     min-height: 389px;
     max-width: 1200px;
@@ -16,28 +37,77 @@
   &_other {
     &::after {
       min-height: 158px;
+      background-position: 50% 100%;
+      background-size: auto;
+    }
+
+    .page-header__page-nav {
+      &::after {
+        height: 39px;
+        bottom: -100px;
+
+        background-image: url("../../img/page-nav/intro-title.svg");
+      }
     }
   }
 }
+
+// Intro text
+
+.page-header__page-nav {
+  // Full intro
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -305px;
+    left: 0;
+    width: 100%;
+    height: 214px;
+    background-image: url("../../img/page-nav/intro-full.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
 
 // Dont work @media in selector and &::after (???)
 // Tablet
 
 @media (min-width: $viewport-tablet) {
   .page-header {
+    // Background
+
     &::after {
       height: 518px;
     }
+
+    // Other pages
 
     &_other {
       &::after {
         height: 290px;
       }
+
+      // Intro text in other pages
+
+      .page-header__page-nav {
+        &::after {
+          height: 78px;
+          bottom: -170px;
+        }
+      }
     }
   }
 
-  .page-header__toggle {
-    display: none;
+  // Intro text
+
+  .page-header__page-nav {
+    &::after {
+      bottom: -425px;
+      height: 350px;
+    }
   }
 }
 
