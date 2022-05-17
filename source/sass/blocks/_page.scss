@@ -19,3 +19,15 @@
   background-color: $basic-white;
   box-shadow: 0 5px 15px $wrapper-shadow;
 }
+
+.page__page-header {
+  margin-bottom: 32px;
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $viewport-desktop) {
+    margin-bottom: 55px;
+  }
+}
