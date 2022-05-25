@@ -1,3 +1,35 @@
 .search {
   text-align: center;
 }
+
+.search__title {
+  margin: 0 0 25px;
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 35px;
+
+    font-size: 30px;
+  }
+}
+
+.search__description {
+  margin: 0 0 27px;
+
+  // Tablet
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 37px;
+  }
+
+  // Desktop
+
+  @media (min-width: $viewport-desktop) {
+    margin-bottom: 42px;
+  }
+}
+
+.search__button {
+  max-width: 458px;
+  width: 100%;
+  padding: 15px 32px 18px;
+}
