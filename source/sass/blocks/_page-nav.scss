@@ -2,12 +2,6 @@
   position: relative;
   color: $basic-white;
 
-  // Tablet & Desktop
-
-  @media (min-width: $viewport-tablet) {
-    flex-direction: row;
-  }
-
   // Mobile only toggles
 
   @media (max-width: $viewport-mobile-only) {
@@ -156,6 +150,7 @@
 
   @media (min-width: $viewport-tablet) {
     flex-direction: row;
+    flex-wrap: wrap;
 
     // Shadow in bottom hide
 
