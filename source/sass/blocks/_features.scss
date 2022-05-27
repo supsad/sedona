@@ -1,51 +1,31 @@
+ // ol counter
+
+$max-value: 20; // max 5 in figma
+
+@for $i from 1 through $max-value {
+  .features:nth-child(#{$i}) {
+    .features__title::after {
+      content: "\2014  №" + $i " \2014";
+    }
+  }
+}
+
+// Styles
+
 .features {
   background-color: $basic-gray;
-}
 
-.features__intro {
-  padding: 26px;
-  text-align: center;
+  // Remove last border
 
-  &_primary,
-  &_primary-low {
-    color: $basic-white;
-    background-color: $accent-blue;
-  }
-
-  &_primary {
-    padding: 53px 12px 40px;
-  }
-
-  &_primary-low {
-    padding: 40px 15px 35px;
+  &:last-child .features__description {
+    border-bottom: 1px solid transparent;
   }
 }
 
-.features__description {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-}
+.features__wrapper {
+  // Tablet & Desktop
 
-.features__img {
-  // TODO Здесь нужно сцентрировать картинку, возможно, аналогом маски
-}
-
-.features__list {
-  padding: 0 20px;
-
-  background-color: $basic-white;
-  list-style: none;
-}
-
-.features__item {
-  // TODO Позиционка
-}
-
-// Tablet & Desktop
-
-@media (min-width: $viewport-tablet) {
-  .features__wrapper {
+  @media (min-width: $viewport-tablet) {
     display: grid;
     grid-template-columns: 1fr 2fr;
 
@@ -53,18 +33,176 @@
       grid-template-columns: 2fr 1fr;
     }
   }
+}
 
-  .features__intro_primary-low {
-    order: 2;
+.features__intro {
+  position: relative;
+  padding: 26px 0 0;
+  text-align: center;
+
+  // Tablet
+
+  @media (min-width: $viewport-tablet) {
+    padding: 42px 33px 63px;
   }
 
-  .features__list {
+  // Desktop
+
+  @media (min-width: $viewport-desktop) {
+    padding: 43px 42px 62px;
+  }
+
+  &_primary,
+  &_primary-low {
+    color: $basic-white;
+    background-color: $accent-blue;
+
+    // Fixed numeric color
+
+    .features__title::after {
+      color: $basic-white;
+    }
+
+    // Border none to primary
+
+    .features__description {
+      border: none;
+    }
+  }
+
+  &_primary {
+    padding: 55px + 37px 12px 40px; // 90px to decorative shape
+
+    // Mobile only decorative shape to primary
+
+    @media (max-width: $viewport-mobile-only) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 37px;
+        top: 0;
+        left: 0;
+        background-image: url("../../img/features/primary-feature-shape.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    // Tablet
+
+    @media (min-width: $viewport-tablet) {
+      padding: 40px 32px 44px;
+    }
+
+    // Desktop
+
+    @media (min-width: $viewport-desktop) {
+      padding: 47px 52px 57px;
+    }
+  }
+
+  &_primary-low {
+    padding: 40px 15px 35px;
+
+    // Tablet & Desktop
+
+    @media (min-width: $viewport-tablet) {
+      padding: 43px 36px 41px;
+      order: 2;
+    }
+
+    // Desktop only
+
+    @media (min-width: $viewport-desktop) {
+      padding: 51px 78px 53px;
+    }
+  }
+}
+
+.features__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: $viewport-tablet) {
+    font-size: 21px;
+  }
+
+  &::after {
+    display: block;
+    margin: 18px 0 25px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: $dark-gray;
+
+    @media (min-width: $viewport-tablet) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.features__title,
+.features__description {
+  margin: 0;
+}
+
+.features__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  // Border in none primary features
+
+  @media (max-width: $viewport-mobile-only) {
+    border-bottom: 1px solid $medium-gray-100;
+    padding-bottom: 25px;
+  }
+}
+
+.features__img {
+  // TODO Здесь нужно сцентрировать картинку, возможно, аналогом маски
+}
+
+.features__list {
+  display: grid;
+  align-items: baseline;
+  padding: 0 20px;
+
+  background-color: $basic-white;
+  list-style: none;
+
+  // Mobile only
+
+  @media (max-width: $viewport-mobile-only) {
+    grid-template-rows: repeat(3, min-content);
+    padding: 26px 20px 35px;
+  }
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
   }
+}
 
-  .features__item {
+.features__item {
+  // Mobile only pos
+
+  @media (max-width: $viewport-mobile-only) {
+    &:last-of-type {
+      grid-row: 2 / 3;
+    }
+  }
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
     text-align: center;
   }
 }
