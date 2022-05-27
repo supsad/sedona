@@ -1,14 +1,108 @@
 .recommendation {
   background-color: transparent;
+
+  // Tablet
+
+  @media (min-width: $viewport-tablet) {
+    padding: 60px 30px;
+  }
+
+  // Desktop
+
+  @media (min-width: $viewport-desktop) {
+    padding: 60px 40px 80px;
+  }
+
+  // Icons images
+
+  &_motel {
+    .recommendation__title {
+      &::before {
+        background-image: url("../../img/recommendation/icon-house.svg");
+      }
+    }
+  }
+
+  &_food {
+    .recommendation__title {
+      &::before {
+        background-image: url("../../img/recommendation/icon-burger.svg");
+      }
+    }
+  }
+
+  &_souvenirs {
+    .recommendation__title {
+      &::before {
+        background-image: url("../../img/recommendation/icon-gift.svg");
+      }
+    }
+  }
+
+  // Mobile only icons pos
+
+  @media (max-width: $viewport-mobile-only) {
+    padding-left: 52px; // for icons
+
+    .recommendation__title {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        position: relative;
+        margin-left: -40px;
+        left: -12px;
+      }
+    }
+  }
 }
 
 .recommendation__title {
+  margin: 0 0 20px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
   color: $basic-black;
+
+  @media (min-width: $viewport-tablet) {
+    font-size: 21px;
+  }
+
+  // icons style
+
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media (min-width: $viewport-tablet) {
+      display: block;
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 26px;
+    }
+  }
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 25px;
+  }
 }
 
 .recommendation__description {
+  margin-bottom: 26px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: $dark-gray;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    margin: 0;
+  }
 }
