@@ -4,10 +4,38 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  row-gap: 6px;
 
   list-style: none;
 }
 
+.social-media__item {
+  width: 46px;
+  height: 48px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
 .social-media__link {
+  width: 100%;
+  height: 100%;
   background-color: $accent-blue;
+
+  &_twitter {
+    padding: 11px 14px;
+  }
+
+  &_facebook {
+    padding: 11px 19px;
+  }
+
+  &_youtube {
+    padding: 10px 13px;
+  }
+
+  &:active {
+    .social-media__img {
+      opacity: 0.3;
+    }
+  }
 }

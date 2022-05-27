@@ -1,6 +1,8 @@
 .copyright {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 
   // Tablet & Desktop
 
@@ -10,11 +12,27 @@
 }
 
 .copyright__title {
+  margin: 0 12px 0 0;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
 }
 
-.copyright__link {
-  // TODO стили для svg
+// Icon states
+
+.copyright__icon-wrapper {
+  display: block;
+
+  &:hover .copyright__icon {
+    fill: $accent-blue;
+  }
+
+  &:active .copyright__icon {
+    fill-opacity: 0.3;
+  }
+}
+
+.copyright__icon {
+  fill: $basic-black;
 }

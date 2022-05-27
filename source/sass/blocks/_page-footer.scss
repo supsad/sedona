@@ -4,6 +4,7 @@
 }
 
 .page-footer__wrapper {
+  padding: 29px 20px 23px;
   text-align: center;
 
   // Tablet & Desktop
@@ -11,21 +12,34 @@
   @media (min-width: $viewport-tablet) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    text-align: initial;
+    column-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 36px 20px;
   }
 }
 
 .page-footer__hashtag {
+  margin: 0;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+
+  // Mobile only
+
+  @media (max-width: $viewport-mobile-only) {
+    margin: 0 0 33px;
+  }
 }
 
 .page-footer__social-media {
+  margin: 0;
   padding: 0;
-}
 
-.page-footer__copyright {
-  justify-content: center;
-  align-items: center;
+  // Mobile only
+
+  @media (max-width: $viewport-mobile-only) {
+    margin: 0 0 40px;
+  }
 }
