@@ -24,23 +24,40 @@
   overflow: initial;
 }
 
+// Default
+
 .visually-hidden {
   @include hidden;
-}
 
-.visually-hidden_tablet,
-.visually-hidden_desktop {
-  @include non-hidden;
-}
+  // Reset vh default
 
-@media (min-width: $viewport-tablet) {
-  .visually-hidden_tablet {
-    @include hidden;
+  &_mobile-only,
+  &_tablet,
+  &_desktop {
+    @include non-hidden;
   }
-}
 
-@media (min-width: $viewport-desktop) {
-  .visually-hidden_desktop {
-    @include hidden;
+  // Only mobile
+
+  @media (max-width: $viewport-mobile-only) {
+    &_mobile-only {
+      @include hidden;
+    }
+  }
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    &_tablet {
+      @include hidden;
+    }
+  }
+
+  // Only desktop
+
+  @media (min-width: $viewport-desktop) {
+    &_desktop {
+      @include hidden;
+    }
   }
 }
