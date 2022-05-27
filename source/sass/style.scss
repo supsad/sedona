@@ -5,6 +5,7 @@
 @import "global/fonts";
 @import "global/global";
 @import "global/visually-hidden";
+@import "global/hide";
 @import "global/wrapper";
 
 // Blocks \\
@@ -18,9 +19,9 @@
 
 // Header
 
-@import "blocks/page-header";
 @import "blocks/logo";
 @import "blocks/page-nav";
+@import "blocks/present";
 
 // Main
 
