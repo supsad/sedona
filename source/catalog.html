@@ -5,12 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фото и видео</title>
 
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsans.woff" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="favicon.ico"><!-- 32x32 -->
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180x180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page__body">
 <div class="page__wrapper">
-  <header class="page__page-header page-header page-header_other">
-    <nav class="page-header__page-nav page-nav page-nav_closed page-nav_no-js" aria-labelledby="nav-title">
+  <header class="page__header page__header_catalog">
+    <nav class="page-nav page-nav_closed page-nav_no-js" aria-labelledby="nav-title">
       <button class="page-nav__toggle">
         <span class="visually-hidden">Открыть меню навигации</span>
       </button>
@@ -35,153 +45,167 @@
         </li>
       </ul>
     </nav>
+
+    <div class="page-header__present present present_other">
+      <img class="present__img present__img_small" src="img/page-header/intro-title.svg" width="460" height="81" alt="Седона - слоган с названием города">
+    </div>
   </header>
 
   <main class="page-main">
     <div class="catalog">
       <div class="wrapper">
-        <h1 class="catalog__title intro-title">Фото и видео</h1>
+        <h1 class="catalog__title intro-title intro-title_less">Фото и видео</h1>
         <p class="catalog__description intro-description">
           Не можете решиться на путешествие из-за курса?<br>
           Фотографии помогут вам забыть о политике и экономике.
         </p>
-
-        <article class="photos">
-          <h2 class="visually-hidden">Раздел с фотографиями</h2>
-          <ul class="photos__list">
-            <li class="photos__item photos__item_wide">
-              <figure class="photos__figure">
-                <img src="img/meta/road-desktop.jpg" width="1200" height="400" alt="Машина, едущая по дороге, в пустынное
-            местности на фоне заката и гор">
-                <footer class="photos__meta-info meta">
-                  <dl class="meta__list">
-                    <div class="meta__list-wrapper">
-                      <dt class="visually-hidden">Название фотографии:</dt>
-                      <dd class="meta__title">Неродные просторы</dd>
-                    </div>
-                    <div class="meta__list-wrapper">
-                      <dt class="meta__description">Автор фото:</dt>
-                      <dd class="meta__description">Борис</dd>
-                    </div>
-                  </dl>
-                  <dl class="meta__list">
-                    <dt class="meta__title meta__title_like-icon">
-                      <span class="visually-hidden">Количество лайков:</span>
-                    </dt>
-                    <dd class="meta__description meta__description_like-stats">1350</dd>
-                  </dl>
-                </footer>
-              </figure>
-            </li>
-            <li class="photos__item">
-              <figure class="photos__figure">
-                <img src="img/meta/flora-desktop.jpg" width="400" height="267" alt="Красивый распустившийся кактус
-            зелёно-жёлтого цвета на фоне гор">
-                <footer class="photos__meta-info meta">
-                  <dl class="meta__list">
-                    <div class="meta__list-wrapper">
-                      <dt class="visually-hidden">Название фотографии:</dt>
-                      <dd class="meta__title">Местная растительность</dd>
-                    </div>
-                    <div class="meta__list-wrapper">
-                      <dt class="meta__description">Автор фото:</dt>
-                      <dd class="meta__description">Сергей</dd>
-                    </div>
-                  </dl>
-                  <dl class="meta__list">
-                    <dt class="meta__title meta__title_like-icon">
-                      <span class="visually-hidden">Количество лайков:</span>
-                    </dt>
-                    <dd class="meta__description meta__description_like-stats">143</dd>
-                  </dl>
-                </footer>
-              </figure>
-            </li>
-            <li class="photos__item">
-              <figure class="photos__figure">
-                <img src="img/meta/road-rocks-desktop.jpg" width="400" height="267" alt="Серпантин в горах, вокруг леса">
-                <footer class="photos__meta-info meta">
-                  <dl class="meta__list">
-                    <div class="meta__list-wrapper">
-                      <dt class="visually-hidden">Название фотографии:</dt>
-                      <dd class="meta__title">Дорога на север</dd>
-                    </div>
-                    <div class="meta__list-wrapper">
-                      <dt class="meta__description">Автор фото:</dt>
-                      <dd class="meta__description">Петр</dd>
-                    </div>
-                  </dl>
-                  <dl class="meta__list">
-                    <dt class="meta__title meta__title_like-icon">
-                      <span class="visually-hidden">Количество лайков:</span>
-                    </dt>
-                    <dd class="meta__description meta__description_like-stats">96</dd>
-                  </dl>
-                </footer>
-              </figure>
-            </li>
-            <li class="photos__item">
-              <figure class="photos__figure">
-                <img src="img/meta/devils-bridge-desktop.jpg" width="400" height="267" alt="Мост дьявола в горах
-            на фоне цветущего леса">
-                <footer class="photos__meta-info meta">
-                  <dl class="meta__list">
-                    <div class="meta__list-wrapper">
-                      <dt class="visually-hidden">Название фотографии:</dt>
-                      <dd class="meta__title">Мост дьявола</dd>
-                    </div>
-                    <div class="meta__list-wrapper">
-                      <dt class="meta__description">Автор фото:</dt>
-                      <dd class="meta__description">Антон</dd>
-                    </div>
-                  </dl>
-                  <dl class="meta__list">
-                    <dt class="meta__title meta__title_like-icon">
-                      <span class="visually-hidden">Количество лайков:</span>
-                    </dt>
-                    <dd class="meta__description meta__description_like-stats">254</dd>
-                  </dl>
-                </footer>
-              </figure>
-            </li>
-          </ul>
-        </article>
       </div>
 
-      <div class="wrapper catalog__wrapper">
-        <article class="video">
-          <h2 class="visually-hidden">Раздел с видео</h2>
+      <article class="photos catalog__photos">
+        <h2 class="visually-hidden">Раздел с фотографиями</h2>
+        <ul class="photos__list">
+          <li class="photos__item photos__item_wide">
+            <figure class="photos__figure">
+              <img src="img/meta/road-desktop.jpg" width="1200" height="400" alt="Машина, едущая по дороге, в пустынное
+            местности на фоне заката и гор">
+              <footer class="photos__meta-info meta">
+                <dl class="meta__list meta__list_info">
+                  <div class="meta__list-wrapper">
+                    <dt class="visually-hidden">Название фотографии:</dt>
+                    <dd class="meta__title">Неродные просторы</dd>
+                  </div>
+                  <div class="meta__list-wrapper">
+                    <dt class="meta__description">Автор фото:</dt>
+                    <dd class="meta__description meta__description_username">Борис</dd>
+                  </div>
+                </dl>
+                <dl class="meta__list">
+                  <dt class="meta__title meta__title_like-icon">
+                    <span class="visually-hidden">Количество лайков:</span>
+                  </dt>
+                  <dd class="meta__description meta__description_like-stats">1350</dd>
+                </dl>
+              </footer>
+            </figure>
+          </li>
+          <li class="photos__item">
+            <figure class="photos__figure">
+              <img src="img/meta/flora-desktop.jpg" width="400" height="267" alt="Красивый распустившийся кактус
+            зелёно-жёлтого цвета на фоне гор">
+              <footer class="photos__meta-info meta">
+                <dl class="meta__list meta__list_info">
+                  <div class="meta__list-wrapper">
+                    <dt class="visually-hidden">Название фотографии:</dt>
+                    <dd class="meta__title">Местная растительность</dd>
+                  </div>
+                  <div class="meta__list-wrapper">
+                    <dt class="meta__description">Автор фото:</dt>
+                    <dd class="meta__description meta__description_username">Сергей</dd>
+                  </div>
+                </dl>
+                <dl class="meta__list">
+                  <dt class="meta__title meta__title_like-icon">
+                    <span class="visually-hidden">Количество лайков:</span>
+                  </dt>
+                  <dd class="meta__description meta__description_like-stats">143</dd>
+                </dl>
+              </footer>
+            </figure>
+          </li>
+          <li class="photos__item">
+            <figure class="photos__figure">
+              <img src="img/meta/road-rocks-desktop.jpg" width="400" height="267" alt="Серпантин в горах, вокруг леса">
+              <footer class="photos__meta-info meta">
+                <dl class="meta__list meta__list_info">
+                  <div class="meta__list-wrapper">
+                    <dt class="visually-hidden">Название фотографии:</dt>
+                    <dd class="meta__title">Дорога на север</dd>
+                  </div>
+                  <div class="meta__list-wrapper">
+                    <dt class="meta__description">Автор фото:</dt>
+                    <dd class="meta__description meta__description_username">Петр</dd>
+                  </div>
+                </dl>
+                <dl class="meta__list">
+                  <dt class="meta__title meta__title_like-icon">
+                    <span class="visually-hidden">Количество лайков:</span>
+                  </dt>
+                  <dd class="meta__description meta__description_like-stats">96</dd>
+                </dl>
+              </footer>
+            </figure>
+          </li>
+          <li class="photos__item">
+            <figure class="photos__figure">
+              <img src="img/meta/devils-bridge-desktop.jpg" width="400" height="267" alt="Мост дьявола в горах
+            на фоне цветущего леса">
+              <footer class="photos__meta-info meta">
+                <dl class="meta__list meta__list_info">
+                  <div class="meta__list-wrapper">
+                    <dt class="visually-hidden">Название фотографии:</dt>
+                    <dd class="meta__title">Мост дьявола</dd>
+                  </div>
+                  <div class="meta__list-wrapper">
+                    <dt class="meta__description">Автор фото:</dt>
+                    <dd class="meta__description meta__description_username">Антон</dd>
+                  </div>
+                </dl>
+                <dl class="meta__list">
+                  <dt class="meta__title meta__title_like-icon">
+                    <span class="visually-hidden">Количество лайков:</span>
+                  </dt>
+                  <dd class="meta__description meta__description_like-stats">254</dd>
+                </dl>
+              </footer>
+            </figure>
+          </li>
+        </ul>
+      </article>
 
-          <p class="video__title intro-title">Все еще сомневаетесь?</p>
+      <article class="video catalog__video">
+        <h2 class="visually-hidden">Раздел с видео</h2>
+
+        <div class="wrapper">
+          <p class="video__title intro-title intro-title_less">Все еще сомневаетесь?</p>
           <p class="video__description intro-description">
             Смотрите видеопрезентацию и скорее за билетами, пока они<br>
             не подорожали в очередной раз!
           </p>
+        </div>
 
-          <div class="video__player player">
-            <img class="player__img" src="img/video/video-preview-desktop.jpg" width="800" height="500" alt="Пробка машин по дороге
+        <div class="video__player player">
+          <img class="player__img" src="img/video/video-preview-desktop.jpg" width="800" height="500" alt="Пробка машин по дороге
         за билетами в Седону">
-            <!--          TODO поменять изображения на кнопки-->
-            <div class="player__toggles">
-              <ul class="player__list">
-                <li class="player__replay">
-                  <img class="player__icon" src="img/player/replay.svg" width="16" height="20" alt="Кнопка перезапуска">
-                </li>
-                <li class="player__timeline">
-                  <div class="player__timeline-bar"></div>
-                  <div class="player__timeline-toggle"></div>
-                </li>
-                <li class="player__closed-caption">
-                  <img class="player__icon" src="img/player/subtitles.svg" width="32" height="20" alt="Кнопка включения субтитров">
-                </li>
-                <li class="player__screen-resolution">
-                  <img class="player__icon" src="img/player/fullscreen.svg" width="20" height="20" alt="Кнопка включения экрана">
-                </li>
-              </ul>
-            </div>
+          <div class="player__toggles">
+            <ul class="player__list">
+              <li class="player__item">
+                <button class="player__button player__button_replay">
+                  <span class="visually-hidden">Перезапуск видео</span>
+                </button>
+              </li>
+              <li class="player__item player__item_timeline">
+                <div class="player__timeline-bar">
+                  <div class="player__timeline-toggle" tabindex="0" style="left: 20%;"></div>
+                </div>
+              </li>
+              <li class="player__item">
+                <ul class="player__item-list">
+                  <li class="player__item">
+                    <button class="player__button player__button_subtitles">
+                      <span class="visually-hidden">Включение субтитров</span>
+                    </button>
+                  </li>
+                  <li class="player__item">
+                    <button class="player__button player__button_screen-resolution">
+                      <span class="visually-hidden">Включение полноэкранного режима</span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
   </main>
 
@@ -190,29 +214,33 @@
       <h2 class="visually-hidden">Дополнительная информация</h2>
       <p class="page-footer__hashtag">#visitsedona</p>
 
-      <ul class="page-footer__social-media social-media">
+      <ul class="social-media page-footer__social-media">
         <li class="social-media__item">
-          <a href="#" class="button social-media__link">
-            <img src="img/social-media/icon-twitter.svg" width="18" height="15" alt="Страница Sedona в Twitter">
+          <a href="#" class="button social-media__link social-media__link_twitter">
+            <img class="social-media__img" src="img/social-media/icon-twitter.svg" width="18" height="15" alt="Страница Sedona в Twitter">
           </a>
         </li>
         <li class="social-media__item">
-          <a href="#" class="button social-media__link">
-            <img src="img/social-media/icon-facebook.svg" width="9" height="19" alt="Страница Sedona в Facebook">
+          <a href="#" class="button social-media__link social-media__link_facebook">
+            <img class="social-media__img" src="img/social-media/icon-facebook.svg" width="9" height="19" alt="Страница Sedona в Facebook">
           </a>
         </li>
         <li class="social-media__item">
-          <a href="#" class="button social-media__link">
-            <img src="img/social-media/icon-youtube.svg" width="20" height="14" alt="Страница Sedona Youtube">
+          <a href="#" class="button social-media__link social-media__link_youtube">
+            <img class="social-media__img" src="img/social-media/icon-youtube.svg" width="20" height="14" alt="Страница Sedona Youtube">
           </a>
         </li>
       </ul>
 
-      <div class="page-footer__copyright copyright">
+      <div class="copyright">
         <p class="copyright__title">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__icon" width="27" height="35">
-            <use href="img/htmlacademy.svg#dev-icon"></use>
+          <span class="visually-hidden">Сайт разработчика макета страницы</span>
+          <svg class="copyright__icon-wrapper" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="copyright__icon" d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4
+            1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3
+            16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4
+            27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
           </svg>
         </a>
       </div>
