@@ -23,11 +23,51 @@
 .page__header {
   margin-bottom: 32px;
 
+  // Tablet
+
   @media (min-width: $viewport-tablet) {
     margin-bottom: 44px;
   }
 
+  // Desktop
+
   @media (min-width: $viewport-desktop) {
     margin-bottom: 55px;
+  }
+
+  // for form.html
+
+  &_form {
+    margin-bottom: 36px;
+
+    // Tablet
+
+    @media (min-width: $viewport-tablet) {
+      margin-bottom: 64px;
+    }
+
+    // Desktop
+
+    @media (min-width: $viewport-desktop) {
+      margin-bottom: 114px;
+    }
+  }
+
+  // for catalog.html
+
+  &_catalog {
+    margin-bottom: 24px;
+
+    // Tablet
+
+    @media (min-width: $viewport-tablet) {
+      margin-bottom: 59px;
+    }
+
+    // Desktop
+
+    @media (min-width: $viewport-desktop) {
+      margin-bottom: 102px;
+    }
   }
 }

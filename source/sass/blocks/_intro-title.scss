@@ -3,4 +3,14 @@
   font-size: 21px;
   line-height: 26px;
   color: $basic-black;
+
+  &_less {
+    font-size: 18px;
+  }
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    font-size: 30px;
+  }
 }

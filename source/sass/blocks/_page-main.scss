@@ -7,9 +7,43 @@
 }
 
 .page-main__advantages {
+  margin-top: 32px;
   margin-bottom: 33px;
+
+  // Tablet
+
+  @media (min-width: $viewport-tablet) {
+    margin-top: 44px;
+  }
+
+  // Desktop only
+
+  @media (min-width: $viewport-desktop) {
+    margin-top: 55px;
+  }
 }
 
 .page-main__search {
   margin-bottom: 49px;
+}
+
+.page-main__form {
+  margin-top: 36px;
+  margin-bottom: 48px;
+
+  // Tablet
+
+  @media (min-width: $viewport-tablet) {
+    margin-top: 64px;
+    margin-bottom: 61px;
+    padding: 0 60px;
+  }
+
+  // Desktop only
+
+  @media (min-width: $viewport-desktop) {
+    margin-top: 114px;
+    margin-bottom: 66px;
+    padding: 0 120px;
+  }
 }
