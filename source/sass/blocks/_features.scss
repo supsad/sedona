@@ -1,4 +1,4 @@
- // ol counter
+// ol counter
 
 $max-value: 20; // max 5 in figma
 
@@ -23,6 +23,8 @@ $max-value: 20; // max 5 in figma
 }
 
 .features__wrapper {
+  background-color: $extra-gray;
+
   // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
@@ -129,6 +131,8 @@ $max-value: 20; // max 5 in figma
   @media (min-width: $viewport-tablet) {
     font-size: 21px;
   }
+
+  // Styles for counter
 
   &::after {
     display: block;

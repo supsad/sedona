@@ -19,6 +19,8 @@
 .advantages__title {
   margin: 0 0 40px;
 
+  // tablet & Desktop
+
   @media (min-width: $viewport-tablet) {
     font-size: 21px;
   }
@@ -39,7 +41,7 @@
 
   list-style: none;
 
-  // Tablet
+  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     display: grid;

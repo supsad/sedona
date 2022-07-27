@@ -1,5 +1,6 @@
 .button {
   display: inline-block;
+  border: none;
   text-align: center;
   vertical-align: middle;
   font-weight: 700;
@@ -9,6 +10,8 @@
   background-color: $accent-blue;
   text-transform: uppercase;
   cursor: pointer;
+
+  // States
 
   &:focus,
   &:hover {
@@ -23,7 +26,7 @@
   &_disabled,
   &:disabled {
     color: $basic-white;
-    background-color: $accent-blue-disabled;
+    background-color: $medium-gray;
     cursor: default;
   }
 }

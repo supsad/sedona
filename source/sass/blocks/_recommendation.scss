@@ -48,6 +48,8 @@
       display: flex;
       align-items: center;
 
+      // Icons
+
       &::before {
         position: relative;
         margin-left: -40px;
@@ -65,11 +67,13 @@
   line-height: 26px;
   color: $basic-black;
 
+  // Tablet & Desktop
+
   @media (min-width: $viewport-tablet) {
     font-size: 21px;
   }
 
-  // icons style
+  // Icons style
 
   &::before {
     content: "";
@@ -79,6 +83,8 @@
     background-position: center;
     background-size: contain;
 
+    // Tablet & Desktop
+
     @media (min-width: $viewport-tablet) {
       display: block;
       width: 76px;
@@ -86,6 +92,8 @@
       margin: 0 auto 26px;
     }
   }
+
+  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     margin-bottom: 25px;

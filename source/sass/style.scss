@@ -2,6 +2,7 @@
 // Global files \\
 
 @import "global/variables";
+@import "global/mixins";
 @import "global/fonts";
 @import "global/global";
 @import "global/visually-hidden";
@@ -38,6 +39,7 @@
 @import "blocks/form-review";
 @import "blocks/user-info";
 @import "blocks/user-opinion";
+@import "blocks/modal";
 
 // Catalog
 

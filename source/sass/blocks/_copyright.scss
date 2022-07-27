@@ -19,20 +19,23 @@
   line-height: 26px;
 }
 
-// Icon states
-
 .copyright__icon-wrapper {
   display: block;
+}
 
-  &:hover .copyright__icon {
+.copyright__icon {
+  fill: $basic-black;
+}
+
+// Icon states
+
+.copyright__link {
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
     fill: $accent-blue;
   }
 
   &:active .copyright__icon {
     fill-opacity: 0.3;
   }
-}
-
-.copyright__icon {
-  fill: $basic-black;
 }
