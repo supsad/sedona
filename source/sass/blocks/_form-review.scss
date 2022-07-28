@@ -1,16 +1,189 @@
+.form-review {
+  position: relative;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    // First right border
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      min-height: 302px;
+
+      background-color: $medium-gray-50;
+    }
+  }
+}
+
 .form-review__item {
   margin: 0;
   padding: 0;
   border: 0;
   min-width: 320px;
+
+  // Mobile only border indents
+
+  @media (max-width: $viewport-mobile-only) {
+    &_user {
+      margin-bottom: 25px;
+      @include indents(bottom, 19px);
+    }
+
+    &_contacts {
+      margin-bottom: 28px;
+      @include indents(bottom, 17px);
+    }
+
+    &_impression {
+      margin-bottom: 30px;
+      @include indents(bottom, 25px);
+    }
+
+    &_place {
+      margin-bottom: 30px;
+      @include indents(bottom, 25px, top, 15px);
+    }
+
+    &_textarea {
+      margin-bottom: 51px;
+      @include indents(bottom, 15px);
+    }
+  }
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    &_user,
+    &_textarea {
+      @include indents(bottom, 55px, top, 0);
+    }
+
+    &_user,
+    &_impression {
+      .form-review__title {
+        text-align: start;
+      }
+    }
+
+    &_user {
+      margin-bottom: 73px;
+
+      // Tablet
+
+      @media (min-width: $viewport-tablet) {
+        padding-left: 58px;
+      }
+
+      // Desktop
+
+      @media (min-width: $viewport-desktop) {
+        padding-left: 79px;
+      }
+    }
+
+    &_contacts {
+      margin-bottom: 52px;
+      @include indents(bottom, 21px, top, 0);
+
+      // Desktop only
+
+      @media (min-width: $viewport-desktop) {
+        @include indents(bottom, 72px, top, 0);
+      }
+    }
+
+    &_impression {
+      order: -1;
+      @include indents(bottom, 60px, top, 0);
+      margin-bottom: 77px;
+    }
+
+    &_place {
+      margin-bottom: 76px;
+      @include indents(bottom, 48px, top, 0);
+    }
+
+    &_textarea {
+      margin-bottom: 58px;
+    }
+
+    // Grids and borders
+
+    &_contacts,
+    &_place,
+    &_textarea {
+      grid-column: 1 / -1;
+
+      // Border top to titles
+
+      .form-review__title {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        &::before,
+        &::after {
+          content: "";
+          flex-grow: 1;
+          flex-shrink: 0;
+          height: 1px;
+
+          background-color: $medium-gray-50;
+        }
+
+        &::before {
+          margin-right: 60px;
+          left: 0;
+        }
+
+        &::after {
+          margin-left: 60px;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  // Desktop only
+
+  @media (min-width: $viewport-desktop) {
+    &_impression {
+      .form-review__title {
+        text-align: center;
+      }
+    }
+  }
 }
 
 .form-review__title {
+  position: relative;
   padding: 0;
+  text-align: center;
+  width: 100%;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  // Mobile only borders
+
+  @media (max-width: $viewport-mobile-only) {
+    border-top: 1px solid $medium-gray;
+  }
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    font-size: 21px;
+  }
 }
 
 .form-review__input-list {
@@ -18,12 +191,19 @@
   padding: 0;
 
   list-style: none;
+
+  // Mobile only padding on item for borders
+
+  @media (max-width: $viewport-mobile-only) {
+    padding: 0 20px;
+  }
 }
 
 .form-review__input-item {
   &_textarea {
     width: 100%;
     height: 160px;
+    padding: 13px 22px 29px;
     border: 0;
 
     font-family: inherit;
@@ -33,52 +213,73 @@
     background-color: $light-gray;
     resize: none;
 
+    // Tablet & Desktop
+
+    @media (min-width: $viewport-tablet) {
+      padding: 18px 21px 24px;
+    }
+
     &::placeholder {
       color: $basic-black;
+      opacity: 1;
     }
   }
 }
 
 .form-review__submit {
   text-align: center;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .form-review__button {
-  border: none;
+  width: 100%;
+  padding: 16px 32px;
 }
 
 .form-review__tip {
   display: none;
-}
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
 
-// Tablet & Desktop
+  // Tablet & Desktop
 
-@media (min-width: $viewport-tablet) {
-  .form-review {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .form-review__item {
-    &_contacts,
-    &_place,
-    &_textarea {
-      grid-column: 1 / -1;
-    }
-
-    &_impression {
-      order: -1;
-    }
-  }
-
-  .form-review__submit {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
-    text-align: initial;
-  }
-
-  .form-review__tip {
+  @media (min-width: $viewport-tablet) {
     display: block;
+    text-align: end;
   }
 }
+
+// Animations
+
+// Error submit button
+
+@keyframes shake__button {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+

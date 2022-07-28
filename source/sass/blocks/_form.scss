@@ -1,4 +1,25 @@
 .form__title,
 .form__description {
+  margin: 0;
   text-align: center;
+}
+
+.form__title {
+  margin-bottom: 35px;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 40px;
+  }
+}
+
+.form__description {
+  margin-bottom: 16px;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 60px;
+  }
 }
