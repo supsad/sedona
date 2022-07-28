@@ -10,18 +10,51 @@
   text-align: center;
 }
 
-.catalog__wrapper {
+.catalog__title {
+  margin-bottom: 35px;
+}
+
+.catalog__description {
+  margin-bottom: 41px;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 80px;
+  }
+}
+
+.catalog__photos {
+  margin-bottom: 32px;
+
+  // Tablet
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 58px;
+  }
+
+  // Desktop
+
+  @media (min-width: $viewport-desktop) {
+    margin-bottom: 63px;
+  }
+}
+
+.catalog__video {
+  margin-bottom: 50px;
   padding: 0;
 
   // Tablet
 
   @media (min-width: $viewport-tablet) {
+    margin-bottom: 40px;
     padding: 0 60px;
   }
 
   // Desktop
 
   @media (min-width: $viewport-desktop) {
+    margin-bottom: 85px;
     padding: 0 120px;
   }
 }

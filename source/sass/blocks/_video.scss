@@ -3,6 +3,26 @@
   text-align: center;
 }
 
+.video__title {
+  margin: 0 0 35px;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 28px;
+  }
+}
+
+.video__description {
+  margin: 0 0 33px;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 80px;
+  }
+}
+
 .video__player {
   margin: 0 auto;
 }

@@ -8,47 +8,12 @@
   min-height: 201px;
 }
 
-.player__timeline {
-  position: absolute;
-  left: 0;
-  bottom: 72px;
-  width: 100%;
-  height: 45px;
-  padding: 21px 22px;
+.player__toggles {
+  padding: 0 20px;
 
-  background-color: rgba($basic-black, 0.6);
-}
+  // Tablet & Desktop
 
-.player__timeline-bar {
-  width: 100%;
-  height: 3px;
-
-  background-color: rgba($basic-white, 0.2);
-}
-
-.player__list {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 66px;
-  margin: 0;
-  padding: 0;
-
-  background-color: $light-gray;
-  list-style: none;
-}
-
-// TODO Временное решение
-.player__icon {
-  width: auto;
-  height: auto;
-  filter: invert(0.5);
-}
-
-// Tablet & Desktop
-
-@media (min-width: $viewport-tablet) {
-  .player__toggles {
+  @media (min-width: $viewport-tablet) {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -60,22 +25,175 @@
 
     background-color: rgba($basic-black, 0.6);
   }
+}
 
-  .player__timeline {
-    position: initial;
-    width: 60%;
-    padding: 20px 0;
+.player__list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 66px;
+  margin: -7px 0 0;
+  padding: 0 25px;
+
+  background-color: $light-gray;
+  list-style: none;
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    margin: 0;
     background-color: transparent;
   }
+}
 
-  .player__list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: transparent;
+.player__item {
+  &_timeline {
+    position: absolute;
+    left: 0;
+    bottom: 73px - 8px; // -8 fixed mb of list
+    width: 100%;
+    height: 45px;
+    padding: 21px 22px;
+
+    background-color: rgba($basic-black, 0.6);
+
+    @media (min-width: $viewport-tablet) {
+      position: initial;
+      width: 70%;
+      padding: 20px 0;
+      background-color: transparent;
+    }
+  }
+}
+
+.player__item-list {
+  display: flex;
+  padding: 0;
+
+  list-style: none;
+
+  .player__item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.player__timeline-bar {
+  position: relative;
+  width: 100%;
+  height: 3px;
+
+  background-color: rgba($basic-white, 0.2);
+}
+
+.player__timeline-toggle {
+  position: absolute;
+  top: -5px;
+  left: 20%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+
+  background-color: $basic-white;
+  cursor: pointer;
+}
+
+.player__button {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border: 0;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+
+  &_replay {
+    background-size: 16px 20px;
   }
 
-  .player__icon {
-    filter: invert(0);
+  &_subtitles {
+    background-size: 32px 20px;
+  }
+
+  &_screen-resolution {
+    background-size: 32px 20px;
+  }
+
+  // Mobile only fixed tablet ver
+
+  @media (max-width: $viewport-mobile-only) {
+    // Buttons & colors
+
+    &_replay {
+      @include icons(replay, $button-basic-mobile); // $extra-gray-100
+      background-size: 16px 20px;
+
+      &:hover {
+        @include icons(replay, $button-hover-mobile);
+      }
+    }
+
+    &_subtitles {
+      @include icons(subtitles, $button-basic-mobile); // $extra-gray-100
+      background-size: 32px 20px;
+
+      &:hover {
+        @include icons(subtitles, $button-hover-mobile);
+      }
+    }
+
+    &_screen-resolution {
+      @include icons(screen-resolution, $button-basic-mobile); // $extra-gray-100
+      background-size: 32px 20px;
+
+      &:hover {
+        @include icons(screen-resolution, $button-hover-mobile);
+      }
+    }
+
+    &_replay,
+    &_subtitles,
+    &_screen-resolution {
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  // Tablet & Desktop
+
+  @media (min-width: $viewport-tablet) {
+    // Buttons & colors on tablet & desktop
+
+    &_replay {
+      @include icons(replay, $button-basic-white); // $basic-white
+    }
+
+    &_subtitles {
+      @include icons(subtitles, $button-basic-white);
+    }
+
+    &_screen-resolution {
+      @include icons(screen-resolution, $button-basic-white);
+    }
+
+    &_replay,
+    &_subtitles,
+    &_screen-resolution {
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
   }
 }
