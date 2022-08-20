@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
-  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180x180 -->
   <link rel="manifest" href="manifest.webmanifest">
 </head>
@@ -34,7 +34,11 @@
         </li>
         <li class="page-nav__item page-nav__item_logo">
           <a class="page-nav__logo logo" href="index.html">
-            <img class="logo__img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
+            <picture>
+              <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo/logotype-tablet.svg">
+              <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
+              <img class="logo__img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
+            </picture>
           </a>
         </li>
         <li class="page-nav__item">
@@ -47,7 +51,8 @@
     </nav>
 
     <div class="page-header__present present present_other">
-      <img class="present__img present__img_small" src="img/page-header/intro-title.svg" width="460" height="81" alt="Седона - слоган с названием город">
+      <img class="present__img present__img_small" src="img/page-header/intro-title.svg" width="460" height="81"
+           alt="Седона - слоган с названием город">
     </div>
   </header>
 
@@ -70,11 +75,13 @@
             </li>
             <li class="user-info__item">
               <label class="user-info__label" for="user-surname">Фамилия*:</label>
-              <input class="user-info__input" type="text" id="user-surname" name="user-surname" placeholder="Иванов" required>
+              <input class="user-info__input" type="text" id="user-surname" name="user-surname"
+                     placeholder="Иванов" required>
             </li>
             <li class="user-info__item">
               <label class="user-info__label" for="user-middle-name">Отчество:</label>
-              <input class="user-info__input" type="text" id="user-middle-name" name="user-middle-name" placeholder="Александрович">
+              <input class="user-info__input" type="text" id="user-middle-name" name="user-middle-name"
+                     placeholder="Александрович">
             </li>
           </ul>
         </fieldset>
@@ -86,11 +93,13 @@
               <label class="user-info__label" for="user-tel"><span class="visually-hidden visually-hidden_desktop">
                 Контактный </span>телефон*:
               </label>
-              <input class="user-info__input user-info__input_tel" type="tel" id="user-tel" name="user-tel" placeholder="Введите телефон" required>
+              <input class="user-info__input user-info__input_tel" type="tel" id="user-tel" name="user-tel"
+                     placeholder="Введите телефон" required>
             </li>
             <li class="user-info__item">
               <label class="user-info__label" for="user-email">Электронная почта*:</label>
-              <input class="user-info__input user-info__input_email" type="email" id="user-email" name="user-email" placeholder="Введите e-mail" required>
+              <input class="user-info__input user-info__input_email" type="email" id="user-email" name="user-email"
+                     placeholder="Введите e-mail" required>
             </li>
           </ul>
         </fieldset>
@@ -99,15 +108,18 @@
           <legend class="form-review__title">Ваше общее впечатление:</legend>
           <ul class="form-review__input-list user-opinion user-opinion_radio">
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="radio" id="user-positive" name="impression" value="positive" checked>
+              <input class="user-opinion__input visually-hidden" type="radio" id="user-positive" name="impression"
+                     value="positive" checked>
               <label class="user-opinion__label" for="user-positive">Скорее положительное</label>
             </li>
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="radio" id="user-negative" name="impression" value="negative">
+              <input class="user-opinion__input visually-hidden" type="radio" id="user-negative" name="impression"
+                     value="negative">
               <label class="user-opinion__label" for="user-negative">Скорее отрицательное</label>
             </li>
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="radio" id="user-difficult" name="impression" value="difficult">
+              <input class="user-opinion__input visually-hidden" type="radio" id="user-difficult" name="impression"
+                     value="difficult">
               <label class="user-opinion__label" for="user-difficult">Затрудняюсь ответить</label>
             </li>
           </ul>
@@ -120,15 +132,18 @@
           </legend>
           <ul class="form-review__input-list user-opinion user-opinion_checkbox">
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="checkbox" id="user-bridge" name="devils-bridge" checked>
+              <input class="user-opinion__input visually-hidden" type="checkbox" id="user-bridge" name="devils-bridge"
+                     checked>
               <label class="user-opinion__label" for="user-bridge">Мост Дьявола</label>
             </li>
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="checkbox" id="user-mount" name="mountain-bell" checked>
+              <input class="user-opinion__input visually-hidden" type="checkbox" id="user-mount" name="mountain-bell"
+                     checked>
               <label class="user-opinion__label" for="user-mount">Гора-Колокол</label>
             </li>
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="checkbox" id="user-park" name="slide-park" checked>
+              <input class="user-opinion__input visually-hidden" type="checkbox" id="user-park" name="slide-park"
+                     checked>
               <label class="user-opinion__label" for="user-park">Слайд-парк</label>
             </li>
             <li class="user-opinion__item">
@@ -165,30 +180,34 @@
       <ul class="social-media page-footer__social-media">
         <li class="social-media__item">
           <a href="#" class="button social-media__link social-media__link_twitter">
-            <img class="social-media__img" src="img/social-media/icon-twitter.svg" width="18" height="15" alt="Страница Sedona в Twitter">
+            <img class="social-media__img" src="img/social-media/icon-twitter.svg" width="18" height="15"
+                 alt="Страница Sedona в Twitter">
           </a>
         </li>
         <li class="social-media__item">
           <a href="#" class="button social-media__link social-media__link_facebook">
-            <img class="social-media__img" src="img/social-media/icon-facebook.svg" width="9" height="19" alt="Страница Sedona в Facebook">
+            <img class="social-media__img" src="img/social-media/icon-facebook.svg" width="9" height="19"
+                 alt="Страница Sedona в Facebook">
           </a>
         </li>
         <li class="social-media__item">
           <a href="#" class="button social-media__link social-media__link_youtube">
-            <img class="social-media__img" src="img/social-media/icon-youtube.svg" width="20" height="14" alt="Страница Sedona Youtube">
+            <img class="social-media__img" src="img/social-media/icon-youtube.svg" width="20" height="14"
+                 alt="Страница Sedona Youtube">
           </a>
         </li>
       </ul>
 
       <div class="copyright">
-        <p class="copyright__title">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Сайт разработчика макета страницы</span>
+          <p class="copyright__title">Разработано</p>
           <svg class="copyright__icon-wrapper" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="copyright__icon" d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4
-            1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3
-            16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4
-            27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
+            <path class="copyright__icon" d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5
+            5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2
+            16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9
+            15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4
+            31.8L1.9 25V15.1Z" fill="black"/>
           </svg>
         </a>
       </div>
@@ -198,10 +217,10 @@
   <section class="modal modal_failure modal_close" aria-labelledby="modal-failure-title">
     <h2 class="visually-hidden" id="modal-failure-title">Окно ошибки!</h2>
     <div class="modal__wrapper">
-      <p class="modal__title intro-title intro-title_less">Что-то пошло<br class="hide hide_mobile-only">
+      <p class="modal__title intro-title intro-title_less">Что-то пошло<br class="show">
         не так!</p>
       <p class="modal__description intro-description">
-        Проверьте поля, выделенные красным,<br class="hide hide_mobile-only">
+        Проверьте поля, выделенные красным,<br class="show">
         скорее всего, вы забыли их заполнить
       </p>
       <button class="button modal__button" type="button" tabindex="-1">Ок</button>
