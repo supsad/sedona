@@ -1,0 +1,16 @@
+// Mobile first
+// .show is mobile-only ver
+
+.show {
+  @media (max-width: $viewport-tablet - 1px) {
+    display: none;
+  }
+
+  // same as hide-desktop
+
+  &_sensory {
+    @media (max-width: $viewport-desktop - 1px) {
+      display: none;
+    }
+  }
+}

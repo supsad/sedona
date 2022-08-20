@@ -14,6 +14,7 @@
 
   @media (min-width: $viewport-tablet) {
     margin-top: 44px;
+    margin-bottom: 58px;
   }
 
   // Desktop only
@@ -25,6 +26,18 @@
 
 .page-main__search {
   margin-bottom: 49px;
+
+  // Tablet
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 58px;
+  }
+
+  // Desktop only
+
+  @media (min-width: $viewport-desktop) {
+    margin-bottom: 66px;
+  }
 }
 
 .page-main__form {

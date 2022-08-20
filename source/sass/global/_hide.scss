@@ -1,34 +1,32 @@
+// Mobile first
+
 .hide {
   display: none;
 
-  // Reset hide default
+  // Reset for tablet & desktop
 
-  &_mobile-only,
   &_tablet,
+  &_desktop,
+  &_tablet-only {
+    display: block;
+  }
+
+  &_tablet-only {
+    @media (min-width: $viewport-mobile-only) and (max-width: $viewport-desktop - 1px) {
+      display: none;
+    }
+  }
+
+  &_tablet {
+    @media (min-width: $viewport-tablet) {
+      display: none;
+    }
+  }
+
+  // same as show_sensory
+
   &_desktop {
-    display: initial;
-  }
-
-  // Mobile only
-
-  @media (max-width: $viewport-mobile-only) {
-    &_mobile-only {
-      display: none;
-    }
-  }
-
-  // Tablet & Desktop
-
-  @media (min-width: $viewport-tablet) {
-    &_tablet {
-      display: none;
-    }
-  }
-
-  // Only Desktop
-
-  @media (min-width: $viewport-desktop) {
-    &_desktop {
+    @media (min-width: $viewport-desktop) {
       display: none;
     }
   }

@@ -11,25 +11,12 @@
   }
 }
 
-.copyright__title {
-  margin: 0 12px 0 0;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 26px;
-}
-
-.copyright__icon-wrapper {
-  display: block;
-}
-
-.copyright__icon {
-  fill: $basic-black;
-}
-
 // Icon states
 
 .copyright__link {
+  display: flex;
+  align-items: center;
+
   &:hover .copyright__icon,
   &:focus .copyright__icon {
     fill: $accent-blue;
@@ -38,4 +25,22 @@
   &:active .copyright__icon {
     fill-opacity: 0.3;
   }
+}
+
+.copyright__title {
+  margin: 0 12px 0 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: $basic-black;
+}
+
+.copyright__icon-wrapper {
+  display: block;
+  flex-shrink: 0;
+}
+
+.copyright__icon {
+  fill: $basic-black;
 }
