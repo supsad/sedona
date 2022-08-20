@@ -7,10 +7,22 @@
   padding: 1px 20px; // fixed dropping out block
 
   background-color: $medium-gray-100;
-  background-image: url("../../img/page-header/back-desktop.jpg");
+  background-image: url("../../img/page-header/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/page-header/back-mobile@2x.jpg");
+  }
+
+  @media (min-width: $viewport-tablet) {
+    background-image: url("../../img/page-header/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/page-header/back-desktop@2x.jpg");
+    }
+  }
 
   // Intro shapes
 

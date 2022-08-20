@@ -29,10 +29,11 @@ $max-value: 20; // max 5 in figma
 
   @media (min-width: $viewport-tablet) {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(min-content, 1fr) 2fr;
+    grid-template-rows: min-content;
 
     &_second {
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 2fr minmax(min-content, 1fr);
     }
   }
 }
@@ -95,13 +96,13 @@ $max-value: 20; // max 5 in figma
     // Tablet
 
     @media (min-width: $viewport-tablet) {
-      padding: 40px 32px 44px;
+      padding: 40px 32px 43px;
     }
 
     // Desktop
 
     @media (min-width: $viewport-desktop) {
-      padding: 47px 52px 57px;
+      padding: 45px 52px 57px;
     }
   }
 
@@ -142,10 +143,6 @@ $max-value: 20; // max 5 in figma
     font-size: 14px;
     line-height: 21px;
     color: $dark-gray;
-
-    @media (min-width: $viewport-tablet) {
-      margin-bottom: 30px;
-    }
   }
 }
 
@@ -167,8 +164,17 @@ $max-value: 20; // max 5 in figma
   }
 }
 
+// I need an adaptive block with an image that cover
+// But I did not find a common way to do this
+// So I found a solution through a revert-layer
+// This is a new property that many browsers don't support
+// But somehow it resets the height to its default value and works on all browsers
+
 .features__img {
-  // TODO Здесь нужно сцентрировать картинку, возможно, аналогом маски
+  display: block;
+  object-fit: cover;
+  height: revert-layer;
+  min-height: 100%;
 }
 
 .features__list {
