@@ -74,7 +74,7 @@ $max-value: 20; // max 5 in figma
   }
 
   &_primary {
-    padding: 55px + 37px 12px 40px; // 90px to decorative shape
+    padding: 74px 12px 14px; // 90px to decorative shape
 
     // Mobile only decorative shape to primary
 
@@ -83,7 +83,7 @@ $max-value: 20; // max 5 in figma
         content: "";
         position: absolute;
         width: 100%;
-        height: 37px;
+        height: 40px;
         top: 0;
         left: 0;
         background-image: url("../../img/features/primary-feature-shape.svg");
@@ -107,7 +107,7 @@ $max-value: 20; // max 5 in figma
   }
 
   &_primary-low {
-    padding: 40px 15px 35px;
+    padding: 38px 15px 11px;
 
     // Tablet & Desktop
 
@@ -137,7 +137,7 @@ $max-value: 20; // max 5 in figma
 
   &::after {
     display: block;
-    margin: 18px 0 25px;
+    margin: 11px 0 17px;
 
     font-weight: 400;
     font-size: 14px;
@@ -189,7 +189,7 @@ $max-value: 20; // max 5 in figma
 
   @media (max-width: $viewport-mobile-only) {
     grid-template-rows: repeat(3, min-content);
-    padding: 26px 20px 35px;
+    padding: 26px 21px 21px;
   }
 
   // Tablet & Desktop

@@ -108,92 +108,31 @@
   padding: 0;
   border: 0;
 
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background: transparent;
   cursor: pointer;
+  color: $extra-gray-100;
 
-  &_replay {
-    background-size: 16px 20px;
+  &:hover {
+    color: $dark-gray;
   }
 
-  &_subtitles {
-    background-size: 32px 20px;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+// Tablet & Desktop
+
+@media (min-width: $viewport-tablet) {
+  color: $basic-white;
+
+  &:hover {
+    color: $basic-white;
+    opacity: 0.6;
   }
 
-  &_screen-resolution {
-    background-size: 32px 20px;
-  }
-
-  // Mobile only fixed tablet ver
-
-  @media (max-width: $viewport-mobile-only) {
-    // Buttons & colors
-
-    &_replay {
-      @include icons(replay, $button-basic-mobile); // $extra-gray-100
-      background-size: 16px 20px;
-
-      &:hover {
-        @include icons(replay, $button-hover-mobile);
-      }
-    }
-
-    &_subtitles {
-      @include icons(subtitles, $button-basic-mobile); // $extra-gray-100
-      background-size: 32px 20px;
-
-      &:hover {
-        @include icons(subtitles, $button-hover-mobile);
-      }
-    }
-
-    &_screen-resolution {
-      @include icons(screen-resolution, $button-basic-mobile); // $extra-gray-100
-      background-size: 32px 20px;
-
-      &:hover {
-        @include icons(screen-resolution, $button-hover-mobile);
-      }
-    }
-
-    &_replay,
-    &_subtitles,
-    &_screen-resolution {
-      &:active {
-        opacity: 0.3;
-      }
-    }
-  }
-
-  // Tablet & Desktop
-
-  @media (min-width: $viewport-tablet) {
-    // Buttons & colors on tablet & desktop
-
-    &_replay {
-      @include icons(replay, $button-basic-white); // $basic-white
-    }
-
-    &_subtitles {
-      @include icons(subtitles, $button-basic-white);
-    }
-
-    &_screen-resolution {
-      @include icons(screen-resolution, $button-basic-white);
-    }
-
-    &_replay,
-    &_subtitles,
-    &_screen-resolution {
-      &:hover {
-        opacity: 0.6;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
-    }
+  &:active {
+    opacity: 0.3;
   }
 }

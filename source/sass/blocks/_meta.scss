@@ -56,28 +56,21 @@
     display: flex;
 
     font-weight: 700;
+  }
+}
 
-    // Icon like
+.meta__icon-like {
+  display: block;
+  width: 23px;
+  height: 23px;
+  margin-right: 14px;
 
-    &::before {
-      content: "";
-      display: block;
-      width: 23px;
-      height: 23px;
-      margin-right: 14px;
+  opacity: 0.3;
 
-      @include icons(like, $button-basic-mobile);
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      opacity: 0.3;
+  // Desktop white in black bg
 
-      // Desktop white in black bg
-
-      @media (min-width: $viewport-desktop) {
-        @include icons(like, $button-basic-white);
-        opacity: 1;
-      }
-    }
+  @media (min-width: $viewport-desktop) {
+    opacity: 1;
   }
 }
 

@@ -23,8 +23,6 @@
     }
   }
 
-  // same as show_sensory
-
   &_desktop {
     @media (min-width: $viewport-desktop) {
       display: none;

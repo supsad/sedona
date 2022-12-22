@@ -8,7 +8,7 @@
 
   // same as hide-desktop
 
-  &_sensory {
+  &_desktop {
     @media (max-width: $viewport-desktop - 1px) {
       display: none;
     }

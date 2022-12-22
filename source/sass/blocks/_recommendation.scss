@@ -42,7 +42,7 @@
   // Mobile only icons pos
 
   @media (max-width: $viewport-mobile-only) {
-    padding-left: 52px; // for icons
+    padding-left: 49px; // for icons
 
     .recommendation__title {
       display: flex;
@@ -52,15 +52,16 @@
 
       &::before {
         position: relative;
-        margin-left: -40px;
-        left: -12px;
+        margin-left: -44px;
+        top: -3px;
+        left: -7px;
       }
     }
   }
 }
 
 .recommendation__title {
-  margin: 0 0 20px;
+  margin: 0 0 8px;
 
   font-weight: 700;
   font-size: 18px;
@@ -77,11 +78,11 @@
 
   &::before {
     content: "";
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 40px 40px;
 
     // Tablet & Desktop
 
@@ -101,7 +102,8 @@
 }
 
 .recommendation__description {
-  margin-bottom: 26px;
+  margin-top: 0;
+  margin-bottom: 14px;
 
   font-weight: 400;
   font-size: 14px;

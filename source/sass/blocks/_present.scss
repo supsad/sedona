@@ -3,7 +3,7 @@
   min-width: 320px;
   max-width: 1200px;
   width: 100%;
-  min-height: 389px;
+  min-height: 388px;
   padding: 1px 20px; // fixed dropping out block
 
   background-color: $medium-gray-100;
@@ -71,7 +71,7 @@
   position: relative;
   min-width: 282px;
   max-width: 505px;
-  margin: 89px auto 84px; // -1 padding fixed
+  margin: 89px auto 83px; // -1 padding fixed
 
   text-align: center;
   z-index: 2;
@@ -102,4 +102,19 @@
       margin: 100px auto 119px; // -1 padding fixed
     }
   }
+}
+
+// SVG-intro
+
+.intro-desktop-top__first {
+  color: $accent-blue;
+}
+
+.intro-desktop-top__second {
+  color: $light-brown;
+}
+
+.intro-all-middle,
+.intro-desktop-bottom {
+  color: $basic-white;
 }

@@ -7,8 +7,8 @@
   @media (max-width: $viewport-mobile-only) {
     .page-nav__toggle {
       position: absolute;
-      width: 23px;
-      height: 22px;
+      width: 50px;
+      height: 50px;
       padding: 0;
       border: none;
       z-index: 3;
@@ -25,8 +25,6 @@
         left: 0;
 
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: 0 0;
       }
 
       &:hover::after {
@@ -62,30 +60,32 @@
     // Closed menu button
 
     &_closed .page-nav__toggle {
-      bottom: 17px;
-      right: 20px;
+      top: 3px;
+      right: 8px;
 
       &::after {
         width: 100%;
         height: 100%;
 
         background-image: url("../../img/page-nav/icon-menu.svg");
+        background-position: 48% 50%;
+        background-size: 23px 22px;
       }
     }
 
     // Opened menu button
 
     &_opened .page-nav__toggle {
-      width: 30px;
-      height: 30px;
-      top: 13px;
-      right: 18px;
+      top: 4px;
+      right: 7px;
 
       &::after {
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
 
         background-image: url("../../img/page-nav/icon-cross.svg");
+        background-position: 48% 50%;
+        background-size: 23px 23px;
       }
     }
 
@@ -183,7 +183,7 @@
 
 .page-nav__link {
   width: 100%;
-  height: 55px;
+  height: 56px;
   padding: 9px 0 5px; // 10 pad - 1 border-top
   border-top: 1px solid rgba(lighten($accent-blue, 50%), 0.2);
   border-bottom: 1px solid rgba(darken($accent-blue, 50%), 0.2);
