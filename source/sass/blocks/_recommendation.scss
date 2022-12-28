@@ -4,7 +4,7 @@
   // Tablet
 
   @media (min-width: $viewport-tablet) {
-    padding: 60px 30px;
+    padding: 52px 22px 60px;
   }
 
   // Desktop
@@ -71,6 +71,7 @@
   // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
+    margin-bottom: 23px;
     font-size: 21px;
   }
 
@@ -88,16 +89,11 @@
 
     @media (min-width: $viewport-tablet) {
       display: block;
-      width: 76px;
-      height: 76px;
-      margin: 0 auto 26px;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 22px;
+      background-size: 76px 76px;
     }
-  }
-
-  // Tablet & Desktop
-
-  @media (min-width: $viewport-tablet) {
-    margin-bottom: 25px;
   }
 }
 

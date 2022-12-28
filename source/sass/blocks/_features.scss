@@ -47,7 +47,8 @@ $max-value: 20; // max 5 in figma
   // Tablet
 
   @media (min-width: $viewport-tablet) {
-    padding: 42px 33px 63px;
+    padding: 38px 34px 42px;
+    border-bottom: none;
   }
 
   // Desktop
@@ -94,7 +95,7 @@ $max-value: 20; // max 5 in figma
     // Tablet
 
     @media (min-width: $viewport-tablet) {
-      padding: 40px 32px 43px;
+      padding: 40px 32px 40px;
     }
 
     // Desktop
@@ -141,6 +142,10 @@ $max-value: 20; // max 5 in figma
     font-size: 14px;
     line-height: 21px;
     color: $dark-gray;
+
+    @media (min-width: $viewport-tablet) {
+      margin: 13px 0 23px;
+    }
   }
 }
 
@@ -189,6 +194,7 @@ $max-value: 20; // max 5 in figma
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
+    padding: 0 10px;
   }
 }
 

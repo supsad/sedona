@@ -75,6 +75,13 @@
       <button class="page-nav__toggle">
         <span class="visually-hidden">Открыть меню навигации</span>
       </button>
+      <a class="page-nav__logo-container">
+        <picture>
+          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo/logotype-tablet.svg">
+          <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
+          <img class="page-nav__logo-img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
+        </picture>
+      </a>
       <span class="visually-hidden" id="nav-title">Главная навигация по сайту</span>
       <ul class="page-nav__list">
         <li class="page-nav__item">
@@ -82,15 +89,6 @@
         </li>
         <li class="page-nav__item">
           <a class="button page-nav__link" href="catalog.html">Фото и видео</a>
-        </li>
-        <li class="page-nav__item page-nav__item_logo">
-          <a class="page-nav__logo logo">
-            <picture>
-              <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo/logotype-tablet.svg">
-              <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
-              <img class="logo__img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
-            </picture>
-          </a>
         </li>
         <li class="page-nav__item">
           <a class="button page-nav__link" href="form.html">Форма отзыва</a>
@@ -177,7 +175,10 @@
         <li class="advantages__item advantages__item_primary features">
           <div class="features__wrapper features__wrapper_second">
             <div class="features__intro features__intro_primary-low">
-              <h3 class="features__title">Там есть мост Дьявола</h3>
+              <h3 class="features__title">
+                Там есть<br class="show">
+                мост Дьявола
+              </h3>
               <p class="features__description">Да, по нему можно пройтись! Если вы осмелитесь, конечно</p>
             </div>
 
