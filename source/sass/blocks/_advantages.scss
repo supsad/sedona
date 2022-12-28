@@ -13,17 +13,21 @@
   // Desktop
 
   @media (min-width: $viewport-desktop) {
-    margin-bottom: 41px;
+    margin-bottom: 42px;
   }
 }
 
 .advantages__title {
   margin: 0 0 30px;
 
-  // tablet & Desktop
+  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     font-size: 21px;
+  }
+
+  @media (min-width: $viewport-desktop) {
+    margin-bottom: 33px;
   }
 }
 

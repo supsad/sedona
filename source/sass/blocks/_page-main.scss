@@ -7,20 +7,12 @@
 }
 
 .page-main__advantages {
-  margin-top: 32px;
   margin-bottom: 33px;
 
   // Tablet
 
   @media (min-width: $viewport-tablet) {
-    margin-top: 44px;
     margin-bottom: 56px;
-  }
-
-  // Desktop only
-
-  @media (min-width: $viewport-desktop) {
-    margin-top: 55px;
   }
 }
 

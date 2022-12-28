@@ -75,6 +75,18 @@ $max-value: 20; // max 5 in figma
   &_primary {
     padding: 74px 12px 39px; // 90px to decorative shape
 
+    // Tablet
+
+    @media (min-width: $viewport-tablet) {
+      padding: 40px 32px 40px;
+    }
+
+    // Desktop
+
+    @media (min-width: $viewport-desktop) {
+      padding: 46px 52px 40px;
+    }
+
     // Mobile only decorative shape to primary
 
     @media (max-width: $viewport-mobile-only) {
@@ -90,18 +102,6 @@ $max-value: 20; // max 5 in figma
         background-position: center;
         background-size: cover;
       }
-    }
-
-    // Tablet
-
-    @media (min-width: $viewport-tablet) {
-      padding: 40px 32px 40px;
-    }
-
-    // Desktop
-
-    @media (min-width: $viewport-desktop) {
-      padding: 45px 52px 57px;
     }
   }
 

@@ -17,6 +17,11 @@
     align-items: center;
     padding: 29px 8px;
   }
+
+  @media (min-width: $viewport-desktop) {
+    padding: 30px 10px;
+    column-gap: 64px;
+  }
 }
 
 .page-footer__hashtag {
