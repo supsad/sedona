@@ -15,10 +15,8 @@ $max-value: 20; // max 5 in figma
 .features {
   background-color: $basic-gray;
 
-  // Remove last border
-
-  &:last-child .features__description {
-    border-bottom: 1px solid transparent;
+  &:last-child .features__intro {
+    border-bottom: none;
   }
 }
 
@@ -40,7 +38,10 @@ $max-value: 20; // max 5 in figma
 
 .features__intro {
   position: relative;
-  padding: 26px 0 0;
+  padding: 25px 15px 25px;
+  margin: 0 20px;
+  border-bottom: 1px solid $medium-gray-100;
+
   text-align: center;
 
   // Tablet
@@ -57,6 +58,9 @@ $max-value: 20; // max 5 in figma
 
   &_primary,
   &_primary-low {
+    margin: 0;
+    border: none;
+
     color: $basic-white;
     background-color: $accent-blue;
 
@@ -65,16 +69,10 @@ $max-value: 20; // max 5 in figma
     .features__title::after {
       color: $basic-white;
     }
-
-    // Border none to primary
-
-    .features__description {
-      border: none;
-    }
   }
 
   &_primary {
-    padding: 74px 12px 14px; // 90px to decorative shape
+    padding: 74px 12px 39px; // 90px to decorative shape
 
     // Mobile only decorative shape to primary
 
@@ -107,7 +105,7 @@ $max-value: 20; // max 5 in figma
   }
 
   &_primary-low {
-    padding: 38px 15px 11px;
+    padding: 38px 15px 36px;
 
     // Tablet & Desktop
 
@@ -155,13 +153,6 @@ $max-value: 20; // max 5 in figma
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-
-  // Border in none primary features
-
-  @media (max-width: $viewport-mobile-only) {
-    border-bottom: 1px solid $medium-gray-100;
-    padding-bottom: 25px;
-  }
 }
 
 // I need an adaptive block with an image that cover
