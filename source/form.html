@@ -31,25 +31,23 @@
 <div class="page__wrapper">
   <header class="page__header page__header_form">
     <nav class="page-nav page-nav_closed page-nav_no-js" aria-labelledby="nav-title">
+      <span class="visually-hidden" id="nav-title">Главная навигация по сайту</span>
       <button class="page-nav__toggle">
         <span class="visually-hidden">Открыть меню навигации</span>
       </button>
-      <span class="visually-hidden" id="nav-title">Главная навигация по сайту</span>
+      <a class="page-nav__logo-container">
+        <picture>
+          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo/logotype-tablet.svg">
+          <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
+          <img class="page-nav__logo-img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
+        </picture>
+      </a>
       <ul class="page-nav__list">
         <li class="page-nav__item">
           <a class="button page-nav__link" href="index.html">Главная</a>
         </li>
         <li class="page-nav__item">
           <a class="button page-nav__link" href="catalog.html">Фото и видео</a>
-        </li>
-        <li class="page-nav__item page-nav__item_logo">
-          <a class="page-nav__logo logo" href="index.html">
-            <picture>
-              <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo/logotype-tablet.svg">
-              <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
-              <img class="logo__img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
-            </picture>
-          </a>
         </li>
         <li class="page-nav__item">
           <a class="button page-nav__link page-nav__link_current">Форма отзыва</a>

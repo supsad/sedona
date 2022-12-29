@@ -80,9 +80,9 @@
 
   &_small {
     min-width: 229px;
-    width: 90%;
+    width: 83%;
     height: auto;
-    margin: 51px auto 66px; // -1 padding fixed
+    margin: 51px auto 65px; // -1 padding fixed
 
     @media (min-width: $viewport-tablet) {
       margin: 95px auto 118px; // -1 padding fixed

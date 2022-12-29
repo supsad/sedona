@@ -27,17 +27,14 @@
 }
 
 .page-main__form {
-  margin-top: 36px;
-  margin-bottom: 48px;
+  margin-bottom: 44px;
 
   @media (min-width: $viewport-tablet) {
-    margin-top: 64px;
     margin-bottom: 61px;
     padding: 0 60px;
   }
 
   @media (min-width: $viewport-desktop) {
-    margin-top: 114px;
     margin-bottom: 66px;
     padding: 0 120px;
   }

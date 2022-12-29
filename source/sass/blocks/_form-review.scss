@@ -1,8 +1,6 @@
 .form-review {
   position: relative;
 
-  // Tablet & Desktop
-
   @media (min-width: $viewport-tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -42,22 +40,22 @@
     }
 
     &_impression {
-      margin-bottom: 30px;
-      @include indents(bottom, 25px);
+      margin-bottom: 27px;
+      @include indents(bottom, 20px, top, 21px);
     }
 
     &_place {
-      margin-bottom: 30px;
-      @include indents(bottom, 25px, top, 15px);
+      margin-bottom: 24px;
+      @include indents(bottom, 21px, top, 15px);
     }
 
     &_textarea {
-      margin-bottom: 51px;
+      margin-bottom: 48px;
       @include indents(bottom, 15px);
     }
   }
 
-  // Tablet & Desktop
+  // Tablet & Desktop border indents
 
   @media (min-width: $viewport-tablet) {
     &_user,
@@ -74,29 +72,12 @@
 
     &_user {
       margin-bottom: 73px;
-
-      // Tablet
-
-      @media (min-width: $viewport-tablet) {
-        padding-left: 58px;
-      }
-
-      // Desktop
-
-      @media (min-width: $viewport-desktop) {
-        padding-left: 79px;
-      }
+      padding-left: 58px;
     }
 
     &_contacts {
       margin-bottom: 52px;
       @include indents(bottom, 21px, top, 0);
-
-      // Desktop only
-
-      @media (min-width: $viewport-desktop) {
-        @include indents(bottom, 72px, top, 0);
-      }
     }
 
     &_impression {
@@ -152,13 +133,21 @@
     }
   }
 
-  // Desktop only
+  // Desktop only border indents
 
   @media (min-width: $viewport-desktop) {
     &_impression {
       .form-review__title {
         text-align: center;
       }
+    }
+
+    &_user {
+      padding-left: 79px;
+    }
+
+    &_contacts {
+      @include indents(bottom, 72px, top, 0);
     }
   }
 }
@@ -178,8 +167,6 @@
   @media (max-width: $viewport-mobile-only) {
     border-top: 1px solid $medium-gray;
   }
-
-  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     font-size: 21px;
@@ -203,7 +190,7 @@
   &_textarea {
     width: 100%;
     height: 160px;
-    padding: 13px 22px 29px;
+    padding: 12px 20px 29px;
     border: 0;
 
     font-family: inherit;
@@ -212,8 +199,6 @@
     line-height: 26px;
     background-color: $light-gray;
     resize: none;
-
-    // Tablet & Desktop
 
     @media (min-width: $viewport-tablet) {
       padding: 18px 21px 24px;
@@ -229,7 +214,9 @@
 .form-review__submit {
   text-align: center;
 
-  // Tablet & Desktop
+  @media (max-width: $viewport-mobile-only) {
+    padding: 0 20px;
+  }
 
   @media (min-width: $viewport-tablet) {
     grid-column: 1 / -1;
@@ -241,6 +228,8 @@
 .form-review__button {
   width: 100%;
   padding: 16px 32px;
+
+  font-size: 18px;
 }
 
 .form-review__tip {
@@ -248,8 +237,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
-
-  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     display: block;

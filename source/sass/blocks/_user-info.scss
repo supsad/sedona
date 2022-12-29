@@ -1,7 +1,5 @@
 .user-info {
   &_contacts {
-    // Only desktop
-
     @media (min-width: $viewport-desktop) {
       display: flex;
       justify-content: space-between;
@@ -11,13 +9,9 @@
       flex-wrap: wrap;
       margin-bottom: 15px;
 
-      // Tablet
-
       @media (min-width: $viewport-tablet) {
         margin-bottom: 25px;
       }
-
-      // Desktop only
 
       @media (min-width: $viewport-desktop) {
         flex-wrap: nowrap;
@@ -27,9 +21,7 @@
 
     .user-info__label {
       margin-left: 22px;
-      margin-bottom: 8px;
-
-      // Desktop only
+      margin-bottom: 6px;
 
       @media (min-width: $viewport-desktop) {
         flex-shrink: 0;
@@ -90,8 +82,6 @@
   font-size: 18px;
   line-height: 26px;
   background-color: $light-gray;
-
-  // States
 
   &:hover {
     background-color: $medium-gray;
