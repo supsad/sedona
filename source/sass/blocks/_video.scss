@@ -4,9 +4,7 @@
 }
 
 .video__title {
-  margin: 0 0 35px;
-
-  // Tablet & Desktop
+  margin: 0 0 30px;
 
   @media (min-width: $viewport-tablet) {
     margin-bottom: 28px;
@@ -14,9 +12,7 @@
 }
 
 .video__description {
-  margin: 0 0 33px;
-
-  // Tablet & Desktop
+  margin: 0 0 32px;
 
   @media (min-width: $viewport-tablet) {
     margin-bottom: 80px;

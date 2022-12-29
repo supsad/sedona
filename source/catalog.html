@@ -50,25 +50,23 @@
 <div class="page__wrapper">
   <header class="page__header page__header_catalog">
     <nav class="page-nav page-nav_closed page-nav_no-js" aria-labelledby="nav-title">
+      <span class="visually-hidden" id="nav-title">Главная навигация по сайту</span>
       <button class="page-nav__toggle">
         <span class="visually-hidden">Открыть меню навигации</span>
       </button>
-      <span class="visually-hidden" id="nav-title">Главная навигация по сайту</span>
+      <a class="page-nav__logo-container">
+        <picture>
+          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo/logotype-tablet.svg">
+          <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
+          <img class="page-nav__logo-img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
+        </picture>
+      </a>
       <ul class="page-nav__list">
         <li class="page-nav__item">
           <a class="button page-nav__link" href="index.html">Главная</a>
         </li>
         <li class="page-nav__item">
           <a class="button page-nav__link page-nav__link_current">Фото и видео</a>
-        </li>
-        <li class="page-nav__item page-nav__item_logo">
-          <a class="page-nav__logo logo" href="index.html">
-            <picture>
-              <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo/logotype-tablet.svg">
-              <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
-              <img class="logo__img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
-            </picture>
-          </a>
         </li>
         <li class="page-nav__item">
           <a class="button page-nav__link" href="form.html">Форма отзыва</a>
@@ -80,7 +78,7 @@
     </nav>
 
     <div class="page-header__present present present_other">
-      <img class="present__img present__img_small" src="img/page-header/intro-title.svg" width="460" height="81"
+      <img class="present__img present__img_small" src="img/page-header/intro-title.svg" width="229" height="39"
            alt="Седона - слоган с названием города">
     </div>
   </header>
@@ -90,7 +88,7 @@
       <div class="wrapper">
         <h1 class="catalog__title intro-title intro-title_less">Фото и видео</h1>
         <p class="catalog__description intro-description">
-          Не можете решиться на путешествие из-за курса?<br>
+          Не можете решиться на путешествие из-за курса?<br class="show">
           Фотографии помогут вам забыть о политике и экономике.
         </p>
       </div>
@@ -111,7 +109,7 @@
                      alt="Машина, едущая по дороге, в пустынное местности на фоне заката и гор"
                      srcset="img/meta/road-mobile@2x.jpg 2x">
               </picture>
-              <footer class="photos__meta-info meta">
+              <footer class="photos__meta meta">
                 <dl class="meta__list meta__list_info">
                   <div class="meta__list-wrapper">
                     <dt class="visually-hidden">Название фотографии:</dt>
@@ -122,7 +120,7 @@
                     <dd class="meta__description meta__description_username">Борис</dd>
                   </div>
                 </dl>
-                <dl class="meta__list">
+                <dl class="meta__list meta__list_likes">
                   <dt class="meta__title">
                     <span class="visually-hidden">Количество лайков:</span>
                   </dt>
@@ -149,7 +147,7 @@
                      alt="Красивый распустившийся кактус зелёно-жёлтого цвета на фоне гор"
                      srcset="img/meta/flora-mobile@2x.jpg 2x">
               </picture>
-              <footer class="photos__meta-info meta">
+              <footer class="photos__meta meta">
                 <dl class="meta__list meta__list_info">
                   <div class="meta__list-wrapper">
                     <dt class="visually-hidden">Название фотографии:</dt>
@@ -160,7 +158,7 @@
                     <dd class="meta__description meta__description_username">Сергей</dd>
                   </div>
                 </dl>
-                <dl class="meta__list">
+                <dl class="meta__list meta__list_likes">
                   <dt class="meta__title">
                     <span class="visually-hidden">Количество лайков:</span>
                   </dt>
@@ -187,7 +185,7 @@
                      alt="Серпантин в горах, вокруг леса"
                      srcset="img/meta/road-rocks-mobile@2x.jpg 2x">
               </picture>
-              <footer class="photos__meta-info meta">
+              <footer class="photos__meta meta">
                 <dl class="meta__list meta__list_info">
                   <div class="meta__list-wrapper">
                     <dt class="visually-hidden">Название фотографии:</dt>
@@ -198,7 +196,7 @@
                     <dd class="meta__description meta__description_username">Петр</dd>
                   </div>
                 </dl>
-                <dl class="meta__list">
+                <dl class="meta__list meta__list_likes">
                   <dt class="meta__title">
                     <span class="visually-hidden">Количество лайков:</span>
                   </dt>
@@ -225,7 +223,7 @@
                      alt="Мост дьявола в горах на фоне цветущего леса"
                      srcset="img/meta/devils-bridge-mobile@2x.jpg 2x">
               </picture>
-              <footer class="photos__meta-info meta">
+              <footer class="photos__meta meta">
                 <dl class="meta__list meta__list_info">
                   <div class="meta__list-wrapper">
                     <dt class="visually-hidden">Название фотографии:</dt>
@@ -236,7 +234,7 @@
                     <dd class="meta__description meta__description_username">Антон</dd>
                   </div>
                 </dl>
-                <dl class="meta__list">
+                <dl class="meta__list meta__list_likes">
                   <dt class="meta__title">
                     <span class="visually-hidden">Количество лайков:</span>
                   </dt>
@@ -270,7 +268,7 @@
           <div class="player__toggles">
             <ul class="player__list">
               <li class="player__item">
-                <button class="player__button player__button_replay">
+                <button class="player__button">
                   <span class="visually-hidden">Перезапуск видео</span>
                   <svg class="player__icon-replay" width="16" height="20">
                     <use xlink:href="#icon-replay"></use>
@@ -285,7 +283,7 @@
               <li class="player__item">
                 <ul class="player__item-list">
                   <li class="player__item">
-                    <button class="player__button player__button_subtitles">
+                    <button class="player__button">
                       <span class="visually-hidden">Включение субтитров</span>
                       <svg class="player__icon-subtitles" width="32" height="20">
                         <use xlink:href="#icon-subtitles"></use>
@@ -293,7 +291,7 @@
                     </button>
                   </li>
                   <li class="player__item">
-                    <button class="player__button player__button_screen-resolution">
+                    <button class="player__button">
                       <span class="visually-hidden">Включение полноэкранного режима</span>
                       <svg class="player__icon-screen-resolution" width="20" height="20">
                         <use xlink:href="#icon-screen-resolution"></use>

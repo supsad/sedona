@@ -1,8 +1,6 @@
 .meta {
   width: 100%;
 
-  // Tablet
-
   @media (min-width: $viewport-tablet) {
     display: flex;
     flex-direction: row;
@@ -12,8 +10,6 @@
 
     background-color: $light-gray-100;
   }
-
-  // Desktop only
 
   @media (min-width: $viewport-desktop) {
     color: $basic-white;
@@ -27,6 +23,10 @@
   &_info {
     flex-grow: 1;
     margin-right: 15px;
+  }
+
+  &_likes {
+    margin-top: 14px;
   }
 }
 
@@ -59,6 +59,14 @@
   }
 }
 
+.meta__title,
+.meta__description,
+.meta__description_like-stats {
+  @media (min-width: $viewport-desktop) {
+    color: $basic-white;
+  }
+}
+
 .meta__icon-like {
   display: block;
   width: 23px;
@@ -71,15 +79,5 @@
 
   @media (min-width: $viewport-desktop) {
     opacity: 1;
-  }
-}
-
-// Desktop only
-
-@media (min-width: $viewport-desktop) {
-  .meta__title,
-  .meta__description,
-  .meta__description_like-stats {
-    color: $basic-white;
   }
 }

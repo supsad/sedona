@@ -4,15 +4,11 @@
 
   list-style: none;
 
-  // Tablet
-
   @media (min-width: $viewport-tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 60px;
   }
-
-  // Desktop
 
   @media (min-width: $viewport-desktop) {
     display: grid;
@@ -25,8 +21,6 @@
   min-width: 280px;
   width: 100%;
 
-  // Mobile only
-
   @media (max-width: $viewport-mobile-only) {
     padding-top: 22px;
     padding-bottom: 15px;
@@ -38,13 +32,9 @@
   }
 
   &_wide {
-    // Tablet & Desktop
-
     @media (min-width: $viewport-tablet) {
       grid-column: 1 / -1;
     }
-
-    // Desktop only
 
     @media (min-width: $viewport-desktop) {
       margin-bottom: -7px;
@@ -56,13 +46,9 @@
   min-width: 280px;
   margin: 0;
 
-  // Mobile only
-
   @media (max-width: $viewport-mobile-only) {
     padding: 0 20px;
   }
-
-  // Desktop only
 
   @media (min-width: $viewport-desktop) {
     position: relative;
@@ -70,16 +56,12 @@
   }
 }
 
-.photos__meta-info {
-  margin-top: 11px;
-
-  // Tablet
+.photos__meta {
+  margin-top: 4px;
 
   @media (min-width: $viewport-tablet) {
     margin-top: -7px; // fixed white-space
   }
-
-  // Desktop
 
   @media (min-width: $viewport-desktop) {
     position: absolute;
