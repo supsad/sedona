@@ -10,10 +10,10 @@
     &::after {
       content: "";
       position: absolute;
-      top: 0;
-      left: 50%;
+      top: 3px;
+      left: calc(50% - 1px);
       width: 1px;
-      min-height: 302px;
+      min-height: 292px;
 
       background-color: $medium-gray-50;
     }
@@ -82,17 +82,16 @@
 
     &_impression {
       order: -1;
-      @include indents(bottom, 60px, top, 0);
-      margin-bottom: 77px;
+      @include indents(bottom, 57px, top, 0);
     }
 
     &_place {
-      margin-bottom: 76px;
-      @include indents(bottom, 48px, top, 0);
+      margin-bottom: 70px;
+      @include indents(bottom, 43px, top, 0);
     }
 
     &_textarea {
-      margin-bottom: 58px;
+      margin-bottom: 55px;
     }
 
     // Grids and borders
@@ -122,12 +121,10 @@
 
         &::before {
           margin-right: 60px;
-          left: 0;
         }
 
         &::after {
           margin-left: 60px;
-          right: 0;
         }
       }
     }
@@ -234,12 +231,15 @@
 
 .form-review__tip {
   display: none;
+  margin: 0;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
 
   @media (min-width: $viewport-tablet) {
     display: block;
+    padding-top: 19px;
     text-align: end;
   }
 }

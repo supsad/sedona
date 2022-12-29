@@ -21,6 +21,7 @@
 
     .user-opinion__input {
       + .user-opinion__label::before {
+        margin-right: 19px;
         border-radius: 50%;
       }
 
@@ -44,10 +45,10 @@
   &_checkbox {
     @media (min-width: $viewport-tablet) {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-      column-gap: 32px;
-      row-gap: 50px;
+      grid-template-columns: repeat(2, 200px);
+      justify-content: center;
+      column-gap: 59px;
+      row-gap: 32px;
       margin: 0 auto;
     }
 
@@ -75,6 +76,7 @@
 
     .user-opinion__input {
       + .user-opinion__label::before {
+        margin-right: 24px;
         border-radius: 5px;
       }
 
@@ -128,7 +130,6 @@
       width: 56px;
       height: 56px;
       flex-shrink: 0;
-      margin-right: 23px;
 
       background-color: $light-gray;
     }

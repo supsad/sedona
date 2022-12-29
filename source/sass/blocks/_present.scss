@@ -85,7 +85,8 @@
     margin: 51px auto 65px; // -1 padding fixed
 
     @media (min-width: $viewport-tablet) {
-      margin: 95px auto 118px; // -1 padding fixed
+      width: 70%;
+      margin: 95px auto 113px; // -1 padding fixed
     }
 
     @media (min-width: $viewport-desktop) {
