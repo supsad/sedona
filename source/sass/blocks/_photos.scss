@@ -31,9 +31,19 @@
     }
   }
 
+  @media (min-width: $viewport-tablet) {
+    .photos__meta {
+      padding-right: 32px;
+    }
+  }
+
   &_wide {
     @media (min-width: $viewport-tablet) {
       grid-column: 1 / -1;
+
+      .photos__meta {
+        padding-right: 20px;
+      }
     }
 
     @media (min-width: $viewport-desktop) {

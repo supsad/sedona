@@ -12,13 +12,17 @@
 
 .catalog__title {
   margin-bottom: 30px;
+
+  @media (min-width: $viewport-tablet) {
+    margin-bottom: 35px;
+  }
 }
 
 .catalog__description {
   margin-bottom: 30px;
 
   @media (min-width: $viewport-tablet) {
-    margin-bottom: 80px;
+    margin-bottom: 81px;
   }
 }
 
