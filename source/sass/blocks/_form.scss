@@ -18,4 +18,8 @@
   @media (min-width: $viewport-tablet) {
     margin-bottom: 84px;
   }
+
+  @media (min-width: $viewport-desktop) {
+    margin-bottom: 58px;
+  }
 }

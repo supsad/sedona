@@ -134,17 +134,25 @@
 
   @media (min-width: $viewport-desktop) {
     &_impression {
+      padding-left: 4px;
+
       .form-review__title {
+        margin-left: -26px;
         text-align: center;
       }
     }
 
     &_user {
+      margin-bottom: 70px;
       padding-left: 79px;
     }
 
     &_contacts {
       @include indents(bottom, 72px, top, 0);
+    }
+
+    &_place {
+      margin-bottom: 68px;
     }
   }
 }

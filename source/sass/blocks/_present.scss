@@ -90,6 +90,7 @@
     }
 
     @media (min-width: $viewport-desktop) {
+      width: 52%;
       margin: 100px auto 119px; // -1 padding fixed
     }
   }

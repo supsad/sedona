@@ -21,7 +21,7 @@
       padding: 40px 40px 35px;
 
       @media (min-width: $viewport-tablet) {
-        padding: 50px 48px;
+        padding: 48px 48px 30px;
       }
     }
 
@@ -33,11 +33,27 @@
 
     .modal__description {
       margin-bottom: 20px;
+
+      @media (min-width: $viewport-desktop) {
+        margin-bottom: 40px;
+      }
     }
 
     .modal__button {
       @media (max-width: $viewport-mobile-only) {
         max-width: 180px;
+      }
+
+      @media (min-width: $viewport-desktop) {
+        max-width: 272px;
+      }
+    }
+  }
+
+  &_success {
+    .modal__title {
+      @media (min-width: $viewport-desktop) {
+        margin-bottom: 34px;
       }
     }
   }
@@ -60,6 +76,10 @@
   @media (min-width: $viewport-tablet) {
     padding: 54px 98px 30px;
   }
+
+  @media (min-width: $viewport-desktop) {
+    padding: 50px 98px 30px;
+  }
 }
 
 .modal__title {
@@ -77,6 +97,10 @@
 
   @media (min-width: $viewport-tablet) {
     padding: 44px 91px;
+  }
+
+  @media (min-width: $viewport-desktop) {
+    margin-top: 12px;
   }
 }
 
