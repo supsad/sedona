@@ -4,8 +4,6 @@
   justify-content: center;
   align-items: center;
 
-  // Tablet & Desktop
-
   @media (min-width: $viewport-tablet) {
     justify-content: flex-end;
   }

@@ -48,15 +48,11 @@
     background-position: 50% 100%;
     background-size: 250%;
 
-    // Tablet
-
     @media (min-width: $viewport-tablet) {
       min-height: 290px;
       padding: 1px 60px;
       background-size: 150%;
     }
-
-    // Desktop
 
     @media (min-width: $viewport-desktop) {
       height: 301px;
@@ -76,8 +72,6 @@
   text-align: center;
   z-index: 2;
 
-  // Tablet & Desktop
-
   @media (min-width: $viewport-tablet) {
     width: 461px;
     height: 350px;
@@ -90,13 +84,9 @@
     height: auto;
     margin: 51px auto 66px; // -1 padding fixed
 
-    // Tablet
-
     @media (min-width: $viewport-tablet) {
       margin: 95px auto 118px; // -1 padding fixed
     }
-
-    // Desktop
 
     @media (min-width: $viewport-desktop) {
       margin: 100px auto 119px; // -1 padding fixed

@@ -15,6 +15,8 @@ $max-value: 20; // max 5 in figma
 .features {
   background-color: $basic-gray;
 
+  // Disable last border
+
   &:last-child .features__intro {
     border-bottom: none;
   }
@@ -22,8 +24,6 @@ $max-value: 20; // max 5 in figma
 
 .features__wrapper {
   background-color: $extra-gray;
-
-  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     display: grid;
@@ -44,14 +44,10 @@ $max-value: 20; // max 5 in figma
 
   text-align: center;
 
-  // Tablet
-
   @media (min-width: $viewport-tablet) {
-    padding: 38px 34px 42px;
+    padding: 42px 34px;
     border-bottom: none;
   }
-
-  // Desktop
 
   @media (min-width: $viewport-desktop) {
     padding: 43px 42px 62px;
@@ -75,13 +71,9 @@ $max-value: 20; // max 5 in figma
   &_primary {
     padding: 74px 12px 39px; // 90px to decorative shape
 
-    // Tablet
-
     @media (min-width: $viewport-tablet) {
       padding: 40px 32px 40px;
     }
-
-    // Desktop
 
     @media (min-width: $viewport-desktop) {
       padding: 46px 52px 40px;
@@ -108,14 +100,10 @@ $max-value: 20; // max 5 in figma
   &_primary-low {
     padding: 38px 15px 36px;
 
-    // Tablet & Desktop
-
     @media (min-width: $viewport-tablet) {
       padding: 43px 36px 41px;
       order: 2;
     }
-
-    // Desktop only
 
     @media (min-width: $viewport-desktop) {
       padding: 51px 78px 53px;
@@ -166,11 +154,19 @@ $max-value: 20; // max 5 in figma
 // This is a new property that many browsers don't support
 // But somehow it resets the height to its default value and works on all browsers
 
+// height: revert-layer;
+// Now works with standard image display.
+// I don't understand why it worked, but I'd rather leave the reset properties in the comments
+
 .features__img {
   display: block;
   object-fit: cover;
-  height: revert-layer;
+  height: 260px;
   min-height: 100%;
+
+  @media (min-width: $viewport-tablet) {
+    height: 256px;
+  }
 }
 
 .features__list {
@@ -181,14 +177,10 @@ $max-value: 20; // max 5 in figma
   background-color: $basic-white;
   list-style: none;
 
-  // Mobile only
-
   @media (max-width: $viewport-mobile-only) {
     grid-template-rows: repeat(3, min-content);
     padding: 26px 21px 21px;
   }
-
-  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     display: grid;
@@ -199,15 +191,11 @@ $max-value: 20; // max 5 in figma
 }
 
 .features__item {
-  // Mobile only pos
-
   @media (max-width: $viewport-mobile-only) {
     &:last-of-type {
       grid-row: 2 / 3;
     }
   }
-
-  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     text-align: center;

@@ -6,8 +6,6 @@
     display: none;
   }
 
-  // same as hide-desktop
-
   &_desktop {
     @media (max-width: $viewport-desktop - 1px) {
       display: none;

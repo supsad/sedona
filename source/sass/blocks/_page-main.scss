@@ -9,8 +9,6 @@
 .page-main__advantages {
   margin-bottom: 33px;
 
-  // Tablet
-
   @media (min-width: $viewport-tablet) {
     margin-bottom: 56px;
   }
@@ -19,13 +17,9 @@
 .page-main__search {
   margin-bottom: 49px;
 
-  // Tablet
-
   @media (min-width: $viewport-tablet) {
     margin-bottom: 58px;
   }
-
-  // Desktop only
 
   @media (min-width: $viewport-desktop) {
     margin-bottom: 66px;
@@ -36,15 +30,11 @@
   margin-top: 36px;
   margin-bottom: 48px;
 
-  // Tablet
-
   @media (min-width: $viewport-tablet) {
     margin-top: 64px;
     margin-bottom: 61px;
     padding: 0 60px;
   }
-
-  // Desktop only
 
   @media (min-width: $viewport-desktop) {
     margin-top: 114px;

@@ -1,13 +1,9 @@
 .recommendation {
   background-color: transparent;
 
-  // Tablet
-
   @media (min-width: $viewport-tablet) {
-    padding: 52px 22px 60px;
+    padding: 56px 22px 60px;
   }
-
-  // Desktop
 
   @media (min-width: $viewport-desktop) {
     padding: 56px 40px 81px;
@@ -39,8 +35,6 @@
     }
   }
 
-  // Mobile only icons pos
-
   @media (max-width: $viewport-mobile-only) {
     padding-left: 49px; // for icons
 
@@ -68,8 +62,6 @@
   line-height: 26px;
   color: $basic-black;
 
-  // Tablet & Desktop
-
   @media (min-width: $viewport-tablet) {
     margin-bottom: 23px;
     font-size: 21px;
@@ -84,8 +76,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40px 40px;
-
-    // Tablet & Desktop
 
     @media (min-width: $viewport-tablet) {
       display: block;
@@ -105,8 +95,6 @@
   font-size: 14px;
   line-height: 21px;
   color: $dark-gray;
-
-  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     margin: 0;

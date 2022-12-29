@@ -4,13 +4,9 @@
 
   text-align: center;
 
-  // Tablet
-
   @media (min-width: $viewport-tablet) {
     margin-bottom: 54px;
   }
-
-  // Desktop
 
   @media (min-width: $viewport-desktop) {
     margin-bottom: 42px;
@@ -19,8 +15,6 @@
 
 .advantages__title {
   margin: 0 0 30px;
-
-  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     font-size: 21px;
@@ -45,8 +39,6 @@
   padding: 0;
 
   list-style: none;
-
-  // Tablet & Desktop
 
   @media (min-width: $viewport-tablet) {
     display: grid;
