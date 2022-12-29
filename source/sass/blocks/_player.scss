@@ -10,6 +10,7 @@
 
   @media (min-width: $viewport-tablet) {
     min-width: 648px;
+    max-width: 800px;
     min-height: 500px;
   }
 }
@@ -88,10 +89,15 @@
 .player__timeline-bar {
   position: relative;
   top: 1px;
-  width: 100%;
+  width: 108%;
+  max-width: 540px;
   height: 3px;
 
   background-color: rgba($basic-white, 0.2);
+
+  @media (min-width: $viewport-desktop) {
+    left: -24px;
+  }
 }
 
 .player__timeline-toggle {

@@ -4,11 +4,11 @@
   line-height: 26px;
   color: $basic-black;
 
-  &_less {
-    font-size: 18px;
-  }
-
   @media (min-width: $viewport-tablet) {
     font-size: 30px;
+  }
+
+  &_less {
+    font-size: 18px;
   }
 }
