@@ -1,6 +1,6 @@
 .DS_Store
-.idea
-.vscode
+.idea/
+.vscode/
 *.ai
 *.log
 *.pdf
@@ -11,6 +11,9 @@ npm-debug.*
 source/css/*.css
 source/css/*.map
 Thumbs.db
+
+# Dist dir
+build/
 
 # Author files
 README

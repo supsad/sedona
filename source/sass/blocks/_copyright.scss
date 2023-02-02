@@ -16,10 +16,12 @@
   align-items: center;
 
   color: $basic-black;
+  fill: $basic-black;
 
   &:hover .copyright__icon,
   &:focus .copyright__icon {
     color: $accent-blue;
+    fill: $accent-blue;
   }
 
   &:active .copyright__icon {

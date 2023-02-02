@@ -89,13 +89,14 @@
 .player__timeline-bar {
   position: relative;
   top: 1px;
-  width: 108%;
-  max-width: 540px;
+  width: 100%;
   height: 3px;
 
   background-color: rgba($basic-white, 0.2);
 
   @media (min-width: $viewport-desktop) {
+    width: 108%;
+    max-width: 540px;
     left: -24px;
   }
 }
@@ -121,9 +122,11 @@
   background: transparent;
   cursor: pointer;
   color: $extra-gray-100;
+  fill: $extra-gray-100;
 
   &:hover {
     color: $dark-gray;
+    fill: $dark-gray;
   }
 
   &:active {
@@ -132,9 +135,11 @@
 
   @media (min-width: $viewport-tablet) {
     color: $basic-white;
+    fill: $basic-white;
 
     &:hover {
       color: $basic-white;
+      fill: $basic-white;
       opacity: 0.6;
     }
 

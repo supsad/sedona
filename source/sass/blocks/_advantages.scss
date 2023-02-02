@@ -16,10 +16,6 @@
 .advantages__title {
   margin: 0 0 30px;
 
-  @media (min-width: $viewport-tablet) {
-    font-size: 21px;
-  }
-
   @media (min-width: $viewport-desktop) {
     margin-bottom: 33px;
   }

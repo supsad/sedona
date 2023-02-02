@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фото и видео</title>
 
-  <link rel="preload" href="fonts/ptsans.woff2" as="font">
-  <link rel="preload" href="fonts/ptsans.woff" as="font">
-  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
-  <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+  <link href="fonts/ptsans.woff2" as="font">
+  <link href="fonts/ptsans.woff" as="font">
+  <link href="fonts/ptsansbold.woff2" as="font">
+  <link href="fonts/ptsansbold.woff" as="font">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml" sizes="any">
@@ -18,35 +18,6 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page__body">
-<svg style="display: none">
-  <symbol id="icon-like" viewBox="0 0 23 21" fill="currentColor">
-    <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"/>
-  </symbol>
-
-  <symbol id="icon-replay" viewBox="0 0 16 20" fill="currentColor">
-    <path d="M8 4V0L3 5L8 10V6C11.3 6 14 8.7 14 12C14 15.3 11.3 18 8 18C4.7 18 2 15.3 2 12H0C0 16.4 3.6 20 8 20C12.4 20 16 16.4 16 12C16 7.6 12.4 4 8 4Z"/>
-  </symbol>
-
-  <symbol id="icon-subtitles" viewBox="0 0 32 20" fill="currentColor">
-    <path d="M29 0H3C1.3 0 0 1.3 0 3V17C0 18.7 1.3 20 3 20H29C30.7 20 32 18.7 32 17V3C32 1.3 30.7 0 29 0ZM14.4 15.9C13.9 16 13.3 16 12.7 16C12 16 11.3 15.9 10.7 15.7C10.1 15.5 9.5 15.1 9.1 14.7C8.7 14.3 8.3 13.6 8 12.8C7.7 12 7.6 11.1 7.6 10C7.6 8.9 7.8 7.9 8.1 7.1C8.4 6.3 8.8 5.7 9.3 5.2C9.8 4.7 10.4 4.4 11 4.2C11.5 4.1 12.2 4 12.8 4C13.5 4 14 4 14.5 4.1C15 4.2 15.3 4.3 15.6 4.4L15.2 6.3C14.9 6.2 14.6 6.1 14.3 6C13.9 6 13.5 6 13 6C12.1 6 11.4 6.3 10.8 7C10.2 7.7 10 8.7 10 10C10 10.6 10.1 11.1 10.2 11.6C10.3 12.1 10.5 12.5 10.8 12.9C11.1 13.2 11.4 13.5 11.8 13.7C12.2 13.9 12.7 14 13.2 14C13.7 14 14.1 14 14.5 13.9C14.8 13.8 15.1 13.7 15.4 13.5L15.9 15.3C15.4 15.6 14.9 15.7 14.4 15.9ZM23.1 15.9C22.6 16 22 16 21.4 16C20.7 16 20 15.9 19.4 15.7C18.8 15.5 18.2 15.1 17.8 14.7C17.3 14.2 16.9 13.6 16.7 12.8C16.4 12 16.3 11.1 16.3 10C16.3 8.9 16.5 7.9 16.8 7.1C17.1 6.3 17.5 5.7 18 5.2C18.5 4.7 19.1 4.4 19.7 4.2C20.2 4.1 20.9 4 21.5 4C22.2 4 22.7 4 23.2 4.1C23.7 4.2 24 4.3 24.3 4.4L23.9 6.3C23.6 6.2 23.3 6.1 23 6C22.6 6 22.2 6 21.7 6C20.8 6 20.1 6.3 19.5 7C18.9 7.7 18.7 8.7 18.7 10C18.7 10.6 18.8 11.1 18.9 11.6C19 12.1 19.2 12.5 19.5 12.9C19.8 13.2 20.1 13.5 20.5 13.7C20.9 13.9 21.4 14 21.9 14C22.4 14 22.8 14 23.2 13.9C23.5 13.8 23.8 13.7 24.1 13.5L24.6 15.3C24.1 15.6 23.6 15.7 23.1 15.9Z"/>
-  </symbol>
-
-  <symbol id="icon-screen-resolution" viewBox="0 0 20 20" fill="currentColor">
-    <path d="M0 0V3V6H3V3H6V0H3H0Z"/>
-    <path d="M3 14H0V17V20H3H6V17H3V14Z"/>
-    <path d="M17 0H14V3H17V6H20V3V0H17Z"/>
-    <path d="M17 17H14V20H17H20V17V14H17V17Z"/>
-  </symbol>
-
-  <symbol id="icon-html-academy" viewBox="0 0 27 35" fill="currentColor">
-    <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5
-            5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2
-            16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9
-            15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4
-            31.8L1.9 25V15.1Z"/>
-  </symbol>
-</svg>
-
 <div class="page__wrapper">
   <header class="page__header page__header_catalog">
     <nav class="page-nav page-nav_closed page-nav_no-js" aria-labelledby="nav-title">
@@ -56,9 +27,10 @@
       </button>
       <a class="page-nav__logo-container">
         <picture>
-          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo/logotype-tablet.svg">
-          <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
-          <img class="page-nav__logo-img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
+          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/site-logo/logotype-tablet.svg">
+          <source media="(min-width: 1200px)" srcset="img/site-logo/logotype-desktop.svg">
+          <img class="page-nav__logo-img" src="img/site-logo/logotype-mobile.svg" alt="Логотип Sedona" width="102"
+               height="84">
         </picture>
       </a>
       <ul class="page-nav__list">
@@ -86,10 +58,10 @@
   <main class="page-main">
     <div class="catalog">
       <div class="wrapper">
-        <h1 class="catalog__title intro-title intro-title_less">Фото и видео</h1>
+        <h1 class="catalog__title intro-title intro-title_less-mobile-only">Фото и видео</h1>
         <p class="catalog__description intro-description">
-          Не можете решиться на путешествие из-за курса?<br class="show">
-          Фотографии помогут вам забыть о политике и экономике.
+          Не можете решиться на путешествие из-за курса?<br class="hide"><span
+          class="hide hide_tablet-n-desktop">&nbsp;</span>Фотографии помогут вам забыть о политике и экономике.
         </p>
       </div>
 
@@ -98,17 +70,31 @@
         <ul class="photos__list">
           <li class="photos__item photos__item_wide">
             <figure class="photos__figure">
-              <picture>
-                <source media="(min-width: 768px) and (max-width: 1199px)"
-                        srcset="img/meta/road-tablet.jpg 1x,
-                          img/meta/road-tablet@2x.jpg 2x">
-                <source media="(min-width: 1200px)"
-                        srcset="img/meta/road-desktop.jpg 1x,
-                          img/meta/road-desktop@2x.jpg 2x">
-                <img src="img/meta/road-mobile.jpg" width="280" height="280"
-                     alt="Машина, едущая по дороге, в пустынное местности на фоне заката и гор"
-                     srcset="img/meta/road-mobile@2x.jpg 2x">
-              </picture>
+              <div class="photos__img-container">
+                <picture>
+                  <!-- type = webp -->
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1199px)"
+                          srcset="img/meta/road-tablet.webp 1x,
+                                img/meta/road-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1200px)"
+                          srcset="img/meta/road-desktop.webp 1x,
+                                img/meta/road-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)"
+                          srcset="img/meta/road-mobile.webp 1x,
+                                img/meta/road-mobile@2x.webp 2x">
+
+                  <!-- type = jpeg -->
+                  <source media="(min-width: 768px) and (max-width: 1199px)"
+                          srcset="img/meta/road-tablet.jpg 1x,
+                                img/meta/road-tablet@2x.jpg 2x">
+                  <source media="(min-width: 1200px)"
+                          srcset="img/meta/road-desktop.jpg 1x,
+                                img/meta/road-desktop@2x.jpg 2x">
+                  <img src="img/meta/road-mobile.jpg" width="280" height="280"
+                       alt="Машина, едущая по дороге, в пустынное местности на фоне заката и гор"
+                       srcset="img/meta/road-mobile@2x.jpg 2x">
+                </picture>
+              </div>
               <footer class="photos__meta meta">
                 <dl class="meta__list meta__list_info">
                   <div class="meta__list-wrapper">
@@ -126,7 +112,7 @@
                   </dt>
                   <dd class="meta__description meta__description_like-stats">
                     <svg class="meta__icon-like" width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-like"></use>
+                      <use xlink:href="/img/icons/sprite.svg#icon-like"></use>
                     </svg>
                     1350
                   </dd>
@@ -136,17 +122,31 @@
           </li>
           <li class="photos__item">
             <figure class="photos__figure">
-              <picture>
-                <source media="(min-width: 768px) and (max-width: 1199px)"
-                        srcset="img/meta/flora-tablet.jpg 1x,
-                          img/meta/flora-tablet@2x.jpg 2x">
-                <source media="(min-width: 1200px)"
-                        srcset="img/meta/flora-desktop.jpg 1x,
-                          img/meta/flora-desktop@2x.jpg 2x">
-                <img src="img/meta/flora-mobile.jpg" width="280" height="280"
-                     alt="Красивый распустившийся кактус зелёно-жёлтого цвета на фоне гор"
-                     srcset="img/meta/flora-mobile@2x.jpg 2x">
-              </picture>
+              <div class="photos__img-container">
+                <picture>
+                  <!-- type = webp -->
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1199px)"
+                          srcset="img/meta/flora-tablet.webp 1x,
+                                img/meta/flora-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1200px)"
+                          srcset="img/meta/flora-desktop.webp 1x,
+                                img/meta/flora-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)"
+                          srcset="img/meta/flora-mobile.webp 1x,
+                                img/meta/flora-mobile@2x.webp 2x">
+
+                  <!-- type = jpeg -->
+                  <source media="(min-width: 768px) and (max-width: 1199px)"
+                          srcset="img/meta/flora-tablet.jpg 1x,
+                                img/meta/flora-tablet@2x.jpg 2x">
+                  <source media="(min-width: 1200px)"
+                          srcset="img/meta/flora-desktop.jpg 1x,
+                                img/meta/flora-desktop@2x.jpg 2x">
+                  <img src="img/meta/flora-mobile.jpg" width="280" height="280"
+                       alt="Красивый распустившийся кактус зелёно-жёлтого цвета на фоне гор"
+                       srcset="img/meta/flora-mobile@2x.jpg 2x">
+                </picture>
+              </div>
               <footer class="photos__meta meta">
                 <dl class="meta__list meta__list_info">
                   <div class="meta__list-wrapper">
@@ -164,7 +164,7 @@
                   </dt>
                   <dd class="meta__description meta__description_like-stats">
                     <svg class="meta__icon-like" width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-like"></use>
+                      <use xlink:href="/img/icons/sprite.svg#icon-like"></use>
                     </svg>
                     143
                   </dd>
@@ -174,17 +174,31 @@
           </li>
           <li class="photos__item">
             <figure class="photos__figure">
-              <picture>
-                <source media="(min-width: 768px) and (max-width: 1199px)"
-                        srcset="img/meta/road-rocks-tablet.jpg 1x,
-                          img/meta/road-rocks-tablet@2x.jpg 2x">
-                <source media="(min-width: 1200px)"
-                        srcset="img/meta/road-rocks-desktop.jpg 1x,
-                          img/meta/road-rocks-desktop@2x.jpg 2x">
-                <img src="img/meta/road-rocks-mobile.jpg" width="280" height="280"
-                     alt="Серпантин в горах, вокруг леса"
-                     srcset="img/meta/road-rocks-mobile@2x.jpg 2x">
-              </picture>
+              <div class="photos__img-container">
+                <picture>
+                  <!-- type = webp -->
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1199px)"
+                          srcset="img/meta/road-rocks-tablet.webp 1x,
+                                img/meta/road-rocks-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1200px)"
+                          srcset="img/meta/road-rocks-desktop.webp 1x,
+                                img/meta/road-rocks-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)"
+                          srcset="img/meta/road-rocks-mobile.webp 1x,
+                                img/meta/road-rocks-mobile@2x.webp 2x">
+
+                  <!-- type = jpeg -->
+                  <source media="(min-width: 768px) and (max-width: 1199px)"
+                          srcset="img/meta/road-rocks-tablet.jpg 1x,
+                                img/meta/road-rocks-tablet@2x.jpg 2x">
+                  <source media="(min-width: 1200px)"
+                          srcset="img/meta/road-rocks-desktop.jpg 1x,
+                                img/meta/road-rocks-desktop@2x.jpg 2x">
+                  <img src="img/meta/road-rocks-mobile.jpg" width="280" height="280"
+                       alt="Серпантин в горах, вокруг леса"
+                       srcset="img/meta/road-rocks-mobile@2x.jpg 2x">
+                </picture>
+              </div>
               <footer class="photos__meta meta">
                 <dl class="meta__list meta__list_info">
                   <div class="meta__list-wrapper">
@@ -202,7 +216,7 @@
                   </dt>
                   <dd class="meta__description meta__description_like-stats">
                     <svg class="meta__icon-like" width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-like"></use>
+                      <use xlink:href="/img/icons/sprite.svg#icon-like"></use>
                     </svg>
                     96
                   </dd>
@@ -212,17 +226,31 @@
           </li>
           <li class="photos__item">
             <figure class="photos__figure">
-              <picture>
-                <source media="(min-width: 768px) and (max-width: 1199px)"
-                        srcset="img/meta/devils-bridge-tablet.jpg 1x,
-                          img/meta/devils-bridge-tablet@2x.jpg 2x">
-                <source media="(min-width: 1200px)"
-                        srcset="img/meta/devils-bridge-desktop.jpg 1x,
-                          img/meta/devils-bridge-desktop@2x.jpg 2x">
-                <img src="img/meta/devils-bridge-mobile.jpg" width="280" height="280"
-                     alt="Мост дьявола в горах на фоне цветущего леса"
-                     srcset="img/meta/devils-bridge-mobile@2x.jpg 2x">
-              </picture>
+              <div class="photos__img-container">
+                <picture>
+                  <!-- type = webp -->
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1199px)"
+                          srcset="img/meta/devils-bridge-tablet.webp 1x,
+                                img/meta/devils-bridge-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1200px)"
+                          srcset="img/meta/devils-bridge-desktop.webp 1x,
+                                img/meta/devils-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)"
+                          srcset="img/meta/devils-bridge-mobile.webp 1x,
+                                img/meta/devils-bridge-mobile@2x.webp 2x">
+
+                  <!-- type = jpeg -->
+                  <source media="(min-width: 768px) and (max-width: 1199px)"
+                          srcset="img/meta/devils-bridge-tablet.jpg 1x,
+                                img/meta/devils-bridge-tablet@2x.jpg 2x">
+                  <source media="(min-width: 1200px)"
+                          srcset="img/meta/devils-bridge-desktop.jpg 1x,
+                                img/meta/devils-bridge-desktop@2x.jpg 2x">
+                  <img src="img/meta/devils-bridge-mobile.jpg" width="280" height="280"
+                       alt="Мост дьявола в горах на фоне цветущего леса"
+                       srcset="img/meta/devils-bridge-mobile@2x.jpg 2x">
+                </picture>
+              </div>
               <footer class="photos__meta meta">
                 <dl class="meta__list meta__list_info">
                   <div class="meta__list-wrapper">
@@ -240,7 +268,7 @@
                   </dt>
                   <dd class="meta__description meta__description_like-stats">
                     <svg class="meta__icon-like" width="23" height="23" aria-hidden="true">
-                      <use xlink:href="#icon-like"></use>
+                      <use xlink:href="/img/icons/sprite.svg#icon-like"></use>
                     </svg>
                     254
                   </dd>
@@ -255,7 +283,7 @@
         <h2 class="visually-hidden">Раздел с видео</h2>
 
         <div class="wrapper">
-          <p class="video__title intro-title intro-title_less">Все еще сомневаетесь?</p>
+          <p class="video__title intro-title intro-title_less-mobile-only">Все еще сомневаетесь?</p>
           <p class="video__description intro-description">
             Смотрите видеопрезентацию и скорее за билетами, пока они<br>
             не подорожали в очередной раз!
@@ -263,15 +291,23 @@
         </div>
 
         <div class="video__player player">
-          <img class="player__img" src="img/video/video-preview-desktop.jpg" width="800" height="500"
-               alt="Пробка машин по дороге за билетами в Седону">
+          <picture>
+            <!-- type = webp -->
+            <source type="image/webp" srcset="img/video/video-preview-desktop.webp 1x,
+                                              img/video/video-preview-desktop@2x.webp 2x">
+
+            <!-- type = jpeg -->
+            <img class="player__img" src="img/video/video-preview-desktop.jpg" width="800" height="500"
+                 alt="Пробка машин по дороге за билетами в Седону"
+                 srcset="img/video-preview-desktop@2x.jpg 2x">
+          </picture>
           <div class="player__toggles">
             <ul class="player__list">
               <li class="player__item">
                 <button class="player__button">
                   <span class="visually-hidden">Перезапуск видео</span>
                   <svg class="player__icon-replay" width="16" height="20">
-                    <use xlink:href="#icon-replay"></use>
+                    <use xlink:href="/img/icons/sprite.svg#icon-replay"></use>
                   </svg>
                 </button>
               </li>
@@ -286,7 +322,7 @@
                     <button class="player__button">
                       <span class="visually-hidden">Включение субтитров</span>
                       <svg class="player__icon-subtitles" width="32" height="20">
-                        <use xlink:href="#icon-subtitles"></use>
+                        <use xlink:href="/img/icons/sprite.svg#icon-subtitles"></use>
                       </svg>
                     </button>
                   </li>
@@ -294,7 +330,7 @@
                     <button class="player__button">
                       <span class="visually-hidden">Включение полноэкранного режима</span>
                       <svg class="player__icon-screen-resolution" width="20" height="20">
-                        <use xlink:href="#icon-screen-resolution"></use>
+                        <use xlink:href="/img/icons/sprite.svg#icon-screen-resolution"></use>
                       </svg>
                     </button>
                   </li>
@@ -338,7 +374,7 @@
           <span class="visually-hidden">Сайт разработчика макета страницы</span>
           <p class="copyright__title">Разработано</p>
           <svg class="copyright__icon" width="27" height="35">
-            <use xlink:href="#icon-html-academy"></use>
+            <use xlink:href="/img/icons/sprite.svg#icon-html-academy-export"></use>
           </svg>
         </a>
       </div>
@@ -346,6 +382,6 @@
   </footer>
 </div>
 
-<script src="js/page-nav.js"></script>
+<script src="js/page-nav.min.js"></script>
 </body>
 </html>

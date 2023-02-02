@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма для отзывов</title>
 
-  <link rel="preload" href="fonts/ptsans.woff2" as="font">
-  <link rel="preload" href="fonts/ptsans.woff" as="font">
-  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
-  <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+  <link href="fonts/ptsans.woff2" as="font">
+  <link href="fonts/ptsans.woff" as="font">
+  <link href="fonts/ptsansbold.woff2" as="font">
+  <link href="fonts/ptsansbold.woff" as="font">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml" sizes="any">
@@ -18,16 +18,6 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page__body">
-<svg style="display: none">
-  <symbol id="icon-html-academy" viewBox="0 0 27 35" fill="currentColor">
-    <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5
-            5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2
-            16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9
-            15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4
-            31.8L1.9 25V15.1Z"/>
-  </symbol>
-</svg>
-
 <div class="page__wrapper">
   <header class="page__header page__header_form">
     <nav class="page-nav page-nav_closed page-nav_no-js" aria-labelledby="nav-title">
@@ -37,9 +27,10 @@
       </button>
       <a class="page-nav__logo-container">
         <picture>
-          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logo/logotype-tablet.svg">
-          <source media="(min-width: 1200px)" srcset="img/logo/logotype-desktop.svg">
-          <img class="page-nav__logo-img" src="img/logo/logotype-mobile.svg" alt="Логотип Sedona" width="102" height="84">
+          <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/site-logo/logotype-tablet.svg">
+          <source media="(min-width: 1200px)" srcset="img/site-logo/logotype-desktop.svg">
+          <img class="page-nav__logo-img" src="img/site-logo/logotype-mobile.svg" alt="Логотип Sedona" width="102"
+               height="84">
         </picture>
       </a>
       <ul class="page-nav__list">
@@ -66,10 +57,10 @@
 
   <main class="page-main">
     <section class="page-main__form form">
-      <h1 class="form__title intro-title intro-title_less">Оставьте свой отзыв</h1>
+      <h1 class="form__title intro-title intro-title_less-mobile-only">Оставьте свой отзыв</h1>
       <p class="form__description intro-description">
-        Помогите нашим отелям стать лучше! оставьте отзыв о них, <br>
-        а также о посещенных вами достопричательностях
+        Помогите нашим отелям стать лучше! Оставьте отзыв о них, <br>
+        а также о посещенных вами достопримечательностях
       </p>
 
       <form class="form-review" action="https://echo.htmlacademy.ru" method="post" target="_blank">
@@ -211,7 +202,7 @@
           <span class="visually-hidden">Сайт разработчика макета страницы</span>
           <p class="copyright__title">Разработано</p>
           <svg class="copyright__icon" width="27" height="35">
-            <use xlink:href="#icon-html-academy"></use>
+            <use xlink:href="/img/icons/sprite.svg#icon-html-academy-export"></use>
           </svg>
         </a>
       </div>
@@ -221,11 +212,12 @@
   <section class="modal modal_failure modal_close" aria-labelledby="modal-failure-title">
     <h2 class="visually-hidden" id="modal-failure-title">Окно ошибки!</h2>
     <div class="modal__wrapper">
-      <p class="modal__title intro-title intro-title_less">Что-то пошло<br class="show">
-        не так!</p>
+      <p class="modal__title intro-title intro-title_less">
+        Что-то пошло<br class="hide"><span class="hide hide_tablet-n-desktop">&nbsp;</span>не так!
+      </p>
       <p class="modal__description intro-description">
-        Проверьте поля, выделенные красным,<br class="show">
-        скорее всего, вы забыли их заполнить
+        Проверьте поля, выделенные красным,<br class="hide"><span class="hide hide_tablet-n-desktop">&nbsp;</span>скорее
+        всего, вы забыли их заполнить
       </p>
       <button class="button modal__button" type="button" tabindex="-1">Ок</button>
     </div>
@@ -236,8 +228,8 @@
     <div class="modal__wrapper">
       <p class="modal__title intro-title intro-title_less">Ваш отзыв отправлен!</p>
       <p class="modal__description intro-description">
-        Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>
-        В ближайшее время мы опубликуем его на сайте.
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br><span class="hide hide_tablet-n-desktop">&nbsp;</span>В
+        ближайшее время мы опубликуем его на сайте.
       </p>
     </div>
     <div class="modal__button-wrapper">
@@ -246,7 +238,7 @@
   </section>
 </div>
 
-<script src="js/page-nav.js"></script>
-<script src="js/form-modal.js"></script>
+<script src="js/page-nav.min.js"></script>
+<script src="js/form-modal.min.js"></script>
 </body>
 </html>

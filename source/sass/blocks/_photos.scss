@@ -45,10 +45,6 @@
         padding-right: 20px;
       }
     }
-
-    @media (min-width: $viewport-desktop) {
-      margin-bottom: -7px;
-    }
   }
 }
 
@@ -66,16 +62,27 @@
   }
 }
 
-.photos__meta {
-  margin-top: 4px;
+.photos__img-container {
+  width: 100%;
+  min-height: 280px;
+  margin-bottom: 11px;
+
+  background-color: $medium-gray-100;
 
   @media (min-width: $viewport-tablet) {
-    margin-top: -7px; // fixed white-space
+    min-height: 267px;
+    margin-bottom: 0;
   }
+}
 
+.photos__img-container img {
+  display: block;
+}
+
+.photos__meta {
   @media (min-width: $viewport-desktop) {
     position: absolute;
     left: 0;
-    bottom: 7px;
+    bottom: 0;
   }
 }

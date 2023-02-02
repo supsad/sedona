@@ -10,5 +10,21 @@
 
   &_less {
     font-size: 18px;
+
+    &-mobile-only {
+      font-size: 18px;
+
+      @media (min-width: $viewport-tablet) {
+        font-size: 30px;
+      }
+    }
+
+    &-main {
+      font-size: 18px;
+
+      @media (min-width: $viewport-tablet) {
+        font-size: 21px;
+      }
+    }
   }
 }
