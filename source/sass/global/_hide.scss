@@ -1,40 +1,55 @@
 // Mobile first
 
 .hide {
-  @media (max-width: $viewport-mobile-only) {
-    display: none;
-  }
+  display: none;
 
-  // Reset
+  &_mobile-only {
+    @media (max-width: $viewport-mobile-only) {
+      display: inline;
 
-  &_mobile-n-tablet,
-  &_tablet-only,
-  &_tablet-n-desktop,
-  &_desktop-only {
-    display: inline;
+      + span {
+        display: none;
+      }
+    }
   }
 
   &_mobile-n-tablet {
     @media (max-width: $viewport-desktop - 1px) {
-      display: none;
+      display: inline;
+
+      + span {
+        display: none;
+      }
     }
   }
 
   &_tablet-only {
     @media (min-width: $viewport-mobile-only) and (max-width: $viewport-desktop - 1px) {
-      display: none;
+      display: inline;
+
+      + span {
+        display: none;
+      }
     }
   }
 
   &_tablet-n-desktop {
     @media (min-width: $viewport-tablet) {
-      display: none;
+      display: inline;
+
+      + span {
+        display: none;
+      }
     }
   }
 
   &_desktop-only {
     @media (min-width: $viewport-desktop) {
-      display: none;
+      display: inline;
+
+      + span {
+        display: none;
+      }
     }
   }
 }

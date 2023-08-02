@@ -99,7 +99,7 @@
     opacity: 1;
   }
 
-  &_required {
+  &_invalid {
     outline: 4px solid $accent-red-outline;
     outline-offset: -4px;
 

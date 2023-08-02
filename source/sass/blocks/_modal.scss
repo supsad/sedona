@@ -21,7 +21,7 @@
       padding: 40px 40px 35px;
 
       @media (min-width: $viewport-tablet) {
-        padding: 48px 48px 30px;
+        padding: 48px;
       }
     }
 
@@ -32,7 +32,7 @@
     }
 
     .modal__description {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
 
       @media (min-width: $viewport-desktop) {
         margin-bottom: 40px;

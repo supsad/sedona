@@ -8,5 +8,10 @@ https://sass-lang.com
 
 sass/
 | - style.scss
-| - [другие *.scss файлы]
-| - [или подпапки с другими *.scss файлами]
+| - global/
+  | - _fonts.scss
+  | - _global.scss
+  | - [другие _*.scss файлы, являющиеся глобальными в проекте блоками по БЭМ]
+| - blocks/
+  | - _advantages.scss
+  | - [другие _*.scss файлы, являющиеся блоками по БЭМ]
