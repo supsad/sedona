@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Форма для отзывов</title>
 
-  <link href="fonts/ptsans.woff2" as="font">
-  <link href="fonts/ptsans.woff" as="font">
-  <link href="fonts/ptsansbold.woff2" as="font">
-  <link href="fonts/ptsansbold.woff" as="font">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="img/present/intro-title.svg" as="image" type="image/svg+xml" crossorigin>
 
   <link rel="stylesheet" href="css/style.min.css">
 
@@ -16,6 +15,14 @@
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180x180 -->
   <link rel="manifest" href="manifest.webmanifest">
+
+  <meta name="author" content="supsad">
+  <meta name="description"
+        content="Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях в чудесном городке Седона!">
+  <meta name="keywords"
+        content="Турист, Каньон, Седона, Городок, Поездка, Туризм, Жилье, Сувениры, Мост, Дьявол, Мост Дьявола,
+        Площадь, Поездка, Гостиница, Аризона, Отель, Отзыв, Впечатление, Информация, Достопримечательности,
+        Гора-колокол, Слайд-Парк, Красные, Скалы, Красные скалы, Эмоции, Восторг, #visitsedona">
 </head>
 <body class="page__body">
 <div class="page__wrapper">
@@ -25,7 +32,7 @@
       <button class="page-nav__toggle">
         <span class="visually-hidden">Открыть меню навигации</span>
       </button>
-      <a class="page-nav__logo-container">
+      <a class="page-nav__logo-container" href="index.html">
         <picture>
           <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/site-logo/logotype-tablet.svg">
           <source media="(min-width: 1200px)" srcset="img/site-logo/logotype-desktop.svg">
@@ -49,8 +56,8 @@
       </ul>
     </nav>
 
-    <div class="page-header__present present present_other">
-      <img class="present__img present__img_small" src="img/page-header/intro-title.svg" width="229" height="39"
+    <div class="present present_other">
+      <img class="present__img present__img_small" src="img/present/intro-title.svg" width="229" height="39"
            alt="Седона - слоган с названием города">
     </div>
   </header>
@@ -59,8 +66,9 @@
     <section class="page-main__form form">
       <h1 class="form__title intro-title intro-title_less-mobile-only">Оставьте свой отзыв</h1>
       <p class="form__description intro-description">
-        Помогите нашим отелям стать лучше! Оставьте отзыв о них, <br>
-        а также о посещенных вами достопримечательностях
+        Помогите нашим отелям стать лучше! Оставьте отзыв о них,
+        <br class="hide hide_tablet-n-desktop">
+        <span>&nbsp;</span>а также о посещенных вами достопримечательностях
       </p>
 
       <form class="form-review" action="https://echo.htmlacademy.ru" method="post" target="_blank">
@@ -107,47 +115,48 @@
           <legend class="form-review__title">Ваше общее впечатление:</legend>
           <ul class="form-review__input-list user-opinion user-opinion_radio">
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="radio" id="user-positive" name="impression"
+              <input class="user-opinion__input visually-hidden" type="radio" id="emotion-positive" name="impression"
                      value="positive" checked>
-              <label class="user-opinion__label" for="user-positive">Скорее положительное</label>
+              <label class="user-opinion__label" for="emotion-positive">Скорее положительное</label>
             </li>
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="radio" id="user-negative" name="impression"
+              <input class="user-opinion__input visually-hidden" type="radio" id="emotion-negative" name="impression"
                      value="negative">
-              <label class="user-opinion__label" for="user-negative">Скорее отрицательное</label>
+              <label class="user-opinion__label" for="emotion-negative">Скорее отрицательное</label>
             </li>
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="radio" id="user-difficult" name="impression"
+              <input class="user-opinion__input visually-hidden" type="radio" id="emotion-difficult" name="impression"
                      value="difficult">
-              <label class="user-opinion__label" for="user-difficult">Затрудняюсь ответить</label>
+              <label class="user-opinion__label" for="emotion-difficult">Затрудняюсь ответить</label>
             </li>
           </ul>
         </fieldset>
 
         <fieldset class="form-review__item form-review__item_place">
           <legend class="form-review__title">
-            Посещенные<br>
+            Посещенные
+            <br>
             достопримечательности:
           </legend>
           <ul class="form-review__input-list user-opinion user-opinion_checkbox">
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="checkbox" id="user-bridge" name="devils-bridge"
+              <input class="user-opinion__input visually-hidden" type="checkbox" id="spot-bridge" name="devils-bridge"
                      checked>
-              <label class="user-opinion__label" for="user-bridge">Мост Дьявола</label>
+              <label class="user-opinion__label" for="spot-bridge">Мост Дьявола</label>
             </li>
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="checkbox" id="user-mount" name="mountain-bell"
+              <input class="user-opinion__input visually-hidden" type="checkbox" id="spot-mount" name="mountain-bell"
                      checked>
-              <label class="user-opinion__label" for="user-mount">Гора-Колокол</label>
+              <label class="user-opinion__label" for="spot-mount">Гора-Колокол</label>
             </li>
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="checkbox" id="user-park" name="slide-park"
+              <input class="user-opinion__input visually-hidden" type="checkbox" id="spot-park" name="slide-park"
                      checked>
-              <label class="user-opinion__label" for="user-park">Слайд-парк</label>
+              <label class="user-opinion__label" for="spot-park">Слайд-парк</label>
             </li>
             <li class="user-opinion__item">
-              <input class="user-opinion__input visually-hidden" type="checkbox" id="user-rocks" name="red-rocks">
-              <label class="user-opinion__label" for="user-rocks">Красные скалы</label>
+              <input class="user-opinion__input visually-hidden" type="checkbox" id="spot-rocks" name="red-rocks">
+              <label class="user-opinion__label" for="spot-rocks">Красные скалы</label>
             </li>
           </ul>
         </fieldset>
@@ -172,7 +181,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper wrapper">
+    <div class="page-footer__wrapper page-footer__wrapper_other wrapper">
       <h2 class="visually-hidden">Дополнительная информация</h2>
       <p class="page-footer__hashtag">#visitsedona</p>
 
@@ -212,12 +221,14 @@
   <section class="modal modal_failure modal_close" aria-labelledby="modal-failure-title">
     <h2 class="visually-hidden" id="modal-failure-title">Окно ошибки!</h2>
     <div class="modal__wrapper">
-      <p class="modal__title intro-title intro-title_less">
-        Что-то пошло<br class="hide"><span class="hide hide_tablet-n-desktop">&nbsp;</span>не так!
+      <p class="modal__title intro-title intro-title_less-mobile-only">
+        Что-то пошло
+        <br class="hide hide_tablet-n-desktop">
+        <span>&nbsp;</span>не так!
       </p>
       <p class="modal__description intro-description">
-        Проверьте поля, выделенные красным,<br class="hide"><span class="hide hide_tablet-n-desktop">&nbsp;</span>скорее
-        всего, вы забыли их заполнить
+        Проверьте поля, выделенные красным,<br class="hide hide_tablet-n-desktop">
+        <span>&nbsp;</span>скорее всего, вы забыли их заполнить
       </p>
       <button class="button modal__button" type="button" tabindex="-1">Ок</button>
     </div>
@@ -226,10 +237,10 @@
   <section class="modal modal_success modal_close" aria-labelledby="modal-success-title">
     <h2 class="visually-hidden" id="modal-success-title">Окно успеха!</h2>
     <div class="modal__wrapper">
-      <p class="modal__title intro-title intro-title_less">Ваш отзыв отправлен!</p>
+      <p class="modal__title intro-title intro-title_less-mobile-only">Ваш отзыв отправлен!</p>
       <p class="modal__description intro-description">
-        Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br><span class="hide hide_tablet-n-desktop">&nbsp;</span>В
-        ближайшее время мы опубликуем его на сайте.
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br class="hide hide_tablet-n-desktop">
+        <span>&nbsp;</span>В ближайшее время мы опубликуем его на сайте.
       </p>
     </div>
     <div class="modal__button-wrapper">
@@ -239,6 +250,8 @@
 </div>
 
 <script src="js/page-nav.min.js"></script>
-<script src="js/form-modal.min.js"></script>
+<!--<script src="js/local-storage.min.js"></script>-->
+<script src="js/test.min.js"></script>
+<script src="js/form-review.min.js"></script>
 </body>
 </html>

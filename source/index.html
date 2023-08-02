@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sedona</title>
 
-  <link href="fonts/ptsans.woff2" as="font">
-  <link href="fonts/ptsans.woff" as="font">
-  <link href="fonts/ptsansbold.woff2" as="font">
-  <link href="fonts/ptsansbold.woff" as="font">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="img/present/intro-full.svg" as="image" type="image/svg+xml" crossorigin>
 
   <link rel="stylesheet" href="css/style.min.css">
 
@@ -16,6 +15,14 @@
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180x180 -->
   <link rel="manifest" href="manifest.webmanifest">
+
+  <meta name="author" content="supsad">
+  <meta name="description"
+        content="Небольшой туристический городок Седона, который может похвастаться изобилием своих красот,
+        который уделывает Гранд-Каньон!">
+  <meta name="keywords"
+        content="Турист, Каньон, Седона, Городок, Поездка, Туризм, Жилье, Сувениры, Мост, Дьявол, Мост Дьявола,
+        Площадь, Поездка, Гостиница, Аризона, Достопримечательности, #visitsedona">
 </head>
 <body class="page__body">
 <div class="page__wrapper">
@@ -50,7 +57,7 @@
     </nav>
 
     <div class="present present_primary">
-      <img class="present__img" src="img/page-header/intro-full.svg" width="282" height="214"
+      <img class="present__img" src="img/present/intro-full.svg" width="282" height="214"
            alt="Слоган с надписью: 'Добро пожаловать в Седону...'">
     </div>
   </header>
@@ -60,8 +67,9 @@
     <section class="page-main__advantages advantages">
       <div class="wrapper advantages__wrapper">
         <h2 class="visually-hidden">Наши преимущества</h2>
-        <p class="advantages__title intro-title_less-main">Седона — небольшой городок в Аризоне,<br> заслуживающий
-          большего!</p>
+        <p class="advantages__title intro-title intro-title_less-main">
+          Седона — небольшой городок в Аризоне,<br>
+          заслуживающий большего!</p>
         <p class="advantages__description">
           Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
         </p>
@@ -72,11 +80,14 @@
           <div class="features__wrapper">
             <div class="features__intro features__intro_primary">
               <h3 class="features__title">
-                Настоящий<br class="hide"><span class="hide hide_tablet-n-desktop">&nbsp;</span>городок
+                Настоящий
+                <br class="hide hide_tablet-n-desktop">
+                <span>&nbsp;</span>городок
               </h3>
               <p class="features__description">
-                Седона не аттракцион для туристов,<br class="hide hide_mobile-n-tablet"><span
-                class="hide hide_desktop-only">&nbsp;</span>там течет своя жизнь
+                Седона не аттракцион для туристов,
+                <br class="hide hide_tablet-n-desktop">
+                <span>&nbsp;</span>там течет своя жизнь
               </p>
             </div>
             <picture>
@@ -111,11 +122,17 @@
             </li>
             <li class="features__item recommendation recommendation_food">
               <h4 class="recommendation__title">Еда</h4>
-              <p class="recommendation__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              <p class="recommendation__description">
+                Всегда заказывайте фирменный бургер,<br class="hide hide_tablet-only">
+                <span>&nbsp;</span>вы не разочаруетесь!
+              </p>
             </li>
             <li class="features__item recommendation recommendation_souvenirs">
               <h4 class="recommendation__title">Сувениры</h4>
-              <p class="recommendation__description">Не только китайского, но и местного производства!</p>
+              <p class="recommendation__description">
+                Не только китайского,<br class="hide hide_desktop-only">
+                <span>&nbsp;</span>но и местного производства!
+              </p>
             </li>
           </ul>
 
@@ -124,7 +141,9 @@
           <div class="features__wrapper features__wrapper_second">
             <div class="features__intro features__intro_primary-low">
               <h3 class="features__title">
-                Там есть<br class="hide"><span class="hide hide_tablet-n-desktop">&nbsp;</span>мост Дьявола
+                Там есть
+                <br class="hide hide_tablet-n-desktop">
+                <span>&nbsp;</span>мост Дьявола
               </h3>
               <p class="features__description">Да, по нему можно пройтись! Если вы осмелитесь, конечно</p>
             </div>
@@ -160,7 +179,9 @@
         <li class="advantages__item features">
           <div class="features__intro">
             <h3 class="features__title">
-              Небольшая<br class="hide"><span class="hide hide_tablet-n-desktop">&nbsp;</span>площадь
+              Небольшая
+              <br class="hide hide_tablet-n-desktop">
+              <span>&nbsp;</span>площадь
             </h3>
             <p class="features__description">Все интересные места находятся очень близко</p>
           </div>
@@ -168,7 +189,9 @@
         <li class="advantages__item features">
           <div class="features__intro">
             <h3 class="features__title">
-              Красивая<br class="hide"><span class="hide hide_tablet-n-desktop">&nbsp;</span>дорога
+              Красивая
+              <br class="hide hide_tablet-n-desktop">
+              <span>&nbsp;</span>дорога
             </h3>
             <p class="features__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
@@ -176,7 +199,9 @@
         <li class="advantages__item features">
           <div class="features__intro">
             <h3 class="features__title">
-              Мало<br class="hide"><span class="hide hide_tablet-n-desktop">&nbsp;</span>туристов
+              Мало
+              <br class="hide hide_tablet-n-desktop">
+              <span>&nbsp;</span>туристов
             </h3>
             <p class="features__description">Большинство едет в Гранд Каньон и толпится там</p>
           </div>
@@ -189,8 +214,9 @@
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <p class="search__title intro-title">Заинтересовались?</p>
         <p class="search__description intro-description">
-          Укажите предполагаемые даты поездки,<br class="hide"><span class="hide hide_tablet-n-desktop">&nbsp;</span>и
-          мы покажем вам лучшие предложения гостиниц в Седоне
+          Укажите предполагаемые даты поездки,
+          <br class="hide hide_tablet-n-desktop">
+          <span>&nbsp;</span>и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
         <a href="#" class="search__button button">Найти гостиницу</a>
       </div>
@@ -225,7 +251,7 @@
         <source media="(min-width: 1200px)"
                 srcset="img/map/map-n-marker-desktop.png 1x,
                         img/map/map-n-marker-desktop@2x.png 2x">
-        <img class="map__img" src="img/map/map-n-marker-mobile.png" width="320" height="350"
+        <img class="map__img" src="img/map/map-n-marker-mobile.png" width="320" height="350" loading="lazy"
              alt="Карта с нашим месторасположением"
              srcset="img/map/map-n-marker-mobile@2x.png 2x">
       </picture>

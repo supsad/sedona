@@ -11,6 +11,7 @@ npm-debug.*
 source/css/*.css
 source/css/*.map
 Thumbs.db
+qodana.yaml
 
 # Dist dir
 build/
