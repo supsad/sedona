@@ -1,9 +1,9 @@
 "use strict";
 
-/* TODO
-Сделать поддержку того, что если записано неправильное значение,
-оно удаляется из localStorage (так как у меня нет проверок символьных,
-то просто сделаю проверочную функцию из принципа проверок браузера):
+/*
+! TODO Сделать поддержку того, что если записано неправильное значение,
+! оно удаляется из localStorage (так как у меня нет проверок символьных,
+! то просто сделаю проверочную функцию из принципа проверок браузера):
 * 1) Создать два массива: массив констант и массив пары ключ-значение
 ? 2) Сделать проверку на ошибку (она уже есть в виде подсветки строки)
 ? 3) Удалить/не запоминать пару ключ значение из localStorage, чтобы оно там не хранилось, после неправильно заполнения
@@ -11,8 +11,15 @@
 * 5) Для расширения посмотреть возможность сократить количество констант полей
 * 6) Если для функции есть regExp - заносить в объект и проверять в цикле
 ? 7) Добавить для всего отдельные функции, чтобы их можно было использовать отдельно
-? 8) Сделать общий чекер
+? 8) Сделать общий чекер (что это вообще за чекер?)
 ? 9) Объект сделать общим, обращение через this, сделать двухслойный объект
+? 10) Внедрить в код оператор нулевого слияния
+? 11) Объект сделать общим, обращение через this, сделать двухслойный объект
+! 12) Найти применение внутреннему объекту (использовать Web Storage API - это и есть localStorage),
+! вероятно, внутренний объект должен использоваться для того, чтобы вовремя проверять заполнение,
+! а позже записывать все данные в localStorage, после чего объект стирается
+! 12.1) Сначала идет работа только с внутренним объектом, после чего из него все данные записываются в localStorage
+! и объект удаляется
 */
 
 const userInfoInputs = document.querySelectorAll(".user-info__input");
@@ -38,47 +45,60 @@ function makeUser(name, surname, middleName, email, tel) {
     surname,
     middleName,
     email,
-    tel
+    tel,
   }
 }
 
 function fillUserInputs(inputs) {
   for (let input of inputs) {
-    let tempAttr = input.getAttribute("name");
+    let inputNameAttribute = input.getAttribute("name");
 
-    // TODO вызов доп. функции для заполнения встроенных объектов
-    fillUserInputsTag( tempAttr );
-    fillRequiredInputs( input, tempAttr );
-    localStorage.getItem( tempAttr );
+    fillUserInputsTag( input, inputNameAttribute );
+    fillUserRequiredInputs( input, inputNameAttribute );
+    localStorage.getItem( inputNameAttribute );
   }
+
+  return inputs; // TODO ???
 }
 
 // TODO не работает
 
-function fillUserInputsTag(attrName) {
-  this[attrName] = {
-    "input": [attrName],
+function fillUserInputsTag(userInputField, attributeName) {
+  return this[attributeName] = {
+    "input": userInputField,
   }
 }
 
-function fillRequiredInputs(userInputField, attrName) {
-  if (userInputField.hasAttribute("required")) {
-    this[attrName] = {
+function fillUserRequiredInputs(userInputField, attributeName) {
+  if (isRequiredInput( userInputField )) {
+    return this[attributeName] = {
       "required": true,
     }
   } else {
-    this[attrName] = {
+    return this[attributeName] = {
       "required": false,
     }
   }
 }
 
-function invalidRequiredFieldsChecker() {
-  // if (element.getAttribute("name") === "user-email" && validateEmail(element)) {
-  //
-  // }
+function isRequiredInput(input) {
+  return input.hasAttribute( "required" );
+}
 
-  userInfoInputs.forEach(element => {
+// function keyObject(obj) {
+//   for (let key of obj) {
+//
+//   }
+//
+//   return key
+// }
+
+// function requiredInputsChecker() {
+//   this[name][key]
+// }
+
+function validateInputs(inputs) {
+  inputs.forEach(element => {
 
 
     if (element.validity.valueMissing && element.validity.typeMismatch) {
@@ -86,7 +106,7 @@ function invalidRequiredFieldsChecker() {
 
       invalidFocus( element );
     }
-    element.classList.remove("user-info__input_invalid");
+    element.classList.remove( "user-info__input_invalid" );
   });
 }
 
@@ -103,7 +123,7 @@ function validateEmail(element) {
 }
 
 const invalidFocus = (element) => {
-  element.classList.add("user-info__input_invalid");
+  element.classList.add( "user-info__input_invalid" );
   element.focus();
 
   return element

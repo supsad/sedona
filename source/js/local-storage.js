@@ -1,4 +1,4 @@
-  /* TODO
+/* TODO
 * Сделать поддержку того, что если записано неправильное значение,
 * оно удаляется из localStorage (так как у меня нет проверок символьных,
 * то просто сделаю проверочную функцию из принципа проверок браузера):
@@ -82,49 +82,49 @@ const userNotFillReqFieldsChecker = function () {
   });
 }
 
-  // Прошлая версия (отменено)
+// Прошлая версия (отменено)
 
-  // // * Array of selectors filled with user data
-  //
-  // let userInfoArr = [];
-  // let userInfoArrReq = [];
-  //
-  // // let localStorageKeys = {
-  // //   name: "required",
-  // //   surname: "required",=
-  // //   "middle-name": "not-required",
-  // //   tel: "required",
-  // //   email: "required"
-  // // };
-  //
-  // let localStorageKeysLength = Object.keys(localStorageKeys).length;
-  //
-  // // ? userInfoArr reversed
-  //
-  // getAllUserKeys();
-  //
-  // // * Getting all keys into an array
-  //
-  // const getAllUserKeys = function () {
-  //   for (let key in localStorageKeys) {
-  //     userInfoArr[localStorageKeysLength - 1] = document.querySelectorAll(`[name=user-${key}]`);
-  //     localStorageKeysLength--;
-  //   }
-  // };
-  //
-  // // * Checking only required fields
-  // // TODO 1. Просмотреть значения ключей
-  // // TODO 2. Создать новый массив на основе Arr, с удаленным ключом i
-  // const validReqUserField = function () {
-  //   for (let i = 0; i < localStorageKeysLength; i++) {
-  //     if (Object.keys(localStorageKeys[localStorageKeysLength - 1]) === "not-required") {
-  //
-  //     }
-  //   }
-  // };
-  //
-  // // * Required fields not met
-  //
-  // const userReqNoMet = function () {
-  //
-  // };
+// // * Array of selectors filled with user data
+//
+// let userInfoArr = [];
+// let userInfoArrReq = [];
+//
+// // let localStorageKeys = {
+// //   name: "required",
+// //   surname: "required",=
+// //   "middle-name": "not-required",
+// //   tel: "required",
+// //   email: "required"
+// // };
+//
+// let localStorageKeysLength = Object.keys(localStorageKeys).length;
+//
+// // ? userInfoArr reversed
+//
+// getAllUserKeys();
+//
+// // * Getting all keys into an array
+//
+// const getAllUserKeys = function () {
+//   for (let key in localStorageKeys) {
+//     userInfoArr[localStorageKeysLength - 1] = document.querySelectorAll(`[name=user-${key}]`);
+//     localStorageKeysLength--;
+//   }
+// };
+//
+// // * Checking only required fields
+// // TODO 1. Просмотреть значения ключей
+// // TODO 2. Создать новый массив на основе Arr, с удаленным ключом i
+// const validReqUserField = function () {
+//   for (let i = 0; i < localStorageKeysLength; i++) {
+//     if (Object.keys(localStorageKeys[localStorageKeysLength - 1]) === "not-required") {
+//
+//     }
+//   }
+// };
+//
+// // * Required fields not met
+//
+// const userReqNoMet = function () {
+//
+// };
