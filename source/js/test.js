@@ -1,25 +1,35 @@
 "use strict";
 
 /*
+? The code structure has been complicated.
+? Of course, you can do without an internal object and work directly with the web storage API,
+? but I wanted to do some additional work with objects and study them.
+? P.S. This is teaching material, btw :)
+ */
+
+/*
 ! TODO Сделать поддержку того, что если записано неправильное значение,
 ! оно удаляется из localStorage (так как у меня нет проверок символьных,
 ! то просто сделаю проверочную функцию из принципа проверок браузера):
-* 1) Создать два массива: массив констант и массив пары ключ-значение
+* 1) Создать два массива: массив констант и *объект* пары ключ-значение
 ? 2) Сделать проверку на ошибку (она уже есть в виде подсветки строки)
 ? 3) Удалить/не запоминать пару ключ значение из localStorage, чтобы оно там не хранилось, после неправильно заполнения
+? 3.1) Это мы делаем с помощью объекта. Работа идет с ним, после чего данные заполняются в localStorage
 * 4) Переписать под этот принцип через перебор поддержку localStorage
 * 5) Для расширения посмотреть возможность сократить количество констант полей
-* 6) Если для функции есть regExp - заносить в объект и проверять в цикле
+? 6) Если для функции есть regExp - заносить в объект и проверять в цикле
 ? 7) Добавить для всего отдельные функции, чтобы их можно было использовать отдельно
-? 8) Сделать общий чекер (что это вообще за чекер?)
-? 9) Объект сделать общим, обращение через this, сделать двухслойный объект
+* 8) Добавить RegExp для email и tel полей
+* 8.1) Только для email, т.к. с tel справляется встроенная в браузер проверка (считается плохой практикой?)
+* 9) Объект сделать общим, обращение через this, сделать двухслойный объект
 ? 10) Внедрить в код оператор нулевого слияния
-? 11) Объект сделать общим, обращение через this, сделать двухслойный объект
-! 12) Найти применение внутреннему объекту (использовать Web Storage API - это и есть localStorage),
+! 11) Найти применение внутреннему объекту (использовать Web Storage API - это и есть localStorage),
 ! вероятно, внутренний объект должен использоваться для того, чтобы вовремя проверять заполнение,
 ! а позже записывать все данные в localStorage, после чего объект стирается
-! 12.1) Сначала идет работа только с внутренним объектом, после чего из него все данные записываются в localStorage
+! 11.1) Сначала идет работа только с внутренним объектом, после чего из него все данные записываются в localStorage
 ! и объект удаляется
+? 12) Возможно, требуется переработка объекта в более лаконичный вид с подвидами, так как сейчас он больше похож
+? на сборную солянку всего, т.е. разделить input с сайта и данные пользователя по разным подобъектам
 */
 
 const userInfoInputs = document.querySelectorAll(".user-info__input");
@@ -81,26 +91,24 @@ function fillUserRequiredInputs(userInputField, attributeName) {
   }
 }
 
+// ! Нужна ли эта функция?
 function isRequiredInput(input) {
   return input.hasAttribute( "required" );
 }
 
-function invalidRequiredFieldsChecker() {
-  // if (element.getAttribute("name") === "user-email" && validateEmail(element)) {
-  //
+// ! Нужна ли эта функция?
+function keyObject(obj) {
+  for (let key of obj) {
+    // userInfoArr[localStorageKeysLength - 1] = document.querySelectorAll(`[name=user-${key}]`);
+    // localStorageKeysLength--;
+  }
+
+  return key;
 }
 
-// function keyObject(obj) {
-//   for (let key of obj) {
-//
-//   }
-//
-//   return key
-// }
-
-// function requiredInputsChecker() {
-//   this[name][key]
-// }
+function requiredInputsChecker() {
+  this[name][key]
+}
 
 function validateInputs(inputs) {
   inputs.forEach(element => {
@@ -128,7 +136,7 @@ function validateEmail(element) {
 }
 
 const invalidFocus = (element) => {
-  element.classList.add("user-info__input_invalid");
+  element.classList.add( "user-info__input_invalid" );
   element.focus();
 
   return element;
