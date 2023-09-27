@@ -85,6 +85,11 @@ function isRequiredInput(input) {
   return input.hasAttribute( "required" );
 }
 
+function invalidRequiredFieldsChecker() {
+  // if (element.getAttribute("name") === "user-email" && validateEmail(element)) {
+  //
+}
+
 // function keyObject(obj) {
 //   for (let key of obj) {
 //
@@ -123,8 +128,8 @@ function validateEmail(element) {
 }
 
 const invalidFocus = (element) => {
-  element.classList.add( "user-info__input_invalid" );
+  element.classList.add("user-info__input_invalid");
   element.focus();
 
-  return element
+  return element;
 }
