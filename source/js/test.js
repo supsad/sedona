@@ -30,12 +30,48 @@
 ! и объект удаляется
 ? 12) Возможно, требуется переработка объекта в более лаконичный вид с подвидами, так как сейчас он больше похож
 ? на сборную солянку всего, т.е. разделить input с сайта и данные пользователя по разным подобъектам
+? 13) Сделать реализацию через "new function() {}", так как объект будет создан единожды, модифицироваться и удаляться
+? в последствии работы кода без возврата к новому созданию сущности/объекта.
+? 14) Для необязательных атрибутов нужно использовать .? - опциональную цепочку (middleName)
 */
 
 const userInfoInputs = document.querySelectorAll(".user-info__input");
 
 // * Object with req inputs
 let user = {}
+
+// ? output user object:
+// user = {
+//   methods = {  TODO это так не работает, переписать. Неправильный контекст this
+//     makeUser(),
+//     fillUserInputs(),
+//     ...N(),
+//   },
+//
+//   information = {
+//     name,
+//     surname,
+//     middleName,
+//     email,
+//     tel,
+//     ...N,
+//   },
+//
+//   fields = {
+//     name: [{
+//       input: *inputField*,
+//       isRequired: *boolean*,
+//     }],
+//     surname: [{
+//       input: *inputField*,
+//       isRequired: *boolean*,
+//     }],
+//     ...N: [{
+//       input: *inputField*,
+//       isRequired: *boolean*,
+//     }],
+//   },
+// }
 
 // * localStorage support
 let isLocalStorageSupport = true;
@@ -80,31 +116,31 @@ function fillUserInputsTag(userInputField, attributeName) {
 }
 
 function fillUserRequiredInputs(userInputField, attributeName) {
-  if (isRequiredInput( userInputField )) {
+  if (userInputField.hasAttribute( "required" )) {
     return this[attributeName] = {
-      "required": true,
+      "isRequired": true,
     }
   } else {
     return this[attributeName] = {
-      "required": false,
+      "isRequired": false,
     }
   }
 }
 
 // ! Нужна ли эта функция?
 function isRequiredInput(input) {
-  return input.hasAttribute( "required" );
+
 }
 
 // ! Нужна ли эта функция?
-function keyObject(obj) {
-  for (let key of obj) {
-    // userInfoArr[localStorageKeysLength - 1] = document.querySelectorAll(`[name=user-${key}]`);
-    // localStorageKeysLength--;
-  }
-
-  return key;
-}
+// function keyObject(obj) {
+//   for (let key of obj) {
+//     userInfoArr[localStorageKeysLength - 1] = document.querySelectorAll(`[name=user-${key}]`);
+//     localStorageKeysLength--;
+//   }
+//
+//   return key;
+// }
 
 function requiredInputsChecker() {
   this[name][key]
