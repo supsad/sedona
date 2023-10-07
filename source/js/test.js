@@ -38,26 +38,35 @@
 const userInfoInputs = document.querySelectorAll(".user-info__input");
 
 // * Object with req inputs
-let user = {}
+const user = {
+  fields: {
+    fillUserFieldsInputTag: function (userInputField, attributeName) {
+      return this[`${attributeName}`] = {
+        "input": `${userInputField}`,
+      }
+    },
+
+    fillUserRequiredInputs: function (userInputField, attributeName) {
+      if (userInputField.hasAttribute("required")) {
+        return this[`${attributeName}`] = {
+          "isRequired": true,
+        }
+      } else {
+        return this[`${attributeName}`] = {
+          "isRequired": false,
+        }
+      }
+    },
+  },
+}
 
 // ? output user object:
 // user = {
-//   methods = {  TODO это так не работает, переписать. Неправильный контекст this
-//     makeUser(),
-//     fillUserInputs(),
-//     ...N(),
-//   },
-//
-//   information = {
-//     name,
-//     surname,
-//     middleName,
-//     email,
-//     tel,
-//     ...N,
-//   },
-//
 //   fields = {
+//     fillUserInputs(),
+//     fillUserFieldsInputTag(),
+//     ...N(),
+//
 //     name: [{
 //       input: *inputField*,
 //       isRequired: *boolean*,
@@ -71,6 +80,13 @@ let user = {}
 //       isRequired: *boolean*,
 //     }],
 //   },
+//
+//   name,
+//   surname,
+//   middleName,
+//   email,
+//   tel,
+//   ...N,
 // }
 
 // * localStorage support
@@ -78,85 +94,53 @@ let isLocalStorageSupport = true;
 
 try {
   makeUser();
-  console.log( "Local storage support: " + true );
+  console.log("Local storage support: " + true);
 } catch (err) {
   isLocalStorageSupport = false;
-  console.log( "Local storage support: " + isLocalStorageSupport );
+  console.log("Local storage support: " + isLocalStorageSupport);
 }
 
-function makeUser(name, surname, middleName, email, tel) {
-  fillUserInputs(userInfoInputs);
-  return user = {
-    name,
-    surname,
-    middleName,
-    email,
-    tel,
-  }
+function makeUser() {
+  fillUserKeys()
+  fillUserKeys(userInfoInputs);
+
+  return this.name
 }
 
-function fillUserInputs(inputs) {
+user.fillUserKeys1 = fillUserKeys();
+
+// Сделать общим вызовом
+function fillUserKeys(inputs) {
   for (let input of inputs) {
     let inputNameAttribute = input.getAttribute("name");
 
-    fillUserInputsTag( input, inputNameAttribute );
-    fillUserRequiredInputs( input, inputNameAttribute );
-    localStorage.getItem( inputNameAttribute );
+    // TODO Прокинуть в вызов fields
+    this.fillUserFieldsInputTag(input, inputNameAttribute);
+    this.fillUserRequiredInputs(input, inputNameAttribute);
   }
 
   return inputs; // TODO ???
 }
 
-// TODO не работает
-
-function fillUserInputsTag(userInputField, attributeName) {
-  return this[attributeName] = {
-    "input": userInputField,
-  }
-}
-
-function fillUserRequiredInputs(userInputField, attributeName) {
-  if (userInputField.hasAttribute( "required" )) {
-    return this[attributeName] = {
-      "isRequired": true,
-    }
-  } else {
-    return this[attributeName] = {
-      "isRequired": false,
-    }
-  }
-}
-
-// ! Нужна ли эта функция?
-function isRequiredInput(input) {
-
-}
-
-// ! Нужна ли эта функция?
-// function keyObject(obj) {
-//   for (let key of obj) {
-//     userInfoArr[localStorageKeysLength - 1] = document.querySelectorAll(`[name=user-${key}]`);
-//     localStorageKeysLength--;
-//   }
-//
-//   return key;
-// }
+// Проверяет из объекта какой ключ isRequired и создает массив required inputs
 
 function requiredInputsChecker() {
-  this[name][key]
+  for (let key of this) {
+    return this[key]["isRequired"];
+  }
 }
 
-function validateInputs(inputs) {
-  inputs.forEach(element => {
+function validateInputs(arrayReqInputs) {
+  arrayReqInputs.forEach(input => {
+    if (input.validity.valueMissing && input.validity.typeMismatch) {
+      // TODO Вместо удаление из localStorage, нужно почистить obj
 
-
-    if (element.validity.valueMissing && element.validity.typeMismatch) {
-      localStorage.removeItem( element.getAttribute("name") );
-
-      invalidFocus( element );
+      return invalidFocus(input);
     }
-    element.classList.remove( "user-info__input_invalid" );
+    input.classList.remove("user-info__input_invalid");
   });
+
+  return // TODO Что вернуть?
 }
 
 // TODO Функция удаления неправильного значения / сокращение полей
@@ -168,11 +152,11 @@ function validateInputs(inputs) {
 
 function validateEmail(element) {
   const REGEX_EMAIL = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
-  return REGEX_EMAIL.test( element.value );
+  return REGEX_EMAIL.test(element.value);
 }
 
 const invalidFocus = (element) => {
-  element.classList.add( "user-info__input_invalid" );
+  element.classList.add("user-info__input_invalid");
   element.focus();
 
   return element;

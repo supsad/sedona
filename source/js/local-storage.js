@@ -128,3 +128,35 @@ const userNotFillReqFieldsChecker = function () {
 // const userReqNoMet = function () {
 //
 // };
+
+// * Закомментированные наработки с test.js
+
+// function fillUserInputs(inputs) {
+//   for (let input of inputs) {
+//     let inputNameAttribute = input.getAttribute("name");
+//
+//     fillUserInputsTag(input, inputNameAttribute);
+//     fillUserRequiredInputs(input, inputNameAttribute);
+//     localStorage.getItem(inputNameAttribute);
+//   }
+//
+//   return inputs; // TODO ???
+// }
+
+// function fillUserInputsTag(userInputField, attributeName) {
+//   return this[attributeName] = {
+//     "input": userInputField,
+//   }
+// }
+
+// function fillUserRequiredInputs(userInputField, attributeName) {
+//   if (userInputField.hasAttribute("required")) {
+//     return this[attributeName] = {
+//       "isRequired": true,
+//     }
+//   } else {
+//     return this[attributeName] = {
+//       "isRequired": false,
+//     }
+//   }
+// }
